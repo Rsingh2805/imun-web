@@ -1,0 +1,75 @@
+.sp_bidpost_static * {outline: none !important;}
+.bid-column, .bid-columns {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+/***** Slider Common CSS *****/
+.no-thumb-image{padding-top:10px;}
+
+.bid-post-categories {padding: 4px 0px;display: inline-block;text-transform: uppercase;color: #666;font-size: 10px;position: relative;z-index: 9;}
+.bid-post-categories a {text-decoration: none !important;font-size: 12px;text-transform: uppercase;padding: 2px 8px;color: #fff !important;line-height: normal;display: inline-block;margin: 1px 0;}
+.bid-post-categories a:nth-child(4n+1){background: #1abc9c;border-color: #1abc9c;}
+.bid-post-categories a:nth-child(4n+2){background: #3aadff;border-color: #3aadff;}
+.bid-post-categories a:nth-child(4n+3){background: #9b59b6;border-color: #9b59b6;}
+.bid-post-categories a:nth-child(4n+4){background: #3498db;border-color: #3498db;}
+.bid-post-categories a:hover, .bid-post-categories a:focus{background: #333 !important;border-color: #333 !important;color: #fff !important;}
+.bid-post-title a {text-decoration: none !important;border-bottom: 0px !important;}
+.bid-post-date {line-height: normal !important;padding: 5px 5px 5px 0;display: inline-block;text-transform: uppercase;color: #666;font-size: 12px;}
+.sp_bidpost_static .bid-post-grid.first {clear: both !important;}
+.bid-clearfix:before, .bid-clearfix:after{content: "";display: table;}
+.bid-clearfix::after{clear: both;}
+.wpswp-post-tags, 
+.wpswp-post-comments{margin-bottom:10px !important;}
+.wpswp-post-tags a , 
+.wpswp-post-comments a{font-style: italic;text-decoration: none;font-size: 15px !important;color: #C6C6C6 !important;}
+.bid-post-grid{margin-bottom:30px;}
+
+/* List designs*/
+.sp_bidpost_static {margin:0 -0.9375em}
+.bid-post-content-inner{padding:5px 0px 10px 0px}
+.bid-readmorebtn{text-decoration: none !important;margin-bottom: 0px;color: #888 !important;border: 2px solid #888;padding: 5px 15px;font-size: 15px;display: inline-block;box-sizing: border-box;line-height: normal !important;margin: 3px 0 10px !important;transition: 0.4s ease-in;}
+.bid-readmorebtn:hover{transition: 0.4s ease-in;background: #888;color:#fff !important;}
+
+/****************** Design-1 ********************/
+.sp_bidpost_static.bid-design-1 .bid-post-grid-content h2 a{color:#444; text-decoration:none;}
+.sp_bidpost_static.bid-design-1 .wpswp-post-tags a{color:#878787 !important;}
+.sp_bidpost_static.bid-design-1 .wpswp-post-comments a {color: #878787 !important;text-decoration: underline;}
+
+
+/****************** Design-2 ********************/
+.sp_bidpost_static.bid-design-1 .bid-post-grid-content h2 a{color:#444; text-decoration:none;}
+.sp_bidpost_static.bid-design-1 .wpswp-post-tags a{color:#878787 !important;}
+.sp_bidpost_static.bid-design-1 .wpswp-post-comments a {color: #878787 !important;text-decoration: underline;}
+
+.bid-title-overlay-border{border: 3px solid #d3e5ea;padding: 8px 20px 8px 20px;margin-bottom: 15px;}
+
+/***** pagination *****/
+.bid_pagination{clear:both; width:100%; padding:0px 15px 10px 15px;box-sizing: border-box; text-align:center;}
+.bid_pagination .button-blog-p{width:40%; float:right; text-align:right;}
+.bid_pagination .button-blog-n{width:40%; float:left; text-align:left;}
+.bid_pagination .current {border-radius: 0;color: #333 !important;background: transparent;padding: 7px 10px;display: inline-block;text-align: center;line-height: normal;box-shadow: none;text-shadow: none;font-size: 14px;text-transform: uppercase;border: 1px solid #333;text-decoration: none !important;}
+.bid_pagination a, .bid_pagination a{color: #fff !important;background: #333;padding: 7px 10px;display: inline-block;text-align: center;line-height: normal;box-shadow: none;text-shadow: none;font-size: 14px;text-transform: uppercase;border: 1px solid #333;text-decoration: none !important;}
+.bid_pagination a:hover, .bid_pagination a:focus, .bid_pagination a:hover, .bid_pagination a:focus{color: #333 !important;background: transparent;}
+
+
+.bid-column,
+.bid-columns {  padding-left: 0.9375em;  padding-right: 0.9375em;  width: 100%;  float: left; position: relative;  }
+
+@media only screen {
+	.bid-column,  .bid-columns {position: relative;padding-left: 0.9375em;padding-right: 0.9375em; float: left; }
+}
+
+@media only screen and (min-width: 40.0625em) {  
+	.bid-column,
+	.bid-columns {position: relative;padding-left: 0.9375em;padding-right: 0.9375em;float: left; }
+	.bid-medium-1 {width: 8.33333%;}
+	.bid-medium-2 {width: 16.66667%;}
+	.bid-medium-3 {width: 25%;}
+	.bid-medium-4 {width: 33.33333%;}
+	.bid-medium-5 {width: 41.66667%;}
+	.bid-medium-6 {width: 50%;}
+	.bid-medium-7 {width: 58.33333%;}
+	.bid-medium-8 {width: 66.66667%;}
+	.bid-medium-9 {width: 75%;}
+	.bid-medium-10 {width: 83.33333%;}
+	.bid-medium-11 {width: 91.66667%;}
+	.bid-medium-12 {width: 100%;}
+}

@@ -2,3 +2,4 @@ private/config.php
 public_html1/
 /bower_components
 /node_modules
+.idea
