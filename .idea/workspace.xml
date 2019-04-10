@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4a215e4e-8be5-478b-ab8c-c2ef0c7872a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/1/thumbnail-slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1/thumbnail-slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1/thumbs2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aboutus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMUN 2018 Brochure.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMUN Hanoi 2019.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMUN_2018.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMUN_2019.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMUN_Egypt_2019.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jointeam.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OnCampus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sponsorus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terms-and-conditions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_page2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_page3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/AjaxLoader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/grabbing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.jquery.com/jquery-1.12.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect.facebook.net/en_US/fbevents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/noJS.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/rsmenu-main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/rsmenu-transitions.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/w3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delegates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaBlkIt.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-Black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-BlackCond.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-BlackCondObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-BlackExt.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-BlackExtObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-BoldCondObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-BoldExt.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-BoldExtObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-Condensed.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-CondensedObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-ExtBlackCond.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-ExtBlackCondObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-Extended.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-ExtendedObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-Heavy.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-HeavyCond.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-HeavyCondObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-HeavyExt.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-HeavyExtObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-HeavyItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-LightCondObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-LightExt.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-LightExtObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-MediumCond.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-MediumCondObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-MediumExt.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-MediumExtObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-Roman.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-Thin.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-ThinCond.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-ThinCondObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-ThinExtObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-ThinItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-UltraLigCond.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-UltraLigCondObl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeue-UltraLigExt.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueBold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueBoldItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueCondensedBlack.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueCondensedBold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueLight.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueLightItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueMedium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueUltraLight.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/HelveticaNeueUltraLightItal.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/helvetica-46-light-italic-587ebdb0ea724.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/helvetica-47-light-condensed-587ebd7b5a6f6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/helvetica-75-bold-outline-587ebe00b76ba.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Coloured.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/AMUNC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/Aus_Embassy_logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/Benilde_MUN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/IR_Student_Updates.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/Rome_MUN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/TEIMUN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/Thailand_IMO.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/Zurich_MUN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Partners/new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Sponsor-Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Team/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/about/1 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/about/1 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/about/1 (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bipasha.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/coloured_logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/conf/conf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/conf/days (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/conf/days (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/conf/days (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/conf/logo (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/conf/logo (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/conf/logo (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/egypt/1 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/egypt/1 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/egypt/1 (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/egypt/1 (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/egypt/1 (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/egypt/1 (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/egypt/banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gal/1 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gal/1 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gal/1 (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gal/1 (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/i.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/1 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/1 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/1 (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/2 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/2 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/2 (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/3 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/3 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/4 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/4 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/5 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/5 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/5 (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/5 (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ii.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_conferences/8106670_orig.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_conferences/UNEP_logo.svg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_conferences/UNHRC_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_conferences/fff204_c088beb1e4534829a7b482c8e0f7cc57_mv2_d_3500_3500_s_4_2 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_conferences/securitycouncil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_hanoi_2019/8106670_orig.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_hanoi_2019/UNSC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_hanoi_2019/UNWOmen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_hanoi_2019/icj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_hanoi_2019/undp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imun_hanoi_2019/unesco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/join.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/loader_dark.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/loader_light.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/news.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sand.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slider/1 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slider/1 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slider/1 (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/speakers/Dana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/speakers/Elvana.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/speakers/agyeeta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/speakers/santa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Adellyn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Arem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Arun.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Jelani.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Nadya.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Popy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Precious.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Sand Siwapron.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Shekina.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Trisha.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/testimonials/Vineeth.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/gamma.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.history.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.masonry.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquerypp.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/js-url.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modernizr.custom.70736.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/rsmenu-main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/khand/khand-v7-latin-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/khand/khand-v7-latin-700.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/khand/khand-v7-latin-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/khand/khand-v7-latin-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/khand/khand-v7-latin-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/Aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/Aboutus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/IMUN_2018.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/IMUN_2018.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/IMUN_2019.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/IMUN_2019.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/Jointeam.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/Jointeam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/OnCampus.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/OnCampus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/RegistrationForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/Sponsorus.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/Sponsorus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/Terms-and-conditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/Terms-and-conditions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/blog_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/blog_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/blog_page2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/blog_page2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/blog_page3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/blog_page3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/delegates.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/delegates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/accordion-and-accordion-slider/assets/css/wp-aas-publicf269.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/album-and-image-gallery-plus-lightbox/assets/css/aigpl-public8d1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/album-and-image-gallery-plus-lightbox/assets/css/magnific-popup8d1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/album-and-image-gallery-plus-lightbox/assets/css/slick8d1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/album-and-image-gallery-plus-lightbox/assets/images/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/album-and-image-gallery-plus-lightbox/assets/images/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/app-mockups-carousel/assets/css/swiper.min5152.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/app-mockups-carousel/assets/css/wp-amc-public5152.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/app-mockups-carousel/assets/js/swiper.min5152.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/audio-player-with-playlist-ultimate/assets/css/apwpultimate-public-style4963.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/audio-player-with-playlist-ultimate/assets/css/jplayer.blue.monday.min665a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/audio-player-with-playlist-ultimate/assets/image/jplayer.blue.monday.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/audio-player-with-playlist-ultimate/assets/image/jplayer.blue.monday.seeking.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/audio-player-with-playlist-ultimate/assets/image/jplayer.blue.monday.video.play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/blog-designer-for-post-and-widget/assets/css/bdpw-public1f22.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/blog-designer-for-post-and-widget/assets/images/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/blog-designer-for-post-and-widget/assets/images/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/buttons-with-style/css/button-css4bf4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/buttons-with-style/css/foundation-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/buttons-with-style/css/foundation-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/buttons-with-style/css/foundation-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/buttons-with-style/css/foundation-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/buttons-with-style/css/foundation-icons4bf4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/buttons-with-style/css/foundation-iconsd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/countdown-timer-ultimate/assets/css/wpcdt-timecircles8d1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/easy-digital-downloads/assets/js/edd-ajax.min562c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/easy-digital-downloads/templates/edd.min562c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/easy-digital-downloads/templates/images/icons/americanexpress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/easy-digital-downloads/templates/images/icons/discover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/easy-digital-downloads/templates/images/icons/mastercard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/easy-digital-downloads/templates/images/icons/visa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/easy-digital-downloads/templates/images/tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/easy-digital-downloads/templates/images/xit.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/featured-post-creative/assets/css/wpfp-publiccfa9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/footer-mega-grid-columns/css/fmgc-cssc64e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/frontend-gallery-slider-for-advanced-custom-field/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/frontend-gallery-slider-for-advanced-custom-field/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/frontend-gallery-slider-for-advanced-custom-field/assets/css/fagsfacf-public-css4e44.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/hero-banner-ultimate/assets/css/hbu-public-style5152.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/html5-videogallery-plus-player/assets/css/font/VideoJSd41d.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/html5-videogallery-plus-player/assets/css/magnific-popup95b8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/html5-videogallery-plus-player/assets/css/video-js95b8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/html5-videogallery-plus-player/assets/css/video-style95b8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/html5-videogallery-plus-player/assets/images/video-play-xxl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/html5-videogallery-plus-player/assets/js/video95b8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min03db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min68b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/social-logos/social-logos6de4.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/social-logos/social-logos6de4.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/social-logos/social-logosd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack03db.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/images/arrows-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/images/arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/images/carousel-sprite-2xe4da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/images/carousel-spritee4da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/images/collapse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/images/expand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/images/slide-nav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/img/slideshow-controls-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/img/slideshow-controls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/meta-slider-and-carousel-with-lightbox/assets/css/wp-igsp-public9632.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/meta-slider-and-carousel-with-lightbox/assets/images/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/meta-slider-and-carousel-with-lightbox/assets/images/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/popup-anything-on-click/assets/css/popupaoc-public-style1159.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/popup-anything-on-click/assets/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/portfolio-and-projects/assets/css/portfolio.jquery97de.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/portfolio-and-projects/assets/css/wp-pap-public97de.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/portfolio-and-projects/assets/images/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/portfolio-and-projects/assets/images/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/post-category-image-with-grid-and-slider/assets/css/ajax-loader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/post-category-image-with-grid-and-slider/assets/css/categoryimage-public4963.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/post-category-image-with-grid-and-slider/assets/images/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/post-category-image-with-grid-and-slider/assets/images/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/post-grid-and-filter-ultimate/assets/css/pgafu-publicc358.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/post-list-designer/assets/css/bld-public4963.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/pricing-tables-for-easy-digital-downloads/assets/css/ptf-pricing-tables20b9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/product-categories-designs-for-woocommerce/assets/css/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/product-categories-designs-for-woocommerce/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/product-categories-designs-for-woocommerce/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/product-categories-designs-for-woocommerce/assets/css/slickc358.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/product-categories-designs-for-woocommerce/assets/js/publicc358.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/recent-posts-widget-designer/assets/css/recent-post-widget-style5152.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/responsive-header-image-slider/css/responsiveimgsliderb12b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/responsive-header-image-slider/img/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/responsive-header-image-slider/img/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/responsive-header-image-slider/img/btns-next-prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/responsive-header-image-slider/img/pagination.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/responsive-header-image-slider/js/jquery.slides.minb12b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/search-and-navigation-popup/assets/css/sanpop-public-style5152.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/search-and-navigation-popup/assets/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/slider-and-carousel-plus-widget-for-instagram/assets/css/font-awesome.minb493.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/slider-and-carousel-plus-widget-for-instagram/assets/css/iscwp-publicb493.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/slider-and-carousel-plus-widget-for-instagram/assets/images/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/slider-and-carousel-plus-widget-for-instagram/assets/images/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/slider-and-carousel-plus-widget-for-instagram/assets/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/slider-and-carousel-plus-widget-for-instagram/assets/images/heart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sliderspack-all-in-one-image-sliders/assets/css/wp-spaios-public97e1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sliderspack-all-in-one-image-sliders/assets/images/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sliderspack-all-in-one-image-sliders/assets/images/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/smooth-scroll-by-wpos/assets/css/ssbywpos-style5152.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/smooth-scroll-by-wpos/assets/js/wp-ssbywpos-public5152.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-faq/css/jquery.accordiond617.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-faq/images/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-faq/js/jquery.accordiond617.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-header-image-slider/css/jquery.bxslider4e44.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-header-image-slider/images/bx_loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-header-image-slider/images/controls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-header-image-slider/js/jquery.bxslider.min4e44.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-news-and-widget/assets/css/stylenewseda1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-news-and-widget/assets/js/jquery.newstapeeda1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sp-news-and-widget/assets/js/sp-news-publiceda1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/stack-slider-3d-image-slider/assets/css/wp-sk-public4e44.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/stack-slider-3d-image-slider/assets/js/wp-sk-public4e44.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/swiper-slider-and-carousel/assets/css/wp-ssc-public62ea.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/ticker-ultimate/assets/css/wptu-front8d1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/ticker-ultimate/assets/images/ticker-arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/timeline-and-history-slider/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/timeline-and-history-slider/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/timeline-and-history-slider/assets/css/slick-slider-style9e1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woo-product-slider-and-carousel-with-category/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woo-product-slider-and-carousel-with-category/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woo-product-slider-and-carousel-with-category/assets/css/wcpscwc-public4e44.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woo-slick-related-product-slider/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woo-slick-related-product-slider/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woo-slick-related-product-slider/assets/css/wpwrps-publicf269.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-layout10cb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen10cb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce10cb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min10cb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min10cb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min10cb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-accordion-with-categories/shortcode/css/jquery.accordion4963.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-accordion-with-categories/shortcode/images/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-accordion-with-categories/shortcode/js/jquery.accordion4963.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-blog-and-widgets/css/styleblog51a2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-featured-content-and-slider/assets/css/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-featured-content-and-slider/assets/css/arrow-left-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-featured-content-and-slider/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-featured-content-and-slider/assets/css/arrow-right-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-featured-content-and-slider/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-featured-content-and-slider/assets/css/featured-content-style9e1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-featured-content-and-slider/assets/css/slick9e1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-logo-showcase-responsive-slider-slider/assets/css/logo-showcase605a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-logo-showcase-responsive-slider-slider/assets/images/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-logo-showcase-responsive-slider-slider/assets/images/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-modal-popup-with-cookie-integration/assets/css/wmpci-public9632.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-modal-popup-with-cookie-integration/assets/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-modal-popup-with-cookie-integration/assets/js/wmpci-popup9632.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-responsive-recent-post-slider/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-responsive-recent-post-slider/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-responsive-recent-post-slider/assets/css/recent-post-style4c56.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-slick-slider-and-image-carousel/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-slick-slider-and-image-carousel/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-slick-slider-and-image-carousel/assets/css/slick-slider-style1f22.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-team-showcase-and-slider/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-team-showcase-and-slider/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-team-showcase-and-slider/assets/css/teamshowcase-style51a2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-testimonial-with-widget/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-testimonial-with-widget/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-testimonial-with-widget/assets/css/testimonials-style254d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-trending-post-slider-and-widget/assets/css/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-trending-post-slider-and-widget/assets/css/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-trending-post-slider-and-widget/assets/css/wtpsw-publice7f0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-trending-post-slider-and-widget/assets/js/wtpsw-publice7f0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wpos-owl-carousel-ultimate/assets/css/owl.carousel4e44.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wpos-owl-carousel-ultimate/assets/css/owl.video.play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wpos-owl-carousel-ultimate/assets/css/wpocup-public4e44.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/css/foundation5697.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/css/normalize19ce.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/css/theme5697.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/Genericons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/Genericons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/Genericons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/Genericonsd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/fontawesome-webfont93e3.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/fontawesome-webfont93e3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/fontawesome-webfont93e3.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/fontawesome-webfont93e3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/fontawesome-webfont93e3.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/fontawesome-webfontd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/fonts/fonts5697.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/js/foundation.min5697.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/js/load-foundation4245.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/js/vendor/modernizrf7ff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/js/wpforge-functions5697.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/wponlinesupport-plugins/style5697.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-includes/css/dist/block-library/style.min3c21.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-includes/js/jquery/jquery-migrate.min330a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-includes/js/jquery/jqueryb8ff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-includes/js/wp-embed.min3c21.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www.facebook.com/angelyzha.html" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/config.php.copy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/private/config.php.copy" />
+        <option value="$PROJECT_DIR$/private/config.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/setasign/fpdi-fpdf" />
+      <path value="$PROJECT_DIR$/vendor/setasign/fpdf" />
+      <path value="$PROJECT_DIR$/vendor/setasign/fpdi" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+    </include_path>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/imun-final.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/php.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1221" />
+    <option name="height" value="621" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="imun-final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="imun-final" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a215e4e-8be5-478b-ab8c-c2ef0c7872a4" name="Default Changelist" comment="" />
+      <created>1554794553380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554794553380</updated>
+      <workItem from="1554794554916" duration="1097000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1097000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-2" width="1366" height="722" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3288364" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/private/config.php.copy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
