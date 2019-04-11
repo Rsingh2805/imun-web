@@ -777,7 +777,7 @@ function generateRandomString($length = 10) {
                                                                     </a>
                                                                 </li>
                                                                 <li class="next finish" style="display:none;">
-                                                                    <a>Finish</a>
+                                                                    <a id="register_submit">Finish</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -842,6 +842,46 @@ function generateRandomString($length = 10) {
 
 </script>
 <script>
+	// Rahul's code
+	function registerSubmit(){
+		// Please write validation rules here
+		let location = $('#location').val();
+		let firstname = $('#full_name').val();
+		let middlename = 'n';
+		let lastname = $('#full_name').val();
+		let sex = $('#sex').val();
+		let dob = $('#date_of_birth').val();
+		let email = $('#email').val();
+		let nationality = $('#nationality').val();
+		let residence = $('#country_of_residence').val();
+		let enrolled_as = $('#currently_enrolled').val();
+		let field_of_study = $('#major_field_of_study').val();
+		let univ_name = $('#high_school_name').val();
+		let food_preference = $('#food_preference').val();
+		let tshirt_size = $('#size_shirt').val();
+		let funded_by = "MYSELF";
+		let known_from = $('#about_mun').val();
+		let prev_experience = $('#previous_imun').val();
+		let referral_code = 'y';
+		let motivation_letter = $('#why_mun').val();
+		$.ajax({
+			url : '../private/API/register.php',
+			type: 'POST',
+			data: 'req=create&location='+location+'&firstname='+firstname+'&middlename='+middlename+'&lastname='+lastname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter,
+			success: function(data){
+				console.log(data);
+			}
+		})
+	}
+
+	$('#register_submit').on("click", function(){
+		registerSubmit();
+	})
+
+
+	// Code ends
+
+
 
 	function save(){
 		$("#form").validate({
