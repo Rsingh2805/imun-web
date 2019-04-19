@@ -144,6 +144,9 @@ color: #FFFFFF !important;
 }
 		
 @media screen and (min-width: 800px) {
+	.oo{
+		margin-left: 370px !important;
+	}
 	.butt{
 		padding: 4% 4% 4% 4% !important;
 	}
@@ -432,7 +435,7 @@ color: #FFFFFF !important;
            	.see{
            		top:289px;
            		left: 566px;
-           		background-color: #121e32a6 !important;
+           		background-color: #3d80efa6 !important;
            	}
 @media only screen and (max-width: 699px) {
 	.see{
@@ -648,7 +651,7 @@ color: #606060;
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand logo" href="index.html">
+					<a class="navbar-brand logo" href="index.php">
 						<span><img src = "images/logo.png" alt = "imun-logo" class = "imun_logo"></span>
 					
 						<p style="font-size: 15px !important">International <small><br>Model United Nations</small></p>				
@@ -662,14 +665,15 @@ color: #606060;
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Conferences
 								</a>
 							<ul class="dropdown-menu" style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
-								<li><a href="IMUN_2018.html" style="color: white;">IMUN 2018</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "IMUN_2019.html">IMUN Egypt 2019 </a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "RegistrationForm.html"> Registration</a></li>
+								<li><a href="IMUN_2018.html" style="color: white;">IMUN Thailand 2018</a></li><hr style="margin: 0px 10px 0px 10px">
+								<li><a href = "imun_vietnam.html"> IMUN Vietnam 2019</a></li><hr style="margin: 0px 10px 0px 10px">
+								<li><a href = "IMUN_2019.html">IMUN Egypt 2019 </a></li>
+								
 								
 							</ul>
 						</li>
 						
-						<li><a href="index.html#testi">Testimonials</a></li>
+					
 						<li class = "dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Connet With Us
 								</a>
@@ -683,7 +687,7 @@ color: #606060;
 						
 						
 						<li><a href="blog.html">Blogs</a></li>
-						<li><a href="index.html#con">Contact Us</a></li>
+						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
 				</div>
@@ -719,7 +723,7 @@ text-align: justify;
 color: #FFFFFF;">International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.</p>
 <!--						<button class = "btn btn-default"><a href = "http://www.internationalmun.org/RegistrationForm.php" style = "">REGISTER NOW</a></button>-->
 	<br><br>
-						<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;"><a  href="RegistrationForm.html" style="color: white; ">REGISTER</a></button><button style="float: left; background-color: #00800000; color: white; margin-left: 2%;" class = "btn btn-default" ><a class="my" href="Aboutus.html" style="font-family: Montserrat;
+						<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;"><a  href="RegistrationForm.php" style="color: white; ">REGISTER</a></button><button style="float: left; background-color: #00800000; color: white; margin-left: 2%;" class = "btn btn-default" ><a class="my" href="Aboutus.html" style="font-family: Montserrat;
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
@@ -811,7 +815,7 @@ color: #15477A;"> <span style = "color:rgb(21,71,122); ">Conferance</span></h2>
 											
 						<div class="swiper-slide">							
 								<div class="hero-image" style=" background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0) 28.58%, #121E32 99.52%), url('images/slider/1 (2).png');">
-  <div class="hero-text">
+  <div class="hero-text"  style="top: 60% !important;">
     <h2 style="font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
@@ -819,16 +823,10 @@ font-weight: bold;
 line-height: normal;
 text-align: center;
 
-color: #FFFFFF;">IMUN Hanoi 2019</h2>
+color: #FFFFFF;">IMUN Vietnam 2019</h2>
     
   </div>
-  <div class="hero-text2">
-   <a href="RegistrationForm.html"><button style="background: linear-gradient(254.81deg, #FFBA52 0%, #DC8F1A 100%);
-box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.25);
-border-radius: 50px; padding: 1% 1% 1% 1%; " class="butt">Register Now</button></a>
-    
-  </div>
-  <div class="hero-text3">
+         <div class="hero-text3"><a href="imun_vietnam.html">
     <h1 style="font-family: HelveticaNeue;
 font-size: 12px;
 line-height: normal;
@@ -838,39 +836,69 @@ color: #FFFFFF;;
 
 color: #FFFFFF;">Know More</h1>
     
-  </div>		</div>			
+  </a></div>
+ 
+		</div>			
 						</div>
 											
 						<div class="swiper-slide">							
 								<div class="hero-image" style=" background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0) 28.58%, #121E32 99.52%), url('images/slider/1 (3).png');">
-  <div class="hero-text" style="top: 75% !important;">
-   <a href="IMUN_2019.html"> <h2 style="font-family: Montserrat;
+  <div class="hero-text" style="top: 60% !important;">
+ <h2 style="font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
 
 line-height: normal;
 text-align: center;
 
-color: #FFFFFF;">IMUN Cario 2019</h2></a>
+color: #FFFFFF;">IMUN Egypt 2019</h2></a>
     
   </div>
- 
+  <div class="hero-text2"  style="top: 75% !important;">
+   <a href="RegistrationForm.php"><button style="background: linear-gradient(254.81deg, #FFBA52 0%, #DC8F1A 100%);
+box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.25);
+border-radius: 50px; padding: 1% 1% 1% 1%; " class="butt">Register Now</button></a>
+    
+  </div>
+   <div class="hero-text3">   <a href="IMUN_2019.html"> 
+    <h1 style="font-family: HelveticaNeue;
+font-size: 12px;
+line-height: normal;
+text-align: center;
+
+color: #FFFFFF;;
+
+color: #FFFFFF;">Know More</h1>
+    
+  </div></a>
  		</div>					
 						</div>
 											
 						<div class="swiper-slide">							
 							<div class="hero-image" style=" background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0) 28.58%, #121E32 99.52%), url('images/slider/1 (1).png');">
-  <div class="hero-text" style="top: 75% !important;">
-    <a href="IMUN_2018.html"><h2 style="font-family: Montserrat;
+  <div class="hero-text" style="top: 60% !important;">
+   <h2 style="font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
 
 line-height: normal;
 text-align: center;
 
-color: #FFFFFF;">IMUN Thailand 2018</h2></a>
+color: #FFFFFF;">IMUN Thailand 2018</h2>
     
   </div>
+     <div class="hero-text3">   <a href="IMUN_2018.html"> 
+    <h1 style="font-family: HelveticaNeue;
+font-size: 12px;
+line-height: normal;
+text-align: center;
+
+color: #FFFFFF;;
+
+color: #FFFFFF;">Know More</h1>
+    
+  </div></a>
+ 		</div>	
  
  		</div>					
 						</div>
@@ -904,7 +932,7 @@ color: #FFFFFF;">IMUN Thailand 2018</h2></a>
 <h2 style="font-family: Montserrat;
 font-style: normal;
 font-weight: 600;
-font-size: 18px;
+font-size: 22px;
 line-height: normal;
 text-align: center;
 
@@ -932,63 +960,40 @@ line-height: normal;
        url('khand/khand-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('khand/khand-v7-latin-700.svg#Khand') format('svg'); /* Legacy iOS */
 
-color: #15477A;">Partner Organisations</h2>
+color: #15477A;"> UN Partner Organisations</h2>
 		
 
 		</div>
 		<div class = "container con" >
 		<div class = "row patner2" id = "row-content">
+		
+			<div style="text-align: center;"  class="row">
+				
+				<div class="col-xs-4 col-sm-3 col-md-4 partner oo">
+					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
+						<a href = "https://www.undp.org/content/undp/en/home.html" target = "_blank"><img src="images/conf/logo (2).png" style="padding:10px 10px 10px 10px; height:100px; "></a>
+					</div>
+					<h5 class="patner_name"><b>UNDP</b></h5>
+				</div>
+				<div class="col-xs-4 col-sm-3 col-md-4 partner">
+					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75); text-align: center;">
+						<a href = "https://en.unesco.org/" target = "_blank"><img src="images/conf/logo (3).png" style="padding:10px 10px 10px 10px; height:100px; "></a>
+					</div>
+					<h5 class="patner_name"><b>UNESCO</b></h5>
+				</div>
+
+
+				
 			
-			<div >
 				
-				<div class="col-xs-4 col-sm-3 partner">
-					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
-						<a href = "http://www.internationalcareersfestival.org/static/6/romemun/presentation" target = "_blank"><img src="images/Partners/Rome_MUN.png" style="padding:10px 10px 10px 10px; height:100px; "></a>
-					</div>
-					<h5 class="patner_name"><b>Rome MUN</b></h5>
-				</div>
-				<div class="col-xs-4 col-sm-3 partner">
-					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
-						<a href = "https://teimun.org/" target = "_blank"><img src="images/Partners/TEIMUN.png" style="padding:10px 10px 10px 10px; height:100px; "></a>
-					</div>
-					<h5 class="patner_name"><b>TEIMUN</b></h5>
-				</div>
-
-
-				
-				<div class="col-xs-4 col-sm-3 partner">
-					<div style=" width:100px;   box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
-						<a href = "https://www.amunc.co/" target = "_blank"><img src="images/Partners/AMUNC.png" style="padding:10px 10px 10px 10px; height:100px; "></a>
-					</div>
-					<h5 class="patner_name"><b>AMUNK</b></h5>
-				</div>
-					<div class="col-xs-4 col-sm-3 partner">
-					<div style=" width:100px;   box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
-						<a href = "https://www.facebook.com/benildemun/" target = "_blank"><img src="images/Partners/Benilde_MUN.png" style="padding:10px 10px 10px 10px; height:100px; "></a>
-					</div>
-					<h5 class="patner_name"><b>Benilde MUN</b></h5>
-				</div>
-				
-                 <div class="col-xs-4 col-sm-3 partner">
+                 <div class="col-xs-4 col-sm-3 col-md-4 partner">
 					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
 						<a href = "https://thailand.iom.int/" target = "_blank"><img src="images/Partners/new.png" style="padding:15px 15px 15px 15px; height:100px; "></a>
 					</div>
-					<h5 class="patner_name"><b>Thailand IMO</b></h5>
+					<h5 class="patner_name"><b> IMO</b></h5>
 				</div>
 
-				<div class="col-xs-4 col-sm-3 partner">
-					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
-						<a href = "https://www.facebook.com/IR.StudentUpdates/?ref=br_rs" target = "_blank"><img src="images/Partners/IR_Student_Updates.png" style="padding:10px 10px 10px 10px; height:100px; "></a>
-					</div>
-					<h5 class="patner_name"><b>IR Student Updates</b></h5>
-
-				</div>
-				<div class="col-xs-4 col-sm-3 partner">
-					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
-						<a href = "https://zumun.ch/" target = "_blank"><img src="images/Partners/Zurich_MUN.png" style="padding:10px 10px 10px 10px; height:100px; width: 100px; border-radius: 190px;"></a>
-					</div>
-					<h5 class="patner_name"><b>Zurich MUN</b></h5>
-				</div>
+			
 				
 			</div>
 		</div>
@@ -1673,44 +1678,47 @@ line-height: normal;
 text-align: center;
 
 color: #15477A;">Say Something</span></b></h4>
+   <form id="contact-form" method="post" action="contact.php">
 							<p id="mail-status"></p>
 							<div style="padding: 0px 10px 0px 10px !important ; max-height: 60px;">
-								<label class="field" style="transform: translate(14px,35px) !important;
+								<label class="field" style="transform: translate(14px,25px) !important;
     background-color: white !important;
     color: rgb(21,71,122) !important;
     width: 80px;
     padding-left: 10px; ">Full name </label><span id="userName-info" class="info"></span><br>
-								<input type="text" name="userName" id="userName" class="form-control" style="border: 1px solid rgb(21,71,122) !important;">
+								<input type="text" name="userName" id="userName" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
 							</div>
 							<div style="padding: 0px 10px 0px 10px; max-height: 60px;">
-								<label class="field" style="transform: translate(14px,35px) !important;
+								<label class="field" style="transform: translate(14px,25px) !important;
     background-color: white !important;
     color: rgb(21,71,122) !important;
     width: 80px;
     padding-left: 10px;  ">Email Id</label><span id="userEmail-info" class="info"></span><br>
-								<input type="text" name="userEmail" id="userEmail" class="form-control" style="border: 1px solid rgb(21,71,122) !important;">
+								<input type="email" name="userEmail" id="userEmail" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
 							</div>
 								<div style="padding: 0px 10px 0px 10px ; max-height: 60px"    >
-								<label class="field" style="transform: translate(14px,35px) !important;
+								<label class="field" style="transform: translate(14px,25px) !important;
     background-color: white !important;
     color: rgb(21,71,122) !important;
     width: 80px;
     padding-left: 10px;  ">Subject</label><span id="userEmail-info" class="info"></span><br>
-								<input type="text" name="userEmail" id="userEmail" class="form-control" style="border: 1px solid rgb(21,71,122) !important;">
+								<input type="text" name="userSub" id="userSub" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
 							</div>
 							
 							<div style="padding: 0px 10px 0px 10px;">
-								<label class="field" style="transform: translate(14px,35px) !important;
+								<label class="field" style="transform: translate(14px,25px) !important;
     background-color: white !important;
     color: rgb(21,71,122) !important;
     width: 100px;
     padding-left: 10px; ">Your Message</label><span id="content-info" class="info"></span><br>
-								<textarea name="content" id="content" class="form-control" rows="3" style="margin: 0px -7px 0px 0px; width: 280px; min-height: 100px; border: 1px solid rgb(21,71,122)  !important;"></textarea>
+								<textarea name="content" id="content" class="form-control" rows="3" style="margin: 0px -7px 0px 0px; width: 280px; min-height: 100px; border: 1px solid rgb(21,71,122)  !important;" required></textarea>
 							</div>
+					
 							<br>
 							<div style="padding: 0px 10px 20px 10px">
 								<button name="submit" class="btnAction btn btn-primary" style="width: 280px; background-color:rgb(21,71,122) !important; ">Send</button>
 							</div>
+								</form>
 						</div>
 		</div>
 	</div>
@@ -1749,7 +1757,8 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 						
 					</div>
 					
-				</div>
+				</div><div>
+									<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;"><a  href="RegistrationForm.php" style="color: white; ">SUBSCRIBE US</a></button></div>
 				<br>
 				<div class="row" style="max-width: 980px;text-align: left;margin-left: 7%;padding-top: 5%;">
 					<div class="col-md-1">
@@ -1759,16 +1768,16 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 						<a href="Aboutus.html" style="color: white;">About Us</a>
 					</div>
 					<div class="col-md-2">
-						<a href="index.html#conf" style="color: white;">Conference</a>
+						<a href="index.php#conf" style="color: white;">Conference</a>
 					</div>
 					
 			
 					<div class="col-md-2">
-						<a href="index.html#testi" style="color: white;">Testimonials</a>
+						<a href="index.php#testi" style="color: white;">Testimonials</a>
 					</div>
 					<div class="col-md-2">
 						
-							<a href="index.html#con" style="color: white;">Contact Us
+							<a href="index.php#con" style="color: white;">Contact Us
 								</a>
 							
 					</div>
