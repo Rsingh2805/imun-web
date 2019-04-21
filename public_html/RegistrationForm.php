@@ -299,7 +299,7 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand logo" href="index.html">
+					<a class="navbar-brand logo" href="index.php">
 						<span><img src = "images/logo.png" alt = "imun-logo" class = "imun_logo"></span>
 					
 						<p style="font-size: 15px !important">International <small><br>Model United Nations</small></p>				
@@ -313,14 +313,15 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 							<a class="dropdown-toggle active1" data-toggle="dropdown" href="#">Conferences
 								</a>
 							<ul class="dropdown-menu droliui" style=" left:0; color: white; background-color: #0e3660;">
-								<li class="droliuili"><a href="IMUN_2018.html" style="color: white;">IMUN 2018</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li class="droliuili"><a href = "IMUN_2019.html">IMUN Egypt 2019 </a></li><hr style="margin: 0px 10px 0px 10px">
-								<li class="droliuili"><a href = "RegistrationForm.html"> Registration</a></li>
+								<li class="droliuili"><a href="IMUN_2018.html" style="color: white;">IMUN  Thailand</a></li><hr style="margin: 0px 10px 0px 10px">
+								<li class="droliuili"><a href = "imun_vietnam.html">IMUN Vietnam  </a></li>
+								<li class="droliuili"><a href = "IMUN_2019.html">IMUN Egypt</a></li><hr style="margin: 0px 10px 0px 10px">
+								
 								
 							</ul>
 						</li>
 						
-						<li><a href="index.html#testi">Testimonials</a></li>
+					
 						<li class = "dropdown droli2">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Connet With Us
 								</a>
@@ -334,7 +335,7 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 						
 						
 						<li><a href="blog.html">Blogs</a></li>
-						<li><a href="index.html#con">Contact Us</a></li>
+						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
 				</div>
@@ -777,7 +778,7 @@ function generateRandomString($length = 10) {
                                                                     </a>
                                                                 </li>
                                                                 <li class="next finish" style="display:none;">
-                                                                    <a id="register_submit">Finish</a>
+                                                                    <a>Finish</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -842,7 +843,7 @@ function generateRandomString($length = 10) {
 
 </script>
 <script>
-	// Rahul's code
+		// Rahul's code
 	function registerSubmit(){
 		// Please write validation rules here
 		let location = $('#location').val();
@@ -873,15 +874,12 @@ function generateRandomString($length = 10) {
 			}
 		})
 	}
-
 	$('#register_submit').on("click", function(){
 		registerSubmit();
 	})
+	// Rahul's code ends
 
-
-	// Code ends
-
-
+	
 
 	function save(){
 		$("#form").validate({
@@ -1013,16 +1011,16 @@ color: #3C3C3C; padding: 5% 5% 5% 5%"> Note: Committee and Country preferences w
 						<a href="Aboutus.html" style="color: white;">About Us</a>
 					</div>
 					<div class="col-md-2">
-						<a href="index.html#conf" style="color: white;">Conference</a>
+						<a href="index.php#conf" style="color: white;">Conference</a>
 					</div>
 					
 			
 					<div class="col-md-2">
-						<a href="index.html#testi" style="color: white;">Testimonials</a>
+						<a href="index.php#testi" style="color: white;">Testimonials</a>
 					</div>
 					<div class="col-md-2">
 						
-							<a href="index.html#con" style="color: white;">Contact Us
+							<a href="index.php#con" style="color: white;">Contact Us
 								</a>
 							
 					</div>
