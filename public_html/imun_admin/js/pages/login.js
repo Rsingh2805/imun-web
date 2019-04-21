@@ -40,6 +40,8 @@ function login(){
         data = JSON.parse(data);
         if (data["status"] === 'PASS'){
             window.location.href = "dashbord.php";
+        }else{
+             $('#login_validator2').text("Email or Password not match");
         }
     })
     return false;

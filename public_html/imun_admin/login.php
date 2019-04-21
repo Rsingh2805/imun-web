@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from dev.lorvent.com/admire/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Dec 2016 17:21:33 GMT -->
 <head>
     <title>IMUN | ADMIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +17,7 @@
 <body>
     <div class="preloader" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 100000; backface-visibility: hidden; background: #ffffff;">
         <div class="preloader_img" style="width: 200px; height: 200px; position: absolute; left: 48%; top: 48%; background-position: center; z-index: 999999">
-            <img src="img/loader.gif" style="width: 40px;" alt="loading...">
+            <img src="../images/loader.gif" style="width: 40px;" alt="loading...">
         </div>
     </div>
     <div class="container wow fadeInDown" data-wow-delay="0.5s" data-wow-duration="2s">
@@ -35,6 +33,7 @@
                         </div>
                         <div class="bg-white login_content login_border_radius">
                             <form onsubmit="return login()" id="login_validator" method="post" class="login_validator">
+                                <p id="login_validator2" style="color: red;"></p>
                                 <div class="form-group">
                                     <label for="email" class="form-control-label">E-mail</label>
                                     <div class="input-group">
@@ -69,9 +68,7 @@
                                             <a class="custom-control-description">Keep me logged in</a>
                                         </label>
                                     </div>
-                                    <div class="col-xs-6 text-xs-right forgot_pwd">
-                                        <a href="forgot_password.php" class="custom-control-description forgottxt_clr">Forgot password?</a>
-                                    </div>
+                                 
                                 </div>
                             </div>
                         

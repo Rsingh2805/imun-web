@@ -1,7 +1,6 @@
 <?php
 
 require_once(dirname(__FILE__).'/database_api.php');
-
 class Application{
     public static function getApplications($id=null){
         $db = new DBConn();
@@ -39,7 +38,7 @@ class Application{
                 ':prev_experience' => $prev_experience,
                 ':referral_code' => $referral_code,
                 ':motivation_letter' => $motivation_letter,
-                ':status' => 'PEN'
+                ':status' => 'PENDING'
             ));
         }catch (PDOException $e){
             echo $sql."<br>".$e->getMessage();
@@ -49,7 +48,7 @@ class Application{
     public static function acceptApplication($id){
         $db = new DBConn();
         $conn = $db->connection();
-        $sql = "UPDATE `application` SET `status`='ACC' WHERE `id`='$id'";
+        $sql = "UPDATE `application` SET `status`='ACCEPTED' WHERE `id`='$id'";
         $stmt = $conn->prepare($sql);
         try {
             $stmt->execute();
@@ -66,7 +65,7 @@ class Application{
     public static function rejectApplication($id){
         $db = new DBConn();
         $conn = $db->connection();
-        $sql = "UPDATE `application` SET `status`='REJ' WHERE `id`='$id'";
+        $sql = "UPDATE `application` SET `status`='REJECTED' WHERE `id`='$id'";
         $stmt = $conn->prepare($sql);
         try {
             $stmt->execute();

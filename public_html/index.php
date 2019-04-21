@@ -1,3 +1,12 @@
+<?php
+
+require_once('../private/DAO/database_api.php');
+  $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT * FROM application ORDER BY id DESC LIMIT 1 ";
+        $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+      
+?>
 <!DOCTYPE html>
 <html lang="en">
 	
@@ -144,6 +153,9 @@ color: #FFFFFF !important;
 }
 		
 @media screen and (min-width: 800px) {
+	.blink{
+		left:75% !important;
+	}
 	.oo{
 		margin-left: 370px !important;
 	}
@@ -693,8 +705,19 @@ color: #606060;
 				</div>
 			</div>
 		</nav><title>Home</title>
+<script type="text/javascript">
+	function blink(selector){
+$(selector).fadeOut('slow', function(){
+    $(this).fadeIn('slow', function(){
+        blink(this);
+    });
+});
+}
 
+blink('.blink');
+</script>
 <section id="imun-banner" class="section-banner" >
+
 	<div class="overlay" style="background: linear-gradient(270deg, #ffffff00 10%,#17233785 18%, #172337e3  100%); padding-top: 150px;">
 		<div class="container con" >
 			<div class = "banner-text" style="margin-left: 5%; ">
@@ -723,7 +746,7 @@ text-align: justify;
 color: #FFFFFF;">International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.</p>
 <!--						<button class = "btn btn-default"><a href = "http://www.internationalmun.org/RegistrationForm.php" style = "">REGISTER NOW</a></button>-->
 	<br><br>
-						<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;"><a  href="RegistrationForm.php" style="color: white; ">REGISTER</a></button><button style="float: left; background-color: #00800000; color: white; margin-left: 2%;" class = "btn btn-default" ><a class="my" href="Aboutus.html" style="font-family: Montserrat;
+					<a  href="RegistrationForm.php" style="color: white; ">	<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;">REGISTER</button></a><button style="float: left; background-color: #00800000; color: white; margin-left: 2%;" class = "btn btn-default" ><a class="my" href="Aboutus.html" style="font-family: Montserrat;
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
@@ -740,7 +763,16 @@ color: #FFFFFF;">Know More</a></button>
 									</div>
 								
 							</div>
-					</div><br>
+
+					</div>
+					<?php if (isset($stmt[0])) {
+						
+					 ?>
+					<div style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px; margin-top: 5%; float: left;  text-transform: uppercase;" class="blink"><b><?php echo $stmt[0]['full_name']; ?>  From  <?php echo $stmt[0]['nationality']; ?>  just Registered on IMUN</b></div><br>
+					<?php
+				}
+
+					?>
 
 				</div><!--End Banner Text--> 
 			</div>
@@ -1724,11 +1756,12 @@ color: #15477A;">Say Something</span></b></h4>
 	</div>
 </div>
 	
-	
-	
+
 </section>
 
+
 <section id="imun-footer" style="background-color:#0E3660 ;">
+
 			<div class="container con">
 				<div class="row">
 					<div class="col-md-4 niche" style="position: absolute;">
@@ -1758,7 +1791,9 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 					</div>
 					
 				</div><div>
-									<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;"><a  href="RegistrationForm.php" style="color: white; ">SUBSCRIBE US</a></button></div>
+					<form><input type="email" name="email" style="width: 35%; border-radius: 20px; border-color: blue;" placeholder="ENTER EMAIL ID TO SUBSCRIBE US">
+									<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; border-radius: 20px;"  ><a  style="color: white;  ">SUBSCRIBE US</a></button>
+								</form></div>
 				<br>
 				<div class="row" style="max-width: 980px;text-align: left;margin-left: 7%;padding-top: 5%;">
 					<div class="col-md-1">
@@ -1797,6 +1832,15 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 <script type="text/javascript" src="code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 <script>
+	function blink(selector){
+$(selector).fadeOut('slow', function(){
+    $(this).fadeIn('slow', function(){
+        blink(this);
+    });
+});
+}
+
+blink('.blink');
 
 	$(document).ready(function(){
 		$("#testimonial-slider").owlCarousel({
