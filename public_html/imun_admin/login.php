@@ -34,13 +34,13 @@
                             </h3>
                         </div>
                         <div class="bg-white login_content login_border_radius">
-                            <form action="dashbord.php" id="login_validator" method="post" class="login_validator">
+                            <form onsubmit="return login()" id="login_validator" method="post" class="login_validator">
                                 <div class="form-group">
                                     <label for="email" class="form-control-label">E-mail</label>
                                     <div class="input-group">
                                         <span class="input-group-addon input_email"><i
                                             class="fa fa-envelope text-primary"></i></span>
-                                        <input type="text" class="form-control  form-control-md" id="email" name="username" placeholder="E-mail">
+                                        <input type="text" class="form-control  form-control-md" id="username" name="username" placeholder="E-mail">
                                     </div>
                                 </div>
                                 <!--</h3>-->
@@ -55,7 +55,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <input type="submit" value="Log In" class="btn btn-primary btn-block login_button">
+                                            <input type="submit" value="Log In" class="btn btn-primary btn-block login_button" onclick="login()">
                                         </div>
                                     </div>
                                 </div>

@@ -14,18 +14,16 @@ class Application{
         return $stmt;
     }
 
-    public static function createApplication($location, $firstname, $middlename, $lastname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter){
+    public static function createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter){
         $db = new DBConn();
         $conn = $db->connection();
 
-        $sql = "INSERT INTO `application` (`conference_location`, `first_name`, `middle_name`, `last_name`, `sex`, `dob`, `email`, `nationality`, `residence_country`, `enrolled_as`, `field_of_study`, `univ_name`, `food_preference`, `tshirt_size`, `funded_by`, `known_from`, `prev_experience`, `referral_code`, `motivation_letter`, `status`) VALUES (:location, :firstname, :middlename, :lastname, :sex, :dob, :email, :nationality, :residence, :enrolled_as, :field_of_study, :univ_name, :food_preference, :tshirt_size, :funded_by, :known_from, :prev_experience, :referral_code, :motivation_letter, :status);";
+        $sql = "INSERT INTO `application` (`conference_location`, `full_name`, `sex`, `dob`, `email`, `nationality`, `residence_country`, `enrolled_as`, `field_of_study`, `univ_name`, `food_preference`, `tshirt_size`, `funded_by`, `known_from`, `prev_experience`, `referral_code`, `motivation_letter`, `status`) VALUES (:location, :fullname, :sex, :dob, :email, :nationality, :residence, :enrolled_as, :field_of_study, :univ_name, :food_preference, :tshirt_size, :funded_by, :known_from, :prev_experience, :referral_code, :motivation_letter, :status);";
         try {
             $stmt = $conn->prepare($sql);
             $stmt->execute(array(
                 ':location' => $location,
-                ':firstname' => $firstname,
-                ':middlename' => $middlename,
-                ':lastname' => $lastname,
+                ':fullname' => $fullname,
                 ':sex' => $sex,
                 ':dob' => $dob,
                 ':email' => $email,

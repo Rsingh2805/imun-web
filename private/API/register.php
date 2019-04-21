@@ -16,9 +16,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     switch ($_POST["req"]){
         case "create":
             $location = $_POST['location'];
-            $firstname = $_POST['firstname'];
-            $middlename = $_POST['middlename'];
-            $lastname = $_POST['lastname'];
+            $fullname = $_POST['fullname'];
             $sex = $_POST['sex'];
             $dob = $_POST['dob'];
             $email = $_POST['email'];
@@ -35,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             $referral_code = $_POST['referral_code'];
             $motivation_letter = $_POST['motivation_letter'];
 
-            Application::createApplication($location, $firstname, $middlename, $lastname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter);
+            Application::createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter);
             $data = array(
                 "status" => "SUCCESS"
             );
