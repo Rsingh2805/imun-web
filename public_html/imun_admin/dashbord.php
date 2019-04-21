@@ -1,27 +1,31 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="no-js" lang="en">
 
 
-<!-- Mirrored from dev.lorvent.com/admire/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Dec 2016 17:20:23 GMT -->
+
 <head>
     <meta charset="UTF-8">
        <title>IMUN | ADMIN</title>
+         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<style type="text/css">
+    td.details-control {
+    background: url('img/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('img/details_close.png') no-repeat center center;
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/logo1.ico" />
-
    <link type="text/css" rel="stylesheet" href="css/components.css" />
     <link type="text/css" rel="stylesheet" href="css/custom.css" />
-    <!--end of global styles-->
-    <!--plugin styles-->
     <link type="text/css" rel="stylesheet" href="vendors/select2/css/select2.min.css" />
-    <link type="text/css" rel="stylesheet" href="vendors/datatables/css/scroller.bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="vendors/datatables/css/colReorder.bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="vendors/datatables/css/dataTables.bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="css/pages/dataTables.bootstrap.css" />
-    <!-- end of plugin styles -->
-    <!--Page level styles-->
-    <link type="text/css" rel="stylesheet" href="css/pages/tables.css" />
+   
 
 
     
@@ -46,6 +50,8 @@
           padding: 2% 2% 2% 2%;
     }.dt-buttons {
         display: none !important;
+    }.active1{
+         background-color: grey; padding: 1% 1% 1% 1%; border-radius: 30px;color: white !important;
     }
 </style>
 </head>
@@ -120,34 +126,37 @@
                     <div class="row">
                         <div class="col-md-12">
                             <section id="my-account">
-                                <ul class="nav nav-tabs" id="tabs">
-                                    <a style="color: white; margin-left: 3%; margin-right: 3%;  background-color: grey; padding: 1% 1% 1% 1%; border-radius: 30px; " href="dashbord.php" class="active1" >EGYPT</a>|
-                                   <a style="color: #031635; margin-left: 3%; margin-right: 3%;" href="malasia.php" >MALASIA</a>
-                                </ul>
-                                <div class="tab-content my-account-tab-content">
-                                     <div class="tab-pane active" id="tab-egypt">
+                                                                <div class="tab-content my-account-tab-content">
+                                  
+
+
+
+                                        <div class="tab-pane active" id="tab-malasia">
                                            <div class="card m-t-35">
                         <div class="card-header bg-white">
-                            <i class="fa fa-table"> </i> Egypt
+                            <i class="fa fa-table"> </i> REGISTRATED CANDIDATES
                         </div>
                         <div class="card-block">
-                                  <div class="card-block p-t-25">
+                            
+                              <div class="card-block p-t-25">
                                         <div class="">
                                             <div class="pull-sm-right">
                                                 <div class="tools pull-sm-right"></div>
                                             </div>
                                         </div>
-                                        <table class="table table-striped table-bordered table-hover" id="sample_1">
+                                        <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important;">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                            <th>Cover Letter</th>
+                                                    <th>Conferance Location</th>
+                                                    <th> Registration Id</th>
+                                                    <th>Full Name</th>
+                                            <th>Nationality</th>                                                                                  <th>Registration  Date and Time</th>
                                             <th >Status</th>
-                                            <th >Time Stamp</th>
+                                            <th>View</th>
                                              <th >Control</th>
                                                 </tr>
                                             </thead>
-                                          <tbody><tr><td>Barbara</td><td>Oberbrunner</td><td>Pending</td><td>340-008-0893</td><td><a href="view.php" class="view">View</a><a href="" class="accept">Accept</a><a href="" class="reject">Reject</a></td></tr><tr><td>Barbara</td><td>Oberbrunner</td><td>Pending</td><td>340-008-0893</td><td><a href="view.php" class="view">View</a><a href="" class="accept">Accept</a><a href="" class="reject">Reject</a></td></tr></tbody>
+                                          
                                         </table>
                                     </div>
                         </div>
@@ -168,43 +177,153 @@
                     </div>
                 </div>
             </div>
-                    <!-- /.outer -->
+                   
                 </div>
-                <!-- /#content -->
+            
             </div>
         </div>
-        <!--wrapper-->
-
-        <!-- # right side -->
+     
     </div>
-    <!-- /#wrap -->
-    <!-- global scripts-->
-  <script type="text/javascript" src="js/components.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-    <!--end of global scripts-->
-    <!--plugin scripts-->
-    <script type="text/javascript" src="vendors/select2/js/select2.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="js/pluginjs/dataTables.tableTools.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/dataTables.colReorder.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/dataTables.bootstrap.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/dataTables.responsive.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/dataTables.rowReorder.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/buttons.colVis.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/buttons.bootstrap.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/buttons.print.min.js"></script>
-    <script type="text/javascript" src="vendors/datatables/js/dataTables.scroller.min.js"></script>
-    <!-- end of plugin scripts -->
-    <!--Page level scripts-->
-    <script type="text/javascript" src="js/pages/datatable.js"></script>
 
+  
+  
+     <script type="text/javascript">
 
+        $('.egypt').click(function(){
+            $('#tab-malasia').removeClass('active');
+            $('#tab-egypt').addClass('active');
+            $('.egypt').addClass('active1');
+            $('.mal').removeClass('active1');
+
+        });
+              $('.mal').click(function(){
+            $('#tab-egypt').removeClass('active');
+            $('#tab-malasia').addClass('active');
+            $('.mal').addClass('active1');
+            $('.egypt').removeClass('active1');
+
+        });
+
+    </script>
+      <script type="text/javascript" src="js/custom.js"></script>
+
+  <script type="text/javascript">
+    function format ( d ) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>E-mail :</td>'+
+            '<td>'+d.email+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Gender :</td>'+
+            '<td>'+d.sex+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Date Of Birth :</td>'+
+            '<td>'+d.dob+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Country of Residence :</td>'+
+            '<td>'+d.residence_country+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Currently enrolled as :</td>'+
+            '<td>'+d.enrolled_as+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Major Field of Study :</td>'+
+            '<td>'+d.field_of_study+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>University/Senior High School Name :</td>'+
+            '<td>'+d.univ_name+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>How do you know about international MUN/IMUN? :</td>'+
+            '<td>'+d.known_from+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Previous MUN experience? :</td>'+
+            '<td>'+d.prev_experience+'</td>'+
+        '</tr>'+
+         '<tr>'+
+            '<td>Food Preference :</td>'+
+            '<td>'+d.food_preference+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Size of T-shirt :</td>'+
+            '<td>'+d.tshirt_size+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Why do you think you must be choosen as a part of International MUN 2019? (in English)  :</td>'+
+            '<td>'+d.motivation_letter+'</td>'+
+        '</tr>'
+
+    '</table>';
+}
+ 
+$(document).ready(function() {
+
+    var table = $('#sample_2').DataTable( {
+        "ajax": "data.json",
+                 
+        "columns": [
+
+          { "data": "conference_location" }, 
+            { "data": "registration_id" },
+            { "data": "full_name" },
+            { "data": "nationality" },
+             { "data": "submission_time" },
+                 { "data": "status" },
+
+           {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           "",
+                "defaultContent": ''
+            },
+             {"data":"",
+                
+        "orderable":false,
+        "render": function (data, type, row) {
+ 
+       if ( row.status === 'PENDING') {
+            return '<button>Accept</button><button>Reject</button>';}
+ 
+            else {
+ 
+    return '<button disabled>Accept</button><button disabled>Reject</button>';
+ 
+}
+            },}
+        ],
+        "order": [[1, 'asc']]
+    } );
+     
+    // Add event listener for opening and closing details
+    $('#sample_2 tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+} );
+
+</script>
+
+   
 
 
 
 </body>
-
-<!-- Mirrored from dev.lorvent.com/admire/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Dec 2016 17:21:10 GMT -->
 </html>
