@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 22, 2019 at 04:13 PM
+-- Generation Time: Apr 22, 2019 at 04:20 PM
 -- Server version: 5.7.25-0ubuntu0.18.04.2
 -- PHP Version: 7.2.15-0ubuntu0.18.04.2
 
@@ -58,6 +58,25 @@ INSERT INTO `application` (`id`, `conference_location`, `full_name`, `sex`, `dob
 (3, 'EGY', 'Rahul', 'M', '2019-03-10', 'rsingh@cs.iitr.ac.in', 'Indian', 'India', 'GRAD', 'CSE', 'IIT Roorkee', 'VEG', 'L', 'PRT', 'Google', 'None', '', 'Some reasons!', 'ACC', '2019-03-28 05:34:17'),
 (4, 'EGY', 'Rahul Singh', 'Male', '1999-03-28', 'rs280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'large', 'MYSELF', 'None', 'None', 'y', 'I\'m Batman', 'ACC', '2019-04-11 04:10:33');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'root@gmail.com', '000000');
+
 --
 -- Indexes for dumped tables
 --
@@ -69,6 +88,12 @@ ALTER TABLE `application`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -77,6 +102,11 @@ ALTER TABLE `application`
 --
 ALTER TABLE `application`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
