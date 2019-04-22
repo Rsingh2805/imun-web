@@ -316,7 +316,7 @@ function updateTable(){
                 "render": function (data, type, row) {
 
                     if ( row.status === 'PEN') {
-                        return '<button data-id="'+row.id+'">Accept</button><button data-id="'+row.id+'">Reject</button>';}
+                        return '<button data-id="'+row.id+'" class="accept-app">Accept</button><button class="reject-app" data-id="'+row.id+'">Reject</button>';}
 
                     else {
 
@@ -344,8 +344,33 @@ function updateTable(){
             tr.addClass('shown');
         }
     } );
+
+    $('#sample_2 tbody').on('click', '.accept-app', function () {
+        acceptTable($(this).attr('data-id'));
+    });
+    $('#sample_2 tbody').on('click', '.reject-app', function () {
+        rejectTable($(this).attr('data-id'));
+    });
 }
- 
+
+function acceptTable(id){
+    $.post("./../../private/API/register.php", {
+        "req": "accept",
+        "id": id
+    }, function(data, status){
+        console.log(data);
+    })
+}
+
+function rejectTable(id){
+    $.post("./../../private/API/register.php", {
+        "req": "reject",
+        "id": id
+    }, function(data, status){
+        console.log(data);
+    })
+}
+
 $(document).ready(function() {
 
     updateTable()

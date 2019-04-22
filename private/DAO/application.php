@@ -80,4 +80,12 @@ class Application{
         }
 
     }
+
+    public static function getStatus($id, $dob){
+        $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT status FROM `application` WHERE `id`='$id' AND `dob`='$dob'";
+        $stmt = $conn->query($sql)->fetch(PDO::FETCH_ASSOC);
+        return $stmt;
+    }
 }

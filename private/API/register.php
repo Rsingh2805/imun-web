@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
                 $data = array(
                     "status" => "SUCCESS"
                 );
-                applicationAcceptedMail($app[0]["email"], $app[0]["first_name"], $app[0]["last_name"], $app[0]["nationality"]);
+                applicationAcceptedMail($app[0]["email"], $app[0]["full_name"], $app[0]["nationality"]);
             }else{
                 $data = array(
                     "status" => "ERROR",
@@ -80,6 +80,13 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             );
             applicationAcceptedMail($app[0]["email"], $app[0]["first_name"], $app[0]["last_name"], $app[0]["nationality"]);
             echo json_encode($data);
+            break;
+        case "status":
+            $id = $_POST["id"];
+            $dob = $_POST["dob"];
+
+            $app = Application::getStatus($id, $dob);
+            echo json_encode($app);
             break;
         default:
             break;

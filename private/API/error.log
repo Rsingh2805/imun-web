@@ -27,3 +27,115 @@
 [22-Apr-2019 11:38:36 Asia/Calcutta] Hello, errors!
 [22-Apr-2019 11:38:36 Asia/Calcutta] Hello, errors!
 [22-Apr-2019 11:38:36 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:26 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:26 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:26 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:26 Asia/Calcutta] PHP Notice:  Undefined index: first_name in /var/www/html/imun-final/private/API/register.php on line 51
+[22-Apr-2019 13:04:26 Asia/Calcutta] PHP Notice:  Undefined index: last_name in /var/www/html/imun-final/private/API/register.php on line 51
+[22-Apr-2019 13:04:30 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:30 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:30 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:30 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:30 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:30 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:39 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:39 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:04:39 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:05:50 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:05:50 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:05:50 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:05:50 Asia/Calcutta] PHP Notice:  Undefined index: first_name in /var/www/html/imun-final/private/API/register.php on line 51
+[22-Apr-2019 13:05:50 Asia/Calcutta] PHP Notice:  Undefined index: last_name in /var/www/html/imun-final/private/API/register.php on line 51
+[22-Apr-2019 13:08:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:08:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 13:08:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:01 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:01 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:01 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:18 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:18 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:18 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:27 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:27 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:16:27 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:18:36 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:18:36 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:18:36 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:19:28 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:19:28 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:19:28 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:21:58 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:21:58 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:21:58 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:23:31 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:23:31 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:23:31 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:32:46 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:32:46 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:32:46 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:33:57 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:33:57 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:33:57 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:34:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:34:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:34:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:35:33 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:35:33 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:35:33 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:43:27 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:43:27 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:43:27 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:43:27 Asia/Calcutta] PHP Notice:  Undefined offset: 0 in /var/www/html/imun-final/private/DAO/application.php on line 89
+[22-Apr-2019 14:46:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:11 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:11 Asia/Calcutta] PHP Notice:  Undefined offset: 0 in /var/www/html/imun-final/private/DAO/application.php on line 89
+[22-Apr-2019 14:46:24 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:24 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:24 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:50 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:50 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:50 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:51 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:51 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:51 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:46:51 Asia/Calcutta] PHP Notice:  Undefined offset: 0 in /var/www/html/imun-final/private/DAO/application.php on line 89
+[22-Apr-2019 14:47:16 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:47:16 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:47:16 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:47:40 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:47:40 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:47:40 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:47:40 Asia/Calcutta] PHP Notice:  Undefined offset: 0 in /var/www/html/imun-final/private/DAO/application.php on line 89
+[22-Apr-2019 14:47:49 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:47:49 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:47:49 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:52:38 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:52:38 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:52:38 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:52:38 Asia/Calcutta] PHP Notice:  Undefined offset: 0 in /var/www/html/imun-final/private/DAO/application.php on line 89
+[22-Apr-2019 14:52:58 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:52:58 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:52:58 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:52:58 Asia/Calcutta] PHP Notice:  Undefined offset: 0 in /var/www/html/imun-final/private/DAO/application.php on line 89
+[22-Apr-2019 14:54:16 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:54:16 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:54:16 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:54:57 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:54:57 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:54:57 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:03 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:03 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:03 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:24 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:24 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:24 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:55 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:55 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:56:55 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:57:36 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:57:36 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:57:36 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:58:03 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:58:03 Asia/Calcutta] Hello, errors!
+[22-Apr-2019 14:58:03 Asia/Calcutta] Hello, errors!

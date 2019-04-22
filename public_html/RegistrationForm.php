@@ -403,7 +403,7 @@ line-height: normal;
 text-align: center;
 
 color: #15477A;">Already Registered ? Check your result.</h4>
-			  <form id="resultForm" method="post" action="#" class="validate">
+			  <form id="resultForm" class="validate">
 
 			  	<div class = "form-group">
 									
@@ -414,11 +414,11 @@ color: #15477A;">Already Registered ? Check your result.</h4>
 							
 									<div class = "form-group">
 										<label  for="id" class="control-label">Id <span style = "color:indianred">*</span></label><br/>
-										<input type="text" name="id" class="form-control" id = "nationality" required>
+										<input type="text" name="id" class="form-control" id = "registration_id" required>
 									
 										
 									</div>
-									  <button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1" style="background-color: white; color:black; border-radius: 20px; font-size: 14px; float: right;">Check</button>
+									  <button onclick="checkStatus()" id="check-status" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1" style="background-color: white; color:black; border-radius: 20px; font-size: 14px; float: right;">Check</button>
 										</form>
 
 		</div>
@@ -442,7 +442,7 @@ color: #15477A;">Already Registered ? Check your result.</h4>
           <h4 class="modal-title">Result</h4>
         </div>
         <div class="modal-body">
-          <p>Your Application is - </p>
+          <p>Your Application is - <span id="status-result"></span></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -825,6 +825,25 @@ function generateRandomString($length = 10) {
                 </div>
 </section>
 <script>
+    function checkStatus(){
+        let registration_id = $('#registration_id').val();
+        let dob = $('#date_of_birth2').val();
+
+        registration_id = parseInt(registration_id.substr(3, registration_id.length));
+        console.log(registration_id);
+        console.log(dob);
+        $.post("./../private/API/register.php", {
+            "req": "status",
+            "id": registration_id,
+            "dob": dob
+        }, function(data, status){
+            console.log(JSON.parse(data));
+            if(data){
+                data = JSON.parse(data);
+                $('#status-result').text(data["status"]);
+            }
+        })
+    }
 
 
 	$(function () {
