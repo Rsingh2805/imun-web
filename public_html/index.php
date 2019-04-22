@@ -1791,9 +1791,10 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 					</div>
 					
 				</div><div>
-					<form><input type="email" name="email" style="width: 35%; border-radius: 20px; border-color: blue;" placeholder="ENTER EMAIL ID TO SUBSCRIBE US">
-									<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; border-radius: 20px;"  ><a  style="color: white;  ">SUBSCRIBE US</a></button>
-								</form></div>
+					<form id="subscribe-form">
+                        <input type="email" name="subscribe-email" id="subscribe-email" style="width: 35%; border-radius: 20px; border-color: blue;" placeholder="ENTER EMAIL ID TO SUBSCRIBE US">
+                        <button id="subscribe-submit" class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; border-radius: 20px;"  ><a  style="color: white;  ">SUBSCRIBE US</a></button>
+                    </form></div>
 				<br>
 				<div class="row" style="max-width: 980px;text-align: left;margin-left: 7%;padding-top: 5%;">
 					<div class="col-md-1">
@@ -1873,6 +1874,20 @@ blink('.blink');
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/gamma.js"></script>
 		<script type="text/javascript">
+//            Rahul's code
+        $('#subscribe-submit').on("click", function(){
+            let email = $('#subscribe-email').val();
+            $.ajax({
+                url : '../private/API/newsletter.php',
+                type: 'POST',
+                data: 'req=add&email='+email,
+                success: function(data){
+                    if(JSON.parse(data)["status"]=='SUCCESS'){
+                    //    handlesuccess
+                    }
+                }
+            })
+        });
 			
 			$(function() {
 

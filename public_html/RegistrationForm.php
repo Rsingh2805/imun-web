@@ -888,7 +888,7 @@ function generateRandomString($length = 10) {
 			type: 'POST',
 			data: 'req=create&location='+location+'&fullname='+fullname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter,
 			success: function(data){
-				if (data=="Email Exist") {
+				if (JSON.parse(data)["status"] =="EXIST") {
 						$("#get_id").load("get_id2.php");
 							$("#get_id").css("color","red");
 					

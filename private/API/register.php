@@ -42,9 +42,11 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
          $stmt = $conn->query($sql)->fetch(PDO::FETCH_ASSOC);
        
         if ($stmt != null) {
-           $data =  "Email Exist";
+           $data =  array(
+               "status" => "EXIST"
+           );
         
-            echo $data ;
+            echo json_encode($data) ;
             break;
         }else{
 

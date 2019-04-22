@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 22, 2019 at 04:20 PM
+-- Generation Time: Apr 22, 2019 at 06:47 PM
 -- Server version: 5.7.25-0ubuntu0.18.04.2
--- PHP Version: 7.2.15-0ubuntu0.18.04.2
+-- PHP Version: 7.2.17-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -56,7 +56,27 @@ CREATE TABLE `application` (
 INSERT INTO `application` (`id`, `conference_location`, `full_name`, `sex`, `dob`, `email`, `nationality`, `residence_country`, `enrolled_as`, `field_of_study`, `univ_name`, `food_preference`, `tshirt_size`, `funded_by`, `known_from`, `prev_experience`, `referral_code`, `motivation_letter`, `status`, `submission_time`) VALUES
 (1, 'MAL', 'Rahul', 'M', '2019-03-08', 'rs280599@gmail.com', 'Indian', 'India', 'SNRH', 'CSE', 'IIT Roorkee', 'VEG', 'S', 'PRT', 'Google', 'None', '', 'Im batman', 'PEN', '2019-03-27 18:04:53'),
 (3, 'EGY', 'Rahul', 'M', '2019-03-10', 'rsingh@cs.iitr.ac.in', 'Indian', 'India', 'GRAD', 'CSE', 'IIT Roorkee', 'VEG', 'L', 'PRT', 'Google', 'None', '', 'Some reasons!', 'ACC', '2019-03-28 05:34:17'),
-(4, 'EGY', 'Rahul Singh', 'Male', '1999-03-28', 'rs280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'large', 'MYSELF', 'None', 'None', 'y', 'I\'m Batman', 'ACC', '2019-04-11 04:10:33');
+(4, 'EGY', 'Rahul Singh', 'Male', '1999-03-28', 'rs280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'large', 'MYSELF', 'None', 'None', 'y', 'I\'m Batman', 'ACC', '2019-04-11 04:10:33'),
+(5, 'Egypt', 'Rahul', 'Male', '1999-03-28', 'ra280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'small', 'MYSELF', 'None', 'None', 'y', 'None', 'PENDING', '2019-04-21 17:12:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subscriber`
+--
+
+CREATE TABLE `subscriber` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subscriber`
+--
+
+INSERT INTO `subscriber` (`id`, `email`) VALUES
+(2, 'damn@gmail.com'),
+(1, 'rsingh@cs.iitr.ac.in');
 
 -- --------------------------------------------------------
 
@@ -88,6 +108,13 @@ ALTER TABLE `application`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `subscriber`
+--
+ALTER TABLE `subscriber`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -101,7 +128,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `subscriber`
+--
+ALTER TABLE `subscriber`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `user`
 --
