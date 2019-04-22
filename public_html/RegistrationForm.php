@@ -778,7 +778,7 @@ function generateRandomString($length = 10) {
                                                                     </a>
                                                                 </li>
                                                                 <li class="next finish" style="display:none;">
-                                                                    <a>Finish</a>
+                                                                    <a id="register_submit">Finish</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -847,9 +847,7 @@ function generateRandomString($length = 10) {
 	function registerSubmit(){
 		// Please write validation rules here
 		let location = $('#location').val();
-		let firstname = $('#full_name').val();
-		let middlename = 'n';
-		let lastname = $('#full_name').val();
+		let fullname = $('#full_name').val();
 		let sex = $('#sex').val();
 		let dob = $('#date_of_birth').val();
 		let email = $('#email').val();
@@ -868,13 +866,14 @@ function generateRandomString($length = 10) {
 		$.ajax({
 			url : '../private/API/register.php',
 			type: 'POST',
-			data: 'req=create&location='+location+'&firstname='+firstname+'&middlename='+middlename+'&lastname='+lastname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter,
+			data: 'req=create&location='+location+'&fullname='+fullname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter,
 			success: function(data){
 				console.log(data);
 			}
 		})
 	}
 	$('#register_submit').on("click", function(){
+	    console.log("hi");
 		registerSubmit();
 	})
 	// Rahul's code ends

@@ -27,13 +27,13 @@ function configure_PHPMailer(){
     return $mail;
 }
 
-function registeredSuccessfullyMail($email, $first, $last){
+function registeredSuccessfullyMail($email, $fullname){
     $mail = configure_PHPMailer();
-    $mail->addAddress($email, $first);
-    $mail->Subject = $first.' '.$last.', are you the Agent of Change?';
+    $mail->addAddress($email, $fullname);
+    $mail->Subject = $fullname.', are you the Agent of Change?';
 
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
-    $html = str_replace("CONSTANTVAR1",$first.' '.$last, file_get_contents(dirname(__FILE__).'/mail.html'));
+    $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/mail.html'));
     $message = $mail->msgHTML($html, dirname(__FILE__));
     $mail->addAttachment(dirname(__FILE__).'/register/Proposal_AYIMUN_2019.pdf');
     $mail->addAttachment(dirname(__FILE__).'/register/PROPOSAL FOR PARENTS AYIMUN.pdf');
@@ -44,16 +44,16 @@ function registeredSuccessfullyMail($email, $first, $last){
     }
 }
 
-function applicationAcceptedMail($email, $first, $last, $nationality){
+function applicationAcceptedMail($email, $fullname, $nationality){
     $mail = configure_PHPMailer();
-    $mail->addAddress($email, $first);
+    $mail->addAddress($email, $fullname);
     $mail->Subject = 'Asia Youth International MUN 2019 : Announcement';
 
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
-    $html = str_replace("CONSTANTVAR1",$first.' '.$last, file_get_contents(dirname(__FILE__).'/acceptance.html'));
+    $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/acceptance.html'));
     $message = $mail->msgHTML($html, dirname(__FILE__));
     // $message = $mail->msgHTML('<img src="/register/reg-unnamed.jpg">', dirname(__FILE__));
-    $mail->addStringAttachment(getLOAPdf($first.' '.$last, $nationality), 'loa.pdf');
+    $mail->addStringAttachment(getLOAPdf($fullname, $nationality), 'loa.pdf');
     if(!$mail->send()){
         return false;
     }else{

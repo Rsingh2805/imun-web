@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user'])){
+    header('Location: ./login.php');
+}
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -262,50 +269,70 @@ tr.shown td.details-control {
 
     '</table>';
 }
- 
-$(document).ready(function() {
+function pad(n, width, z) {
+    z = z || '0';
+    n = n + '';
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
 
+function get_id(el){
+    let registration_id = '';
+    registration_id += el['conference_location'].substr(0,3).toUpperCase();
+    registration_id += pad(el['id'], 6);
+    return registration_id;
+}
+
+function updateTable(){
     var table = $('#sample_2').DataTable( {
-        "ajax": "data.json",
-                 
+        "ajax": {
+            "url": "./../../private/API/dashboard.php",
+            "dataSrc": function(json) {
+                console.log(json);
+                $.each(json, function(index, el){
+                    el["registration_id"] = get_id(el);
+                });
+                return json;
+            }
+        },
+
         "columns": [
 
-          { "data": "conference_location" }, 
+            { "data": "conference_location" },
             { "data": "registration_id" },
             { "data": "full_name" },
             { "data": "nationality" },
-             { "data": "submission_time" },
-                 { "data": "status" },
+            { "data": "submission_time" },
+            { "data": "status" },
 
-           {
+            {
                 "className":      'details-control',
                 "orderable":      false,
                 "data":           "",
                 "defaultContent": ''
             },
-             {"data":"",
-                
-        "orderable":false,
-        "render": function (data, type, row) {
- 
-       if ( row.status === 'PENDING') {
-            return '<button>Accept</button><button>Reject</button>';}
- 
-            else {
- 
-    return '<button disabled>Accept</button><button disabled>Reject</button>';
- 
-}
-            },}
+            {"data":"",
+
+                "orderable":false,
+                "render": function (data, type, row) {
+
+                    if ( row.status === 'PEN') {
+                        return '<button data-id="'+row.id+'">Accept</button><button data-id="'+row.id+'">Reject</button>';}
+
+                    else {
+
+                        return '<button disabled>Accept</button><button disabled>Reject</button>';
+
+                    }
+                },}
         ],
         "order": [[1, 'asc']]
     } );
-     
+
     // Add event listener for opening and closing details
     $('#sample_2 tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = table.row( tr );
- 
+
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
@@ -317,6 +344,11 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     } );
+}
+ 
+$(document).ready(function() {
+
+    updateTable()
 } );
 
 </script>

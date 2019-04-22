@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             $data = array(
                 "status" => "SUCCESS"
             );
-            registeredSuccessfullyMail($email, $firstname, $lastname);
+            registeredSuccessfullyMail($email, $fullname);
             echo json_encode($data);
             break;
         case "accept":
