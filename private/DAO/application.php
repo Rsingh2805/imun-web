@@ -40,6 +40,9 @@ class Application{
                 ':motivation_letter' => $motivation_letter,
                 ':status' => 'PENDING'
             ));
+            $sql = "SELECT * FROM `application` WHERE `email`='$email' ";
+            $stmt = $conn->query($sql)->fetch(PDO::FETCH_ASSOC);
+            return $stmt;
         }catch (PDOException $e){
             echo $sql."<br>".$e->getMessage();
         }

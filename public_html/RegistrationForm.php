@@ -842,6 +842,8 @@ function generateRandomString($length = 10) {
             if(data){
                 data = JSON.parse(data);
                 $('#status-result').text(data["status"]);
+            }else{
+                $('#status-result').text("Incorrect Details");
             }
         })
     }
@@ -889,11 +891,11 @@ function generateRandomString($length = 10) {
 			data: 'req=create&location='+location+'&fullname='+fullname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter,
 			success: function(data){
 				if (JSON.parse(data)["status"] =="EXIST") {
-						$("#get_id").load("get_id2.php");
+						$("#get_id").text('Error....Email Id Already Registered Try With Diffrent Email Id.');
 							$("#get_id").css("color","red");
 					
-				}else{
-				$("#get_id").load("get_id.php");
+				}else if(JSON.parse(data)["status"] =="SUCCESS"){
+				$("#get_id").text(JSON.parse(data)["id"]);
 			}
 			}
 		})

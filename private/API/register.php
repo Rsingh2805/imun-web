@@ -43,19 +43,20 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
        
         if ($stmt != null) {
            $data =  array(
-               "status" => "EXIST"
+               "status" => "EXIST",
+               "id" => strtoupper(substr($stmt["conference_location"], 0, 3)).str_pad(strval($stmt['id']), 6, '0', STR_PAD_LEFT)
            );
         
             echo json_encode($data) ;
             break;
         }else{
 
-            Application::createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter);
+            $stmt = Application::createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter);
             $data = array(
-                "status" => $stmt
+                "status" => "SUCCESS",
+                "id" => strtoupper(substr($stmt["conference_location"], 0, 3)).str_pad(strval($stmt['id']), 6, '0', STR_PAD_LEFT)
             );
            $mail= registeredSuccessfullyMail($email, $fullname);
-           print_r($mail);
             echo json_encode($data);
             break;}
         case "accept":
