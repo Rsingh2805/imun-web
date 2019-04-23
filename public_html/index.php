@@ -144,6 +144,9 @@ color: #FFFFFF !important;
 }
 		
 @media screen and (min-width: 800px) {
+	.blink{
+		left:75% !important;
+	}
 	.oo{
 		margin-left: 370px !important;
 	}
@@ -693,11 +696,22 @@ color: #606060;
 				</div>
 			</div>
 		</nav><title>Home</title>
+<script type="text/javascript">
+	function blink(selector){
+$(selector).fadeOut('slow', function(){
+    $(this).fadeIn('slow', function(){
+        blink(this);
+    });
+});
+}
 
+blink('.blink');
+</script>
 <section id="imun-banner" class="section-banner" >
+
 	<div class="overlay" style="background: linear-gradient(270deg, #ffffff00 10%,#17233785 18%, #172337e3  100%); padding-top: 150px;">
 		<div class="container con" >
-			<div class = "banner-text" style="margin-left: 5%; ">
+			<div class = "banner-text" style="margin-left: 5%; "><div style="float: right; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: white; padding: 10px 10px 10px 10px; border-radius: 20px; position: absolute; top: -15%;left: 50%" class="blink">Mr XYX from XYZ just registreted on IMUN</div>
 				<div class = "row">
 					<div class = "col-md-2"></div>
 					<div class = "col-xs-12 col-sm-12 col-md-12 col-xl-8">
@@ -1797,6 +1811,15 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 <script type="text/javascript" src="code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 <script>
+	function blink(selector){
+$(selector).fadeOut('slow', function(){
+    $(this).fadeIn('slow', function(){
+        blink(this);
+    });
+});
+}
+
+blink('.blink');
 
 	$(document).ready(function(){
 		$("#testimonial-slider").owlCarousel({

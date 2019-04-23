@@ -442,7 +442,8 @@ color: #15477A;">Already Registered ? Check your result.</h4>
           <h4 class="modal-title">Result</h4>
         </div>
         <div class="modal-body">
-          <p>Your Application is - <span id="status-result"></span></p>
+        
+          <p>Status of Your Application: <span id="status-result">Please Enter Correct Id or Date of birth</span></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -801,9 +802,9 @@ function generateRandomString($length = 10) {
                                                                 <h4 class="modal-title">Thank You</h4>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <p>You Registreted Successfully.</p>
-                                                                <p>Your Id is:- <?php echo generateRandomString();
-                                                                ?>(Save your Id it will help to check your result)</p>
+                                                                <p>Your Apllication Submited Successfully.</p>
+                                                                <p>Your Id :- <?php echo generateRandomString();
+                                                                ?></p><p>(Save your Id it will help to check your result)</p>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default"

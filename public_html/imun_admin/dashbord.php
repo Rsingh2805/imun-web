@@ -32,7 +32,10 @@ tr.shown td.details-control {
    <link type="text/css" rel="stylesheet" href="css/components.css" />
     <link type="text/css" rel="stylesheet" href="css/custom.css" />
     <link type="text/css" rel="stylesheet" href="vendors/select2/css/select2.min.css" />
-   
+  <link type="text/css" rel="stylesheet" href="vendors/c3/css/c3.min.css">
+  <link type="text/css" rel="stylesheet" href="vendors/toastr/css/toastr.min.css">
+  <link type="text/css" rel="stylesheet" href="vendors/switchery/css/switchery.min.css">
+
 
 
     
@@ -89,18 +92,12 @@ tr.shown td.details-control {
                     
                         <div class="btn-group">
                             <div class="user-settings no-bg">
-                                <button type="button" class="btn btn-default no-bg Prince_btn" data-toggle="dropdown">
-                                    <img src="../images/logo.png" class="admin_img2 rounded-circle avatar-img" alt="avatar" style="height: unset !important;">
-                                    <strong>Admin</strong>
-                                    <span class="fa fa-sort-down white_bg"></span>
+                                <button type="button" class="btn btn-default no-bg Prince_btn" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="../images/logo.png" class="admin_img2 rounded-circle avatar-img" alt="avatar">
+                                    <strong>Logout</strong>
+                                
                                 </button>
-                                <div class="dropdown-menu admire_admin">
-                                   
-                                  
-    
-                                    <a class="dropdown-item" href="login.php"><i class="fa fa-sign-out"></i>
-                                        Log Out</a>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>
@@ -315,7 +312,7 @@ function updateTable(){
                 "orderable":false,
                 "render": function (data, type, row) {
 
-                    if ( row.status === 'PEN') {
+                    if ( row.status === 'PENDING') {
                         return '<button data-id="'+row.id+'" class="accept-app">Accept</button><button class="reject-app" data-id="'+row.id+'">Reject</button>';}
 
                     else {

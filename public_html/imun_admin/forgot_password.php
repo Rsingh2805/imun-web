@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from dev.lorvent.com/admire/forgot_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Dec 2016 17:27:23 GMT -->
 <head>
    <title>IMUN | ADMIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
