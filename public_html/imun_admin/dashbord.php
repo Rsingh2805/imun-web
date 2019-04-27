@@ -94,7 +94,7 @@ tr.shown td.details-control {
                             <div class="user-settings no-bg">
                                 <button type="button" class="btn btn-default no-bg Prince_btn" data-toggle="dropdown" aria-expanded="false">
                                     <img src="../images/logo.png" class="admin_img2 rounded-circle avatar-img" alt="avatar">
-                                    <strong>Logout</strong>
+                                 <strong>   <a href="logout.php">Logout</a></strong>
                                 
                                 </button>
                               
@@ -138,7 +138,7 @@ tr.shown td.details-control {
                                         <div class="tab-pane active" id="tab-malasia">
                                            <div class="card m-t-35">
                         <div class="card-header bg-white">
-                            <i class="fa fa-table"> </i> REGISTRATED CANDIDATES
+                            <i class="fa fa-table"> </i> REGISTERED CANDIDATES
                         </div>
                         <div class="card-block">
                             

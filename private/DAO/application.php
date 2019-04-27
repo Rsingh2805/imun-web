@@ -1,7 +1,6 @@
 <?php
 
 require_once(dirname(__FILE__).'/database_api.php');
-
 class Application{
     public static function getApplications($id=null){
         $db = new DBConn();

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -413,7 +414,7 @@ color: #15477A;">Already Registered ? Check your result.</h4>
 									</div>
 							
 									<div class = "form-group">
-										<label  for="id" class="control-label">Id <span style = "color:indianred">*</span></label><br/>
+										<label  for="id" class="control-label">Registration Id <span style = "color:indianred">*</span></label><br/>
 										<input type="text" name="id" class="form-control" id = "registration_id" required>
 									
 										
@@ -422,7 +423,7 @@ color: #15477A;">Already Registered ? Check your result.</h4>
 										</form>
 
 		</div>
-		
+	
 	</div>
 </section>
 
@@ -442,7 +443,7 @@ color: #15477A;">Already Registered ? Check your result.</h4>
           <h4 class="modal-title">Result</h4>
         </div>
         <div class="modal-body">
-        
+
           <p>Status of Your Application: <span id="status-result">Please Enter Correct Id or Date of birth</span></p>
         </div>
         <div class="modal-footer">
@@ -799,12 +800,11 @@ function generateRandomString($length = 10) {
                                                             <div class="modal-header">
                                                                 <button type="button" class="close"
                                                                         data-dismiss="modal">&times;</button>
-                                                                <h4 class="modal-title">Thank You</h4>
+                                                              
                                                             </div>
                                                             <div class="modal-body">
-                                                                <p>Your Apllication Submited Successfully.</p>
-                                                                <p>Your Id :- <?php echo generateRandomString();
-                                                                ?></p><p>(Save your Id it will help to check your result)</p>
+                                                                 <p>Wait for 5 Sec To update Your Registration Id </p>
+                                                                <p>Your Registration Id :- <span id="get_id"></span></p><p>(Save your Id it will help to check your result)</p>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default"
@@ -888,13 +888,20 @@ function generateRandomString($length = 10) {
 			type: 'POST',
 			data: 'req=create&location='+location+'&fullname='+fullname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter,
 			success: function(data){
-				console.log(data);
+				if (data=="Email Exist") {
+						$("#get_id").load("get_id2.php");
+							$("#get_id").css("color","red");
+					
+				}else{
+				$("#get_id").load("get_id.php");
+			}
 			}
 		})
 	}
 	$('#register_submit').on("click", function(){
 	    console.log("hi");
 		registerSubmit();
+
 	})
 	// Rahul's code ends
 

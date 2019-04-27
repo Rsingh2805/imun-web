@@ -7,6 +7,8 @@ error_log( "Hello, errors!" );
 //exit(dirname(__FILE__).'/../functions/mail.php');
 require_once dirname(__FILE__).'/../lib/mail/mail.php';
 require_once dirname(__FILE__).'/../DAO/application.php';
+
+require_once dirname(__FILE__).'/../DAO/database_api.php';
 //require dirname(__FILE__).'/../functions/mail.php';
 
 if ($_SERVER['REQUEST_METHOD']=='GET'){
@@ -33,20 +35,34 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             $referral_code = $_POST['referral_code'];
             $motivation_letter = $_POST['motivation_letter'];
 
+               $db = new DBConn();
+        $conn = $db->connection();
+
+        $sql = "SELECT * FROM `application` WHERE `email`='$email' ";
+         $stmt = $conn->query($sql)->fetch(PDO::FETCH_ASSOC);
+       
+        if ($stmt != null) {
+           $data =  "Email Exist";
+        
+            echo $data ;
+            break;
+        }else{
+
             Application::createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter);
             $data = array(
-                "status" => "SUCCESS"
+                "status" => $stmt
             );
-            registeredSuccessfullyMail($email, $fullname);
+           $mail= registeredSuccessfullyMail($email, $fullname);
+           print_r($mail);
             echo json_encode($data);
-            break;
+            break;}
         case "accept":
             $id = $_POST["id"];
             $result = Application::acceptApplication($id);
             if($result==true){
                 $app = Application::getApplications($id);
                 $data = array(
-                    "status" => "SUCCESS"
+                    "status" => $mail
                 );
                 applicationAcceptedMail($app[0]["email"], $app[0]["full_name"], $app[0]["nationality"]);
             }else{
