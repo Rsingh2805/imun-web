@@ -8,18 +8,7 @@ $mail->SMTPDebug = 1;
 $mail->Debugoutput = 'html';
 
 
-// $mail->Host = "server47.hostingraja.in";
-// $mail->Port =465;
-// $mail->SMTPAuth = true;
-// $mail->SMTPSecure = 'ssl';
-// $mail->Username = "no-reply@staro.in";
-// $mail->Password = "y~QdpUB5F3e";
 
-// $mail->Host = "mail.staro.in";
-// $mail->Port =587;
-// $mail->SMTPAuth = true;
-// $mail->Username = "no-reply@staro.in";
-// $mail->Password = "y~QdpUB5F3e";
 
 $mail->Host = "smtp.gmail.com";
 $mail->Port =587;
