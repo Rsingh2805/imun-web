@@ -17,13 +17,25 @@ function configure_PHPMailer(){
     $mail = new PHPMailer;
     $mail->isSMTP();
     $mail->SMTPDebug = CONFIG['smtp']['debug']; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
+    $mail->Debugoutput = function($str, $level){
+        file_put_contents(dirname(__FILE__).'/email-error.log', $str);
+    };
     $mail->Host = CONFIG['smtp']['host']; // use $mail->Host = gethostbyname('smtp.gmail.com'); // if your network does not support SMTP over IPv6
     $mail->Port = CONFIG['smtp']['port']; // TLS only
     $mail->SMTPSecure = 'tls'; // ssl is depracated
     $mail->SMTPAuth = true;
     $mail->Username = CONFIG['smtp']['email'];
     $mail->Password = CONFIG['smtp']['pass'];
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );
     $mail->setFrom(CONFIG['smtp']['email'], CONFIG['smtp']['name']);
+    //Set an alternative reply-to address
+    $mail->addReplyTo(CONFIG['smtp']['email'], CONFIG['smtp']['name']);
     return $mail;
 }
 
@@ -37,7 +49,9 @@ function registeredSuccessfullyMail($email, $fullname){
     $message = $mail->msgHTML($html, dirname(__FILE__));
     $mail->addAttachment(dirname(__FILE__).'/register/Proposal_AYIMUN_2019.pdf');
     $mail->addAttachment(dirname(__FILE__).'/register/PROPOSAL FOR PARENTS AYIMUN.pdf');
+    $mail->AltBody = 'This is a plain-text message body';
     if(!$mail->send()){
+        file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);
         return false;
     }else{
         return true;

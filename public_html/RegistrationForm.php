@@ -838,12 +838,11 @@ function generateRandomString($length = 10) {
             "id": registration_id,
             "dob": dob
         }, function(data, status){
-            console.log(JSON.parse(data));
             if(data){
                 data = JSON.parse(data);
                 $('#status-result').text(data["status"]);
             }else{
-                $('#status-result').text("Incorrect Details");
+
             }
         })
     }

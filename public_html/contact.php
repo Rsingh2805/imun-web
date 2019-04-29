@@ -15,7 +15,7 @@ $mail->Port =587;
 $mail->SMTPAuth = true;
 
 $mail->Username = "imun2221@gmail.com";
- $mail->Password = ")(*&^%$#@!";
+$mail->Password = ")(*&^%$#@!";
 
 
 $mail->SMTPOptions = array(
