@@ -33,9 +33,9 @@ function configure_PHPMailer(){
             'allow_self_signed' => true
         )
     );
-    $mail->setFrom(CONFIG['smtp']['email'], CONFIG['smtp']['name']);
+    $mail->setFrom(CONFIG['smtp']['from'], CONFIG['smtp']['from_name']);
     //Set an alternative reply-to address
-    $mail->addReplyTo(CONFIG['smtp']['email'], CONFIG['smtp']['name']);
+    $mail->addReplyTo(CONFIG['smtp']['from'], CONFIG['smtp']['from_name']);
     return $mail;
 }
 

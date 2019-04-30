@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             if($result==true){
                 $app = Application::getApplications($id);
                 $data = array(
-                    "status" => $mail
+                    "status" => "SUCCESS"
                 );
                 applicationAcceptedMail($app[0]["email"], $app[0]["full_name"], $app[0]["nationality"]);
             }else{

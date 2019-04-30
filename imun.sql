@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 22, 2019 at 06:47 PM
--- Server version: 5.7.25-0ubuntu0.18.04.2
+-- Generation Time: Apr 30, 2019 at 10:36 AM
+-- Server version: 5.7.26-0ubuntu0.18.04.1
 -- PHP Version: 7.2.17-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -57,7 +57,9 @@ INSERT INTO `application` (`id`, `conference_location`, `full_name`, `sex`, `dob
 (1, 'MAL', 'Rahul', 'M', '2019-03-08', 'rs280599@gmail.com', 'Indian', 'India', 'SNRH', 'CSE', 'IIT Roorkee', 'VEG', 'S', 'PRT', 'Google', 'None', '', 'Im batman', 'PEN', '2019-03-27 18:04:53'),
 (3, 'EGY', 'Rahul', 'M', '2019-03-10', 'rsingh@cs.iitr.ac.in', 'Indian', 'India', 'GRAD', 'CSE', 'IIT Roorkee', 'VEG', 'L', 'PRT', 'Google', 'None', '', 'Some reasons!', 'ACC', '2019-03-28 05:34:17'),
 (4, 'EGY', 'Rahul Singh', 'Male', '1999-03-28', 'rs280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'large', 'MYSELF', 'None', 'None', 'y', 'I\'m Batman', 'ACC', '2019-04-11 04:10:33'),
-(5, 'Egypt', 'Rahul', 'Male', '1999-03-28', 'ra280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'small', 'MYSELF', 'None', 'None', 'y', 'None', 'PENDING', '2019-04-21 17:12:59');
+(28, 'Egypt', 'Rahul ', 'Male', '1999-03-28', 'ra280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'small', 'MYSELF', 'None', 'Nnne', 'y', 'No reason', 'PENDING', '2019-04-29 18:09:39'),
+(30, 'Egypt', 'Rahul Singh', 'Male', '1999-03-28', 'rahulsingh280599@rediffmail.com', 'Indian', 'iNDIA', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'small', 'MYSELF', 'None', 'None', 'y', 'None', 'PENDING', '2019-04-29 18:21:27'),
+(31, 'Egypt', 'Vaibhav Bhansari', 'Male', '1997-10-19', 'vbhansari@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT ROorkee', 'Veg', 'small', 'MYSELF', 'None', 'None', 'y', 'NA', 'PENDING', '2019-04-30 04:58:48');
 
 -- --------------------------------------------------------
 
@@ -128,7 +130,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `subscriber`
 --
