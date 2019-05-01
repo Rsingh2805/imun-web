@@ -5,7 +5,7 @@ ini_set("log_errors", 1);
 ini_set("error_log", "error.log");
 error_log( "Hello, errors!" );
 //exit(dirname(__FILE__).'/../functions/mail.php');
-require_once dirname(__FILE__).'/../lib/mail/mail.php';
+require_once dirname(__FILE__).'/../lib/mail/mail-handler.php';
 require_once dirname(__FILE__).'/../DAO/application.php';
 
 require_once dirname(__FILE__).'/../DAO/database_api.php';
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
                 $data = array(
                     "status" => "SUCCESS"
                 );
-                applicationAcceptedMail($app[0]["email"], $app[0]["full_name"], $app[0]["nationality"]);
+                $mail = applicationAcceptedMail($app[0]["email"], $app[0]["full_name"], $app[0]["nationality"]);
             }else{
                 $data = array(
                     "status" => "ERROR",
