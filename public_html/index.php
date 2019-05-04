@@ -268,6 +268,11 @@ color: #15477A;
     margin-top: 30px;
 }
 @media screen and (max-width: 767px){
+	.hero-text3 a h1{
+		padding: 1% 1% 1% 1% !important;
+	}	.hero-text3{
+		left: 38% !important;
+	}
 	#subscribe-email{
 		width: 80% !important;
 	}
