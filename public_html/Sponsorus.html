@@ -184,6 +184,29 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 <!-- End Facebook Pixel Code -->
 	</head>
 	<body>
+	    
+	    <div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v3.3'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="128351647837657">
+</div>
 		<!-- Header Section Start -->
 	<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
 			<div class="container con">
@@ -202,7 +225,7 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right" >
-						
+							<li class=""><a href="index.php">Home</a></li>
 						<li><a href="Aboutus.html">About Us</a></li>
 							<li class = "dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Conferences
@@ -215,18 +238,13 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 								
 							</ul>
 						</li>
-						<li class = "dropdown">
-							<a class="dropdown-toggle active1" data-toggle="dropdown" href="#">Connet With Us
-								</a>
-							<ul class="dropdown-menu " style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
-								<li><a href="OnCampus.html" style="color: white;">On Campus</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Jointeam.html">Join Us</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Sponsorus.html">Sponsor Us</a></li>
-								
-							</ul>
-						</li>
 						
-						
+					
+					
+					
+						<li><a href="OnCampus.html">On Campus</a></li>
+						<li><a href="Jointeam.html">Join Us</a></li>
+						<li class="active1"><a href="Sponsorus.html">Sponsor Us</a></li>
 						<li><a href="blog.html">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
@@ -360,8 +378,16 @@ font-size: 14px;
 line-height: 20px;
 text-align: justify;
 
-color: #3C3C3C; padding: 5% 0% 5% 0%">International MUN is grateful to The Australian Embassy, Bangkok for their kind donations at IMUN 2018 in Bangkok, Thailand. We also encourage individuals to contribute for our cause in order for us to sustain our already lasting broad-range of activities. As a Non-Governmental Organisation, we also accept aid from government agencies and sponsoring from Businesses. This aid can be of any form from liquid money to material that you deem necessary for our use to attain our goals.
-.</p><br>
+color: #3C3C3C; padding: 5% 0% 0% 0%">International MUN is grateful to The Australian Embassy, Bangkok for their kind donations at IMUN 2018 in Bangkok, Thailand. We also encourage individuals to contribute for our cause in order for us to sustain our already lasting broad-range of activities. As a Non-Governmental Organisation, we also accept aid from government agencies and sponsoring from Businesses. This aid can be of any form from liquid money to material that you deem necessary for our use to attain our goals.
+.</p><br><p style="font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+text-align: justify;
+
+color: #3C3C3C; padding: 0% 0% 5% 0%">If you consider to sponsor our association, please contact the finance and fundraising department at info@internationalmun.org
+.</p>
 </div>
 </section>
 
@@ -375,7 +401,7 @@ color: #3C3C3C; padding: 5% 0% 5% 0%">International MUN is grateful to The Austr
 		<div class = "container" >
 		<div class = "row patner2" id = "row-content">
 			
-			<div >
+			<div style="text-align: center;" >
 				
 				<div class="col-xs-4 col-sm-3 partner">
 					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
@@ -396,7 +422,7 @@ color: #3C3C3C; padding: 5% 0% 5% 0%">International MUN is grateful to The Austr
 					<div style=" width:100px;   box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
 						<a href = "https://www.amunc.co/" target = "_blank"><img src="images/Partners/AMUNC.png" style="padding:10px 10px 10px 10px; height:100px; "></a>
 					</div>
-					<h5 class="patner_name"><b>AMUNK</b></h5>
+					<h5 class="patner_name"><b>AMUNC</b></h5>
 				</div>
 					<div class="col-xs-4 col-sm-3 partner">
 					<div style=" width:100px;   box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
@@ -409,7 +435,7 @@ color: #3C3C3C; padding: 5% 0% 5% 0%">International MUN is grateful to The Austr
 					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
 						<a href = "https://thailand.iom.int/" target = "_blank"><img src="images/Partners/new.png" style="padding:15px 15px 15px 15px; height:100px; "></a>
 					</div>
-					<h5 class="patner_name"><b>Thailand IMO</b></h5>
+					<h5 class="patner_name"><b>Thailand IOM</b></h5>
 				</div>
 
 				<div class="col-xs-4 col-sm-3 partner">
@@ -424,7 +450,19 @@ color: #3C3C3C; padding: 5% 0% 5% 0%">International MUN is grateful to The Austr
 						<a href = "https://zumun.ch/" target = "_blank"><img src="images/Partners/Zurich_MUN.png" style="padding:10px 10px 10px 10px; height:100px; width: 100px; border-radius: 190px;"></a>
 					</div>
 					<h5 class="patner_name"><b>Zurich MUN</b></h5>
+				</div>	<div class="col-xs-4 col-sm-3  partner">
+					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75); text-align: center;">
+						<a href = "https://www.undp.org/content/undp/en/home.html" target = "_blank"><img src="images/conf/logo (2).png" style="padding:10px 10px 10px 10px; height:100px; "></a>
+					</div>
+					<h5 class="patner_name"><b>UNDP</b></h5>
 				</div>
+				<div class="col-xs-4 col-sm-3 partner  " >
+					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75); text-align: center;min-height: 100px;">
+						<a href = "https://en.unesco.org/" target = "_blank"><img src="images/conf/logo (3).png" style="padding:10px 10px 10px 10px; height:85px; "></a>
+					</div>
+					<h5 class="patner_name"><b>UNESCO</b></h5>
+				</div>
+
 				
 			</div>
 		</div>

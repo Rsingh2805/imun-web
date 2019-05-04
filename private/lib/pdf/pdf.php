@@ -27,11 +27,10 @@ function getLOAPdf($full_name, $nationality){
     $pdf->SetFont('Calibri', '', '12');
     $pdf->SetTextColor(0,0,0);
 
-    $pdf->SetXY(70, 120);
+    $pdf->SetXY(31, 62);
 
-    $pdf->Write(0, 'Rahul Singh');
-    $pdf->SetXY(70, 128.5);
-    $pdf->Write(0, 'Indian');
+    $pdf->Write(0, $full_name);
+
     $pdf->AddPage();
     $pdf->useTemplate($tplId2);
     $pdf->AddPage();

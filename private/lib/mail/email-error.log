@@ -1,1 +1,2 @@
-SERVER -> CLIENT: 221 2.0.0 closing connection 128sm2287082pfg.70 - gsmtp
+Failed
+SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting

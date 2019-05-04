@@ -60,9 +60,31 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 <!-- End Facebook Pixel Code -->
 	</head>
 	<body>
+	    <div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v3.3'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="128351647837657">
+</div>
 		<!-- Header Section Start -->
-		<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation">
-			<div class="container">
+	<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
+			<div class="container con">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 						<span class="sr-only">Toggle navigation</span>
@@ -70,32 +92,37 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand logo" href="index-2.html">
+					<a class="navbar-brand logo" href="index.php">
 						<span><img src = "images/logo.png" alt = "imun-logo" class = "imun_logo"></span>
 					
-						<p>International <small><br>Model United Nations</small></p>				
+						<p style="font-size: 15px !important">International <small><br>Model United Nations</small></p>				
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index-2.html">Home</a></li>
+					<ul class="nav navbar-nav navbar-right" >
+							<li class=""><a href="index.php">Home</a></li>
 						<li><a href="Aboutus.html">About Us</a></li>
-						<li class = "dropdown">
+							<li class = "dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Conferences
-								<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="Conference.html">IMUN Thailand 2018</a></li>
-								<li><a href = "IMUN_Hanoi_2019.html">IMUN Vietnam 2019</a></li>
-								<li><a href = "IMUN_Egypt_2019.html">IMUN Egypt  2019</a></li>
+								</a>
+							<ul class="dropdown-menu" style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
+								<li><a href="IMUN_2018.html" style="color: white;">IMUN Thailand 2018</a></li><hr style="margin: 0px 10px 0px 10px">
+								<li><a href = "imun_vietnam.html"> IMUN Vietnam 2019</a></li><hr style="margin: 0px 10px 0px 10px">
+								<li><a href = "IMUN_2019.html">IMUN Egypt 2019 </a></li>
+								
 								
 							</ul>
 						</li>
-						<li><a href = "Ourteam.html">Our Team</a></li>
-						<li><a href="OnCampus.html">On-Campus</a></li>
+						
+					
+					
+					
+						<li><a href="OnCampus.html">On Campus</a></li>
 						<li><a href="Jointeam.html">Join Us</a></li>
 						<li><a href="Sponsorus.html">Sponsor Us</a></li>
-						<li><a href="http://blog.internationalmun.org/" target="_blank">Blog</a></li>
-						<li><a href="Contactus.html">Contact Us</a></li>
+						<li><a href="blog.html">Blogs</a></li>
+						<li><a href="index.php#con">Contact Us</a></li>
+			
 					</ul>
 				</div>
 			</div>

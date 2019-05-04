@@ -262,6 +262,10 @@ tr.shown td.details-control {
         '<tr>'+
             '<td>Why do you think you must be choosen as a part of International MUN 2019? (in English)  :</td>'+
             '<td>'+d.motivation_letter+'</td>'+
+        '</tr>'+
+         '<tr>'+
+            '<td>Promocode  :</td>'+
+            '<td>'+d.promo+'</td>'+
         '</tr>'
 
     '</table>';

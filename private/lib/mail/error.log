@@ -1,0 +1,1 @@
+[03-May-2019 19:22:50 Europe/Berlin] PHP Fatal error:  Cannot redeclare applicationAcceptedMail() (previously declared in C:\xampp\htdocs\imun-web-2-5\private\lib\mail\mail-handler.php:7) in C:\xampp\htdocs\imun-web-2-5\private\lib\mail\mail.php on line 88

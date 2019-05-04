@@ -15,7 +15,7 @@ require dirname(__FILE__).'/../pdf/pdf.php';
 
 function configure_PHPMailer(){
     $mail = new PHPMailer;
-    $mail->isSMTP();
+  // $mail->isSMTP();
     $mail->SMTPDebug = CONFIG['smtp']['debug']; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
     $mail->Debugoutput = function($str, $level){
         file_put_contents(dirname(__FILE__).'/email-error.log', $str);
@@ -42,26 +42,26 @@ function configure_PHPMailer(){
 function registeredSuccessfullyMail($email, $fullname){
     $mail = configure_PHPMailer();
     $mail->addAddress($email, $fullname);
-    $mail->Subject = $fullname.', are you the Agent of Change?';
+    $mail->Subject = "International Model United Nations";
 
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
     $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/mail.html'));
     $message = $mail->msgHTML($html, dirname(__FILE__));
-    $mail->addAttachment(dirname(__FILE__).'/register/Proposal_AYIMUN_2019.pdf');
-    $mail->addAttachment(dirname(__FILE__).'/register/PROPOSAL FOR PARENTS AYIMUN.pdf');
+    $mail->addAttachment(dirname(__FILE__).'/../../../public_html/IMUN_Egypt_2019.pdf');
+    $mail->addAttachment(dirname(__FILE__).'/../../../public_html/viet.pdf');
     $mail->AltBody = 'This is a plain-text message body';
     if(!$mail->send()){
         file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);
-        return false;
+        return $mail->ErrorInfo;
     }else{
-        return true;
+        return "Success";
     }
 }
 
 function applicationAcceptedMail($email, $fullname, $nationality){
     $mail = configure_PHPMailer();
     $mail->addAddress($email, $fullname);
-    $mail->Subject = 'Asia Youth International MUN 2019 : Announcement';
+    $mail->Subject = 'International Model United Nations 2019 ';
 
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
     $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/acceptance.html'));
@@ -86,3 +86,21 @@ function applicationAcceptedMail($email, $fullname, $nationality){
 //        return true;
 //    }
 }
+
+function sendContact($email,$fullname,$message,$subject){
+       $mail = configure_PHPMailer();
+   $mail->addAddress('team@internationalmun.org', 'Contact Form');
+ //Set the subject line 
+ $mail->Subject = "IMUN CONTACT FORM";
+  //Read an HTML message body from an external file, convert referenced images to embedded,
+ //convert HTML into a basic plain-text alternative body
+ $mail->msgHTML('<b>NAME : </b>'.$fullname.'<br><b>EMAIL : </b>'.$email.'<br><b>Subject : </b>'.$subject.'<br><b>Message : </b>'.$message);
+ //Replace the plain text body with one created manually
+$mail->AltBody = 'This is a plain-text message body';
+    if(!$mail->send()){
+        file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);
+        return $mail->ErrorInfo;
+    }else{
+        return true;
+    }
+    }

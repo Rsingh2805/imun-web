@@ -189,6 +189,29 @@ color: #FFFFFF !important;
 <!-- End Facebook Pixel Code -->
 	</head>
 	<body>
+	    
+	    <div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v3.3'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="128351647837657">
+</div>
 		<!-- Header Section Start -->
 		<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
 			<div class="container con">
@@ -207,7 +230,7 @@ color: #FFFFFF !important;
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right" >
-						
+							<li class=""><a href="index.php">Home</a></li>
 						<li><a href="Aboutus.html">About Us</a></li>
 							<li class = "dropdown active1">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Conferences
@@ -220,18 +243,13 @@ color: #FFFFFF !important;
 								
 							</ul>
 						</li>
-						<li class = "dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Connet With Us
-								</a>
-							<ul class="dropdown-menu" style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
-								<li><a href="OnCampus.html" style="color: white;">On Campus</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Jointeam.html">Join Us</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Sponsorus.html">Sponsor Us</a></li>
-								
-							</ul>
-						</li>
 						
-						
+					
+					
+					
+						<li><a href="OnCampus.html">On Campus</a></li>
+						<li><a href="Jointeam.html">Join Us</a></li>
+						<li><a href="Sponsorus.html">Sponsor Us</a></li>
 						<li><a href="blog.html">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
