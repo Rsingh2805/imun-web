@@ -62,34 +62,7 @@ require_once('../private/DAO/database_api.php');
     });
   };
 </script>
-<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
-
-<!-- ManyChat -->
-<script src="//widget.manychat.com/1909957505749717.js" async="async"></script>
-
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-779655741');
-</script>
-		<!-- Global site tag (gtag.js) - Google Ads: 779655741 --> 
-		
-		 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'connect.facebook.net/en_US/fbevents.js');
- fbq('init', '336654900172750'); 
-fbq('track', 'PageView');
-</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132542716-1"></script>
 <script>
@@ -174,7 +147,7 @@ left: -200px !important;
 	}
    .gamma-gallery{
 		text-align: center;
-		margin-left: 20% !important;
+		margin-left: 28% !important;
 
 	}
     
@@ -467,7 +440,7 @@ color: #FFFFFF !important;
            	}
            	.see{
            		top:289px;
-           		left: 566px;
+           		left: 650px;
            		background-color: #3d80efa6 !important;
            	}
 @media only screen and (max-width: 699px) {
@@ -804,7 +777,7 @@ line-height: normal;
 text-align: center;
 
 color: #FFFFFF;">Know More</a></button>
-						<br><br><br>
+						<br><br><br><br><br>
 						
 						<div class = "imun-social" style="float: left;">
 							<h6 style="float: left; color: white; margin-bottom: 0px;font-size: 14px;">Catch us at:</h6><br>
@@ -1075,8 +1048,8 @@ color: #15477A;"> UN Partner Organisations</h2>
 
 
 </section>
-<section style="position: absolute;">
-	<img src="images/icon/b.png">
+<section style="position: absolute;right:0%;left:0%;">
+	<img src="images/icon/b.png" style="width:100%;">
 </section>
 <section style="z-index: 2;">
 	<div class="container">
