@@ -489,7 +489,7 @@ font-size: 24px;
 line-height: normal;
 text-align: center;
 
-color: #15477A;">IMUN Egypt 2019 Registration Form</b></h2>
+color: #15477A;">IMUN China 2019 Registration Form</b></h2>
 	
 </div>
 	<?php
@@ -559,8 +559,8 @@ function generateRandomString($length = 10) {
 										<select id="location" name="location" type="text"
                                                                        placeholder="Enter your Preferred Conference Location"
                                                                        class="form-control required" >
-											<option>Egypt</option>
-											<option>Malaysia</option>
+											<option>China</option>
+											
 											
 
 										</select>

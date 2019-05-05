@@ -141,16 +141,13 @@ tr.shown td.details-control {
                                         <div class="tab-pane active" id="tab-malasia">
                                            <div class="card m-t-35">
                         <div class="card-header bg-white">
-                            <i class="fa fa-table"> </i> REGISTERED CANDIDATES
+                            <i class="fa fa-table"> </i> Fixed Delegates
                         </div><div class="container">
                 
-                             <button>Payment Pending Mail</button>
-                            
-                               <button>Delete User</button>
                                 <button>Download Excel</button>
                               
                                  
-                                       <button><a href="delegates.php" style="color: black;">Fixed Delegate Button</a></button>
+                                       <button><a href="dashbord.php" style="color: black;">Registrated Candidates</a></button>
                         </div>
                         <div class="card-block">
                             
@@ -166,10 +163,10 @@ tr.shown td.details-control {
                                                     <th>Con. Location</th>
                                                     <th> Registration Id</th>
                                                     <th>Full Name</th>
-                                                                                                                         <th>Why IMUN?</th>
-                                            <th >Status</th>
+                                                                                                                             <th>Why IMUN?</th>
+                                           
                                             <th>View</th>
-                                             <th >Control</th>
+                                            
                                                 </tr>
                                             </thead>
                                           
@@ -329,7 +326,7 @@ function updateTable(){
             { "data": "full_name" },
            
             { "data": "motivation_letter" },
-            { "data": "status" },
+           
 
             {
                 "className":      'details-control',
@@ -337,20 +334,7 @@ function updateTable(){
                 "data":           "",
                 "defaultContent": ''
             },
-            {"data":"",
-
-                "orderable":false,
-                "render": function (data, type, row) {
-
-                    if ( row.status === 'PENDING') {
-                        return '<button data-id="'+row.id+'" class="accept-app">Accept</button><button class="reject-app" data-id="'+row.id+'">Reject</button>';}
-
-                    else {
-
-                        return '<button disabled>Accept</button><button disabled>Reject</button>';
-
-                    }
-                },}
+        
         ],
         "order": [[1, 'asc']]
     } );

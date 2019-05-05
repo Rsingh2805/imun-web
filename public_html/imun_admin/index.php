@@ -1,4 +1,4 @@
 <?php
-header("Location:dasbord.php");
+header("Location:dashbord.php");
 
 ?>

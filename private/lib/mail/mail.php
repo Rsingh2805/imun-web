@@ -15,7 +15,7 @@ require dirname(__FILE__).'/../pdf/pdf.php';
 
 function configure_PHPMailer(){
     $mail = new PHPMailer;
-  // $mail->isSMTP();
+   $mail->isSMTP();
     $mail->SMTPDebug = CONFIG['smtp']['debug']; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
     $mail->Debugoutput = function($str, $level){
         file_put_contents(dirname(__FILE__).'/email-error.log', $str);

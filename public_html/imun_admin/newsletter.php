@@ -117,13 +117,11 @@ tr.shown td.details-control {
                 <header class="head">
                     <div class="main-bar row">
                         <div class="col-xs-6">
-                            <h4 class="m-t-2">
-                                <i class="fa fa-home"></i>
-                                Dashboard |
-                                <a href="blogs.php" >Blogs</a> |
-                                <a href="newsletter.php"> Newsletter</a>|
+                            <h4 class="m-t-5">
+                               <a href="dashbord.php">  Dashboard </a>|
+                             <a href="blogs.php">  Blogs</a> |
+                              Newsletter |
                             </h4>
-                          
                         </div>
                     </div>
                 </header>
@@ -141,35 +139,42 @@ tr.shown td.details-control {
                                         <div class="tab-pane active" id="tab-malasia">
                                            <div class="card m-t-35">
                         <div class="card-header bg-white">
-                            <i class="fa fa-table"> </i> REGISTERED CANDIDATES
-                        </div><div class="container">
+                            <i class="fa fa-table"> </i> Newsletter
+                        </div>
+                        <div class="container">
                 
-                             <button>Payment Pending Mail</button>
+                             <button id="send">Send Mail</button>
                             
-                               <button>Delete User</button>
+                               <button>Unsubscribe</button>
                                 <button>Download Excel</button>
                               
                                  
-                                       <button><a href="delegates.php" style="color: black;">Fixed Delegate Button</a></button>
+                                      
+                        </div>
+                        <div class="mail" style="display: none; margin-left: 5%;"><br>
+                            <br>
+                            <form>
+                                <label>Subject</label><br>
+                                <input type="text" name="subject"><br>
+                                <label>Message</label><br>
+                                <textarea rows="2" cols="16" name="message"  style="width: 50%;"></textarea><br>
+
+                                <input type="submit" name="submit" value="Send">
+                            </form>
                         </div>
                         <div class="card-block">
                             
-                              <div class="card-block p-t-25" style="overflow-x:auto;">
+                              <div class="card-block p-t-25">
                                         <div class="">
                                             <div class="pull-sm-right">
                                                 <div class="tools pull-sm-right"></div>
                                             </div>
                                         </div>
-                                        <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important; ">
+                                        <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important;">
                                             <thead>
                                                 <tr><th><input type="checkbox" name="" value=""> <br></th>
-                                                    <th>Con. Location</th>
-                                                    <th> Registration Id</th>
-                                                    <th>Full Name</th>
-                                                                                                                         <th>Why IMUN?</th>
-                                            <th >Status</th>
-                                            <th>View</th>
-                                             <th >Control</th>
+                                                    <th>Email  id</th>
+                                                  
                                                 </tr>
                                             </thead>
                                           
@@ -205,6 +210,12 @@ tr.shown td.details-control {
   
      <script type="text/javascript">
 
+
+ $('#send').click(function(){
+            $('.mail').css('display','block');
+           
+
+        });
         $('.egypt').click(function(){
             $('#tab-malasia').removeClass('active');
             $('#tab-egypt').addClass('active');
@@ -227,10 +238,7 @@ tr.shown td.details-control {
     function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-            '<tr>'+
-            '<td>Registration Date and Time:</td>'+
-            '<td>'+d.submission_time+'</td>'+
-        '</tr>'+
+        
         '<tr>'+
             '<td>E-mail :</td>'+
             '<td>'+d.email+'</td>'+
@@ -242,10 +250,6 @@ tr.shown td.details-control {
         '<tr>'+
             '<td>Date Of Birth :</td>'+
             '<td>'+d.dob+'</td>'+
-        '</tr>'+
-         '<tr>'+
-            '<td>Nationality:</td>'+
-            '<td>'+d.nationality+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>Country of Residence :</td>'+
@@ -279,7 +283,10 @@ tr.shown td.details-control {
             '<td>Size of T-shirt :</td>'+
             '<td>'+d.tshirt_size+'</td>'+
         '</tr>'+
-    
+        '<tr>'+
+            '<td>Why do you think you must be choosen as a part of International MUN 2019? (in English)  :</td>'+
+            '<td>'+d.motivation_letter+'</td>'+
+        '</tr>'+
          '<tr>'+
             '<td>Promocode  :</td>'+
             '<td>'+d.promo+'</td>'+
@@ -314,7 +321,7 @@ function updateTable(){
         },
 
         "columns": [
-             {"data":"",
+  {"data":"",
 
                 "orderable":false,
                 "render": function (data, type, row) {
@@ -325,32 +332,7 @@ function updateTable(){
                    
                 },},
             { "data": "conference_location" },
-            { "data": "registration_id" },
-            { "data": "full_name" },
-           
-            { "data": "motivation_letter" },
-            { "data": "status" },
-
-            {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           "",
-                "defaultContent": ''
-            },
-            {"data":"",
-
-                "orderable":false,
-                "render": function (data, type, row) {
-
-                    if ( row.status === 'PENDING') {
-                        return '<button data-id="'+row.id+'" class="accept-app">Accept</button><button class="reject-app" data-id="'+row.id+'">Reject</button>';}
-
-                    else {
-
-                        return '<button disabled>Accept</button><button disabled>Reject</button>';
-
-                    }
-                },}
+       
         ],
         "order": [[1, 'asc']]
     } );

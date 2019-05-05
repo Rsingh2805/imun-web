@@ -28,6 +28,7 @@ require_once('../private/DAO/database_api.php');
 }
 	</style>	
 		<meta charset="utf-8">
+		<meta property="og:image" content="images/logo.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name = "application-name" content="International Model United Nations">
 		<meta name="description" content="International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.">
