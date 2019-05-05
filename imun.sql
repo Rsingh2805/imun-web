@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 30, 2019 at 10:36 AM
--- Server version: 5.7.26-0ubuntu0.18.04.1
--- PHP Version: 7.2.17-0ubuntu0.18.04.1
+-- Host: 127.0.0.1
+-- Generation Time: May 05, 2019 at 09:10 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.2.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -46,20 +48,17 @@ CREATE TABLE `application` (
   `referral_code` varchar(10) NOT NULL,
   `motivation_letter` text NOT NULL,
   `status` varchar(30) DEFAULT 'PEN',
-  `submission_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `submission_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `promo` varchar(200) NOT NULL,
+  `payment` varchar(200) NOT NULL DEFAULT 'PENDING'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `application`
 --
 
-INSERT INTO `application` (`id`, `conference_location`, `full_name`, `sex`, `dob`, `email`, `nationality`, `residence_country`, `enrolled_as`, `field_of_study`, `univ_name`, `food_preference`, `tshirt_size`, `funded_by`, `known_from`, `prev_experience`, `referral_code`, `motivation_letter`, `status`, `submission_time`) VALUES
-(1, 'MAL', 'Rahul', 'M', '2019-03-08', 'rs280599@gmail.com', 'Indian', 'India', 'SNRH', 'CSE', 'IIT Roorkee', 'VEG', 'S', 'PRT', 'Google', 'None', '', 'Im batman', 'PEN', '2019-03-27 18:04:53'),
-(3, 'EGY', 'Rahul', 'M', '2019-03-10', 'rsingh@cs.iitr.ac.in', 'Indian', 'India', 'GRAD', 'CSE', 'IIT Roorkee', 'VEG', 'L', 'PRT', 'Google', 'None', '', 'Some reasons!', 'ACC', '2019-03-28 05:34:17'),
-(4, 'EGY', 'Rahul Singh', 'Male', '1999-03-28', 'rs280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'large', 'MYSELF', 'None', 'None', 'y', 'I\'m Batman', 'ACC', '2019-04-11 04:10:33'),
-(28, 'Egypt', 'Rahul ', 'Male', '1999-03-28', 'ra280599@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'small', 'MYSELF', 'None', 'Nnne', 'y', 'No reason', 'PENDING', '2019-04-29 18:09:39'),
-(30, 'Egypt', 'Rahul Singh', 'Male', '1999-03-28', 'rahulsingh280599@rediffmail.com', 'Indian', 'iNDIA', 'Senior High School', 'CSE', 'IIT Roorkee', 'Veg', 'small', 'MYSELF', 'None', 'None', 'y', 'None', 'PENDING', '2019-04-29 18:21:27'),
-(31, 'Egypt', 'Vaibhav Bhansari', 'Male', '1997-10-19', 'vbhansari@gmail.com', 'Indian', 'India', 'Senior High School', 'CSE', 'IIT ROorkee', 'Veg', 'small', 'MYSELF', 'None', 'None', 'y', 'NA', 'PENDING', '2019-04-30 04:58:48');
+INSERT INTO `application` (`id`, `conference_location`, `full_name`, `sex`, `dob`, `email`, `nationality`, `residence_country`, `enrolled_as`, `field_of_study`, `univ_name`, `food_preference`, `tshirt_size`, `funded_by`, `known_from`, `prev_experience`, `referral_code`, `motivation_letter`, `status`, `submission_time`, `promo`, `payment`) VALUES
+(49, 'China', 'vaibhav bhansari', 'Male', '2019-05-01', 'vbhansari@gmail.com', 'India', 'India', 'Graduate', 'COmputer ENg', 'sv', 'Veg', 'small', 'MYSELF', 'g', '2', 'y', 'hvjhvjh', 'ACCEPTED', '2019-05-05 06:50:26', 'nbbb', 'PENDING');
 
 -- --------------------------------------------------------
 
@@ -77,8 +76,10 @@ CREATE TABLE `subscriber` (
 --
 
 INSERT INTO `subscriber` (`id`, `email`) VALUES
+(5, ''),
 (2, 'damn@gmail.com'),
-(1, 'rsingh@cs.iitr.ac.in');
+(1, 'rsingh@cs.iitr.ac.in'),
+(71, 'vbhansari@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -130,17 +131,21 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+
 --
 -- AUTO_INCREMENT for table `subscriber`
 --
 ALTER TABLE `subscriber`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
