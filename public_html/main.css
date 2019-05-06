@@ -454,10 +454,9 @@ body{overflow-x: hidden;}
 	border:1px solid #1f487e;
 	text-align: center;
 	padding:05px;
+}.navbar-default .navbar-nav>li>a {
+    color: white !important;
 }
-
-
-
 /*****RESPONSIVE****/
 
 /* 
@@ -512,7 +511,7 @@ body{overflow-x: hidden;}
 ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1424px) {
+@media (min-width: 768px){
 
 
 	.navbar ul li a{

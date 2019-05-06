@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             $prev_experience = $_POST['prev_experience'];
             $referral_code = $_POST['referral_code'];
             $motivation_letter = $_POST['motivation_letter'];
+            $promo= $_POST['promo'];
 
                $db = new DBConn();
         $conn = $db->connection();
@@ -51,12 +52,15 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             break;
         }else{
 
-            $stmt = Application::createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter);
+            $stmt = Application::createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter,$promo);
             $data = array(
+                "name"=>$fullname,
+                "email"=>$email,
                 "status" => "SUCCESS",
                 "id" => strtoupper(substr($stmt["conference_location"], 0, 3)).str_pad(strval($stmt['id']), 6, '0', STR_PAD_LEFT)
             );
-           $mail= registeredSuccessfullyMail($email, $fullname);
+       
+         
             echo json_encode($data);
             break;}
         case "accept":

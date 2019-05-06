@@ -13,11 +13,11 @@ class Application{
         return $stmt;
     }
 
-    public static function createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter){
+    public static function createApplication($location, $fullname, $sex, $dob, $email, $nationality, $residence, $enrolled_as, $field_of_study, $univ_name, $food_preference, $tshirt_size, $funded_by, $known_from, $prev_experience, $referral_code, $motivation_letter,$promo){
         $db = new DBConn();
         $conn = $db->connection();
 
-        $sql = "INSERT INTO `application` (`conference_location`, `full_name`, `sex`, `dob`, `email`, `nationality`, `residence_country`, `enrolled_as`, `field_of_study`, `univ_name`, `food_preference`, `tshirt_size`, `funded_by`, `known_from`, `prev_experience`, `referral_code`, `motivation_letter`, `status`) VALUES (:location, :fullname, :sex, :dob, :email, :nationality, :residence, :enrolled_as, :field_of_study, :univ_name, :food_preference, :tshirt_size, :funded_by, :known_from, :prev_experience, :referral_code, :motivation_letter, :status);";
+        $sql = "INSERT INTO `application` (`conference_location`, `full_name`, `sex`, `dob`, `email`, `nationality`, `residence_country`, `enrolled_as`, `field_of_study`, `univ_name`, `food_preference`, `tshirt_size`, `funded_by`, `known_from`, `prev_experience`, `referral_code`, `motivation_letter`, `status`,`promo`) VALUES (:location, :fullname, :sex, :dob, :email, :nationality, :residence, :enrolled_as, :field_of_study, :univ_name, :food_preference, :tshirt_size, :funded_by, :known_from, :prev_experience, :referral_code, :motivation_letter, :status,:promo);";
         try {
             $stmt = $conn->prepare($sql);
             $stmt->execute(array(
@@ -38,6 +38,7 @@ class Application{
                 ':prev_experience' => $prev_experience,
                 ':referral_code' => $referral_code,
                 ':motivation_letter' => $motivation_letter,
+                 ':promo' => $promo,
                 ':status' => 'PENDING'
             ));
             $sql = "SELECT * FROM `application` WHERE `email`='$email' ";

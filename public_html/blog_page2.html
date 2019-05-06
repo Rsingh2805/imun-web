@@ -81,6 +81,28 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 <!-- End Facebook Pixel Code -->
 	</head>
 	<body style="overflow-x: unset;">
+	    <div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v3.3'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="128351647837657">
+</div>
 		<!-- Header Section Start -->
 		<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
 			<div class="container con">
@@ -99,7 +121,7 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right" >
-						
+							<li class=""><a href="index.php">Home</a></li>
 						<li><a href="Aboutus.html">About Us</a></li>
 							<li class = "dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Conferences
@@ -112,19 +134,14 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 								
 							</ul>
 						</li>
-						<li class = "dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Connet With Us
-								</a>
-							<ul class="dropdown-menu" style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
-								<li><a href="OnCampus.html" style="color: white;">On Campus</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Jointeam.html">Join Us</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Sponsorus.html">Sponsor Us</a></li>
-								
-							</ul>
-						</li>
 						
-						
-						<li><a href="blog.html" class="active1">Blogs</a></li>
+					
+					
+					
+						<li><a href="OnCampus.html">On Campus</a></li>
+						<li><a href="Jointeam.html">Join Us</a></li>
+						<li><a href="Sponsorus.html">Sponsor Us</a></li>
+						<li class="active1"><a href="blog.php">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
@@ -360,33 +377,11 @@ A floor like the IMUN is the best way for the youth to build acceptance, empathy
 				
 				<a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.internationalmun.org/imun-where-your-voice-can-change-the-world/" target="_blank"> <img src="images/icon/facebook-logo.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
 					<a href="http://twitter.com/share?&amp;url=http://blog.internationalmun.org/imun-where-your-voice-can-change-the-world/" target="_blank">	<img src="images/icon/twitter.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
-						<a href="https://plus.google.com/share?url=http://blog.internationalmun.org/imun-where-your-voice-can-change-the-world/" target="_blank">	<img src="images/icon/google-plus.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
+				
 							<a href="http://www.linkedin.com/shareArticle?url=http://blog.internationalmun.org/imun-where-your-voice-can-change-the-world/" target="_blank">	<img src="images/icon/linkedin.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
-								<a href="https://pinterest.com/pin/create/button/?url=http://blog.internationalmun.org/imun-where-your-voice-can-change-the-world/" target="_blank">	<img src="images/icon/pinterest.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
-			</div>
-	</div>
+								</div>
 </section>
-<section style="background: #F9F9F9;">
-	<div class="container">
-	<p style="font-family: Montserrat;
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: normal;
-margin-top: 5%;
-color: #121E32;">Leave a Comment</p>
-<textarea rows="10"  style=" border-radius: 20px; padding-top: 10px; padding-left: 10px;">Write Something...</textarea>
-<div class="pos" style="top:1540px;">
-<input type="name" name="" placeholder="Name"  style="  margin-left:2%; border: 1px solid #DFDFDF;
-box-sizing: border-box;
-border-radius: 10px; padding: 1% 1% 1% 1%;"><input type="email" name="" placeholder="Email Id"  style="margin-left:2%; border: 1px solid #DFDFDF;
-box-sizing: border-box;
-border-radius: 10px;  padding: 1% 1% 1% 1%;" ><button  style="border: 1px solid #327AC9;
-margin-left: 2%;
-border-radius: 10px; color: #327AC9;  padding: 1% 1% 1% 1%; background-color: white;">Publish</button>
-</div>
-</div>
-</section>
+
 <script>
 	$(document).ready(function() {
 		$('#hanoi-lists').DataTable();
@@ -417,7 +412,7 @@ border-radius: 10px; color: #327AC9;  padding: 1% 1% 1% 1%; background-color: wh
 							
 					</div>
 					<div class="col-md-2">
-						<a href="blog.html" style="color: white;">Blogs</a>
+						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
 					<br><br><br>
 				</div><div class="col-md-12 col-xs-7" style="">

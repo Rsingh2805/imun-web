@@ -3,8 +3,16 @@
 require_once('../private/DAO/database_api.php');
   $db = new DBConn();
         $conn = $db->connection();
-        $sql = "SELECT * FROM application ORDER BY id DESC LIMIT 1 ";
+        $sql = "SELECT * FROM application ORDER BY id DESC LIMIT 3 ";
         $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+      
+?>
+<?php
+
+
+ 
+        $sql2 = "SELECT * FROM `news`";
+        $stmt2 = $conn->query($sql2)->fetchAll(PDO::FETCH_ASSOC);
       
 ?>
 <!DOCTYPE html>
@@ -28,6 +36,7 @@ require_once('../private/DAO/database_api.php');
 }
 	</style>	
 		<meta charset="utf-8">
+		<meta property="og:image" content="images/logo.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name = "application-name" content="International Model United Nations">
 		<meta name="description" content="International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.">
@@ -50,6 +59,9 @@ require_once('../private/DAO/database_api.php');
 
 
 <script>
+	
+
+
   window.fbAsyncInit = function() {
     FB.init({
       appId            : 'your-app-id',
@@ -59,34 +71,7 @@ require_once('../private/DAO/database_api.php');
     });
   };
 </script>
-<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
-
-<!-- ManyChat -->
-<script src="//widget.manychat.com/1909957505749717.js" async="async"></script>
-
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-779655741');
-</script>
-		<!-- Global site tag (gtag.js) - Google Ads: 779655741 --> 
-		
-		 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'connect.facebook.net/en_US/fbevents.js');
- fbq('init', '336654900172750'); 
-fbq('track', 'PageView');
-</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132542716-1"></script>
 <script>
@@ -153,9 +138,7 @@ color: #FFFFFF !important;
 }
 		
 @media screen and (min-width: 800px) {
-	.blink{
-		left:75% !important;
-	}
+	
 	.oo{
 		margin-left: 370px !important;
 	}
@@ -173,7 +156,7 @@ left: -200px !important;
 	}
    .gamma-gallery{
 		text-align: center;
-		margin-left: 20% !important;
+		margin-left: 28% !important;
 
 	}
     
@@ -267,6 +250,26 @@ color: #15477A;
     margin-top: 30px;
 }
 @media screen and (max-width: 767px){
+	.hero-text3 a h1{
+		padding: 1% 1% 1% 1% !important;
+	}	.hero-text3{
+		left: 38% !important;
+	}
+	#subscribe-email{
+		width: 80% !important;
+	}
+	.centr{
+		text-align: center !important;
+	}
+	#blink1{
+		width: 60% !important;
+	}
+	#blink2{
+		width: 60% !important;
+	}
+	#blink3{
+		width: 60% !important;
+	}
     .testimonial{
         text-align: center;
         padding: 0 15px;
@@ -446,7 +449,7 @@ color: #FFFFFF !important;
            	}
            	.see{
            		top:289px;
-           		left: 566px;
+           		left: 650px;
            		background-color: #3d80efa6 !important;
            	}
 @media only screen and (max-width: 699px) {
@@ -508,6 +511,16 @@ padding: 2% 2% 2% 2% !important;
 	font-size: 18px !important;
 }
 }
+.active1{
+font-family: Montserrat !important;
+font-style: normal !important;
+font-weight: 600 !important;
+font-size: 12px !important;
+line-height: normal !important;
+text-align: center !important;
+	border-bottom: 2px solid #fab449;
+color: #FFFFFF !important;
+}
 @media screen and (min-width: 700px) {
 
 .hero-image {
@@ -537,7 +550,7 @@ padding: 2% 2% 2% 2% !important;
   text-align: justify !important;
   position: absolute !important;
   top: 85% !important;
-  left: 46% !important;
+  left: 40% !important;
   transform: translate(-21%, -50%) !important;
   color: white !important;
   text-align: justify !important;
@@ -577,7 +590,7 @@ padding: 2% 2% 2% 2% !important;
 max-width: 149px;
 max-height: 151px;
 }
-			
+		
 </style>
 
   <link href="1/thumbs2.css" rel="stylesheet" />
@@ -652,7 +665,42 @@ color: #606060;
  </script>
 
 	</head>
-	<body>
+	<body >
+	    <div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v3.3'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="128351647837657">
+</div>
+			<?php if (isset($stmt[0])) {
+						
+					 ?>
+
+		<div style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px;  width: 25%; text-align: center;display: none;" class=" navbar-fixed-bottom" id="blink1"><b><?php echo $stmt[0]['full_name']; ?>  From  <?php echo $stmt[0]['nationality']; ?><br>  just Registered on IMUN</b></div>
+			<div style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px;  width: 25%; text-align: center;display: none;" class=" navbar-fixed-bottom" id="blink2"><b><?php echo $stmt[1]['full_name']; ?>  From  <?php echo $stmt[1]['nationality']; ?><br>  just Registered on IMUN</b></div>
+				<div style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px;  width: 25%; text-align: center;display: none;" class=" navbar-fixed-bottom" id="blink3"><b><?php echo $stmt[2]['full_name']; ?>  From  <?php echo $stmt[2]['nationality']; ?><br>  just Registered on IMUN</b></div>
+
+
+					<?php
+				}
+
+					?>
 		<!-- Header Section Start -->
 		<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
 			<div class="container con">
@@ -671,7 +719,7 @@ color: #606060;
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right" >
-						
+							<li class="active1"><a href="index.php">Home</a></li>
 						<li><a href="Aboutus.html">About Us</a></li>
 							<li class = "dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Conferences
@@ -686,42 +734,26 @@ color: #606060;
 						</li>
 						
 					
-						<li class = "dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Connet With Us
-								</a>
-							<ul class="dropdown-menu" style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
-								<li><a href="OnCampus.html" style="color: white;">On Campus</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Jointeam.html">Join Us</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Sponsorus.html">Sponsor Us</a></li>
-								
-							</ul>
-						</li>
-						
-						
-						<li><a href="blog.html">Blogs</a></li>
+					
+					
+						<li><a href="OnCampus.html">On Campus</a></li>
+						<li><a href="Jointeam.html">Join Us</a></li>
+						<li><a href="Sponsorus.html">Sponsor Us</a></li>
+						<li><a href="blog.php">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
 				</div>
 			</div>
 		</nav><title>Home</title>
-<script type="text/javascript">
-	function blink(selector){
-$(selector).fadeOut('slow', function(){
-    $(this).fadeIn('slow', function(){
-        blink(this);
-    });
-});
-}
 
-blink('.blink');
-</script>
+
 <section id="imun-banner" class="section-banner" >
 
 	<div class="overlay" style="background: linear-gradient(270deg, #ffffff00 10%,#17233785 18%, #172337e3  100%); padding-top: 150px;">
 		<div class="container con" >
 			<div class = "banner-text" style="margin-left: 5%; ">
-				<div class = "row">
+				<div class = "row ro">
 					<div class = "col-md-2"></div>
 					<div class = "col-xs-12 col-sm-12 col-md-12 col-xl-8">
 						<div class = "text-left" style="font-family: Montserrat;
@@ -746,7 +778,7 @@ text-align: justify;
 color: #FFFFFF;">International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.</p>
 <!--						<button class = "btn btn-default"><a href = "http://www.internationalmun.org/RegistrationForm.php" style = "">REGISTER NOW</a></button>-->
 	<br><br>
-					<a  href="RegistrationForm.php" style="color: white; ">	<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;">REGISTER</button></a><button style="float: left; background-color: #00800000; color: white; margin-left: 2%;" class = "btn btn-default" ><a class="my" href="Aboutus.html" style="font-family: Montserrat;
+					<a  href="RegistrationForm.php" style="color: white; ">	<button class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;">REGISTER NOW</button></a><button style="float: left; background-color: #00800000; color: white; margin-left: 2%;" class = "btn btn-default" ><a class="my" href="Aboutus.html" style="font-family: Montserrat;
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
@@ -754,30 +786,26 @@ line-height: normal;
 text-align: center;
 
 color: #FFFFFF;">Know More</a></button>
-						<br><br><br>
+						<br><br><br><br><br>
 						
 						<div class = "imun-social" style="float: left;">
 							<h6 style="float: left; color: white; margin-bottom: 0px;font-size: 14px;">Catch us at:</h6><br>
-								<a href = "https://www.facebook.com/internationalmun2018/" target = "_blank"><img src="images/f.png" height="30" width="30">
-									<a href = "https://www.instagram.com/international_mun/" target="_blank" ><img src="images/i.png" height="30" width="30"></a>
+								<a href = "https://www.facebook.com/internationalmun2018/" target = "_blank"><img src="images/f.png" height="28" width="28">
+									<a href = "https://www.instagram.com/international_mun/" target="_blank" ><img src="images/ii.png" height="30" width="30"></a>
 									</div>
 								
 							</div>
 
 					</div>
-					<?php if (isset($stmt[0])) {
-						
-					 ?>
-					<div style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px; margin-top: 5%; float: left;  text-transform: uppercase;" class="blink"><b><?php echo $stmt[0]['full_name']; ?>  From  <?php echo $stmt[0]['nationality']; ?>  just Registered on IMUN</b></div><br>
-					<?php
-				}
-
-					?>
+				
+				
+			
 
 				</div><!--End Banner Text--> 
 			</div>
 		</div>
 		</section><!--End IMUN-Banner-->
+
 
 <section id = "imun-sponser" style="background-color: #ffffff; padding-bottom: 100px;margin-top: 5%;" class="">
 	<div class="container" id="conf">
@@ -796,7 +824,7 @@ line-height: normal;
        url('khand/khand-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('khand/khand-v7-latin-700.svg#Khand') format('svg'); /* Legacy iOS */
 
-color: #15477A;"> <span style = "color:rgb(21,71,122); ">Conferance</span></h2>
+color: #15477A;"> <span style = "color:rgb(21,71,122); ">Conference</span></h2>
 		
 
 		</div>
@@ -860,13 +888,13 @@ color: #FFFFFF;">IMUN Vietnam 2019</h2>
   </div>
          <div class="hero-text3"><a href="imun_vietnam.html">
     <h1 style="font-family: HelveticaNeue;
-font-size: 12px;
+font-size: 16px;
 line-height: normal;
 text-align: center;
 
 color: #FFFFFF;;
 
-color: #FFFFFF;">Know More</h1>
+color: #FFFFFF; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; padding: 13px 13px 13px 13px; border-radius: 20px; ">Know More</h1>
     
   </a></div>
  
@@ -886,21 +914,16 @@ text-align: center;
 color: #FFFFFF;">IMUN Egypt 2019</h2></a>
     
   </div>
-  <div class="hero-text2"  style="top: 75% !important;">
-   <a href="RegistrationForm.php"><button style="background: linear-gradient(254.81deg, #FFBA52 0%, #DC8F1A 100%);
-box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.25);
-border-radius: 50px; padding: 1% 1% 1% 1%; " class="butt">Register Now</button></a>
-    
-  </div>
+
    <div class="hero-text3">   <a href="IMUN_2019.html"> 
     <h1 style="font-family: HelveticaNeue;
-font-size: 12px;
+font-size: 16px;
 line-height: normal;
 text-align: center;
 
 color: #FFFFFF;;
 
-color: #FFFFFF;">Know More</h1>
+color: #FFFFFF; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; padding: 13px 13px 13px 13px; border-radius: 20px; ">Know More</h1>
     
   </div></a>
  		</div>					
@@ -921,13 +944,13 @@ color: #FFFFFF;">IMUN Thailand 2018</h2>
   </div>
      <div class="hero-text3">   <a href="IMUN_2018.html"> 
     <h1 style="font-family: HelveticaNeue;
-font-size: 12px;
+font-size: 16px;
 line-height: normal;
 text-align: center;
 
 color: #FFFFFF;;
 
-color: #FFFFFF;">Know More</h1>
+color: #FFFFFF; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; padding: 13px 13px 13px 13px; border-radius: 20px; ">Know More</h1>
     
   </div></a>
  		</div>	
@@ -974,7 +997,7 @@ font-weight: 500;
 font-size: 12px;
 line-height: normal;
 text-align: center;
-color: #15477A;">Autralian Embassy, Bangkok</p>
+color: #15477A;">Australian Embassy, Bangkok and Vietnam</p>
 <section>
 	<div class="container ">
 		<h2 class = "text-left" id = "heading" style="text-align: left; margin-left: 12%;font-family: Khand !important;
@@ -1022,7 +1045,7 @@ color: #15477A;"> UN Partner Organisations</h2>
 					<div  style=" width:100px;  box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);">
 						<a href = "https://thailand.iom.int/" target = "_blank"><img src="images/Partners/new.png" style="padding:15px 15px 15px 15px; height:100px; "></a>
 					</div>
-					<h5 class="patner_name"><b> IMO</b></h5>
+					<h5 class="patner_name"><b> IOM</b></h5>
 				</div>
 
 			
@@ -1034,8 +1057,8 @@ color: #15477A;"> UN Partner Organisations</h2>
 
 
 </section>
-<section style="position: absolute;">
-	<img src="images/icon/b.png">
+<section style="position: absolute;right:0%;left:0%;">
+	<img src="images/icon/b.png" style="width:100%;">
 </section>
 <section style="z-index: 2;">
 	<div class="container">
@@ -1201,30 +1224,24 @@ color: #15477A; ">In The NEWS</span></h2>
             <div id="thumbnail-slider" style="background-color: unset; box-shadow: unset;">
                 <div class="inner">
                     <ul>
-                        <li>
+                      <?php foreach ($stmt2 as $value2) {
+                      ?>
+                   
                         <li style="min-height: 190px; min-width: 289px; text-align: left;">
-                            <a class="thumb" href="images/news.png"></a>
-                            <h6> Reflections: How MUN Has Changed Our Lives</h6><p>
-                            	Model UN is a fast-growing competitive activity for many students, but to a great deal of us, it means something more. Model UN has helped us grow into leaders, discover our futures, become confident in ourselves, and form lasting friendships with people from all over the world. This article was written by you, the Best Delegate community, and it shows stories about how MUN has made us the people.
+                            <a class="thumb" href="images/news/<?php echo $value2['image'];?>"></a>
+                               <a href="<?php echo $value2['url'];?>">
+                            <h6><?php echo $value2['subject'];?></h6> </a><p>
+                            	<?php echo $value2['content'];?>
                             </p>
 
                         </li>
+                   
+                        <?php 
+                    }
+                    ?>
 
-                    </li>
-                         <li style="min-height: 190px; min-width: 289px;">
-                            <a class="thumb" href="images/news.png"></a>
-                             <a class="thumb" href="images/news.png"></a>
-                            <h6> Reflections: How MUN Has Changed Our Lives</h6><p>
-                            	Model UN is a fast-growing competitive activity for many students, but to a great deal of us, it means something more. Model UN has helped us grow into leaders, discover our futures, become confident in ourselves, and form lasting friendships with people from all over the world. This article was written by you, the Best Delegate community, and it shows stories about how MUN has made us the people.
-                            </p>
-                        </li>
-                         <li style="min-height: 190px; min-width: 289px;">
-                            <a class="thumb" href="images/news.png"></a>
-                             <a class="thumb" href="images/news.png"></a>
-                            <h6> Reflections: How MUN Has Changed Our Lives</h6><p>
-                            	Model UN is a fast-growing competitive activity for many students, but to a great deal of us, it means something more. Model UN has helped us grow into leaders, discover our futures, become confident in ourselves, and form lasting friendships with people from all over the world. This article was written by you, the Best Delegate community, and it shows stories about how MUN has made us the people.
-                            </p>
-                        </li>
+                  
+                       
                        
                     </ul>
                 </div>
@@ -1710,7 +1727,7 @@ line-height: normal;
 text-align: center;
 
 color: #15477A;">Say Something</span></b></h4>
-   <form id="contact-form" method="post" action="contact.php">
+   <form id="contact-form" method="post" action="#" class="validate">
 							<p id="mail-status"></p>
 							<div style="padding: 0px 10px 0px 10px !important ; max-height: 60px;">
 								<label class="field" style="transform: translate(14px,25px) !important;
@@ -1718,7 +1735,7 @@ color: #15477A;">Say Something</span></b></h4>
     color: rgb(21,71,122) !important;
     width: 80px;
     padding-left: 10px; ">Full name </label><span id="userName-info" class="info"></span><br>
-								<input type="text" name="userName" id="userName" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
+								<input type="text" name="userName" id="contact-name" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
 							</div>
 							<div style="padding: 0px 10px 0px 10px; max-height: 60px;">
 								<label class="field" style="transform: translate(14px,25px) !important;
@@ -1726,7 +1743,7 @@ color: #15477A;">Say Something</span></b></h4>
     color: rgb(21,71,122) !important;
     width: 80px;
     padding-left: 10px;  ">Email Id</label><span id="userEmail-info" class="info"></span><br>
-								<input type="email" name="userEmail" id="userEmail" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
+								<input type="email" name="userEmail" id="contact-email" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
 							</div>
 								<div style="padding: 0px 10px 0px 10px ; max-height: 60px"    >
 								<label class="field" style="transform: translate(14px,25px) !important;
@@ -1734,7 +1751,7 @@ color: #15477A;">Say Something</span></b></h4>
     color: rgb(21,71,122) !important;
     width: 80px;
     padding-left: 10px;  ">Subject</label><span id="userEmail-info" class="info"></span><br>
-								<input type="text" name="userSub" id="userSub" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
+								<input type="text" name="userSub" id="contact-sub" class="form-control" style="border: 1px solid rgb(21,71,122) !important;" required>
 							</div>
 							
 							<div style="padding: 0px 10px 0px 10px;">
@@ -1743,12 +1760,12 @@ color: #15477A;">Say Something</span></b></h4>
     color: rgb(21,71,122) !important;
     width: 100px;
     padding-left: 10px; ">Your Message</label><span id="content-info" class="info"></span><br>
-								<textarea name="content" id="content" class="form-control" rows="3" style="margin: 0px -7px 0px 0px; width: 280px; min-height: 100px; border: 1px solid rgb(21,71,122)  !important;" required></textarea>
+								<textarea name="content" id="contact-message" class="form-control" rows="3" style="margin: 0px -7px 0px 0px; width: 280px; min-height: 100px; border: 1px solid rgb(21,71,122)  !important;" required></textarea>
 							</div>
 					
 							<br>
 							<div style="padding: 0px 10px 20px 10px">
-								<button name="submit" class="btnAction btn btn-primary" style="width: 280px; background-color:rgb(21,71,122) !important; ">Send</button>
+								<a class="btnAction btn btn-primary" style="width: 280px; background-color:rgb(21,71,122) !important; " id="con_sub">Send</a>
 							</div>
 								</form>
 						</div>
@@ -1790,13 +1807,13 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 						
 					</div>
 					
-				</div><div>
-					<form id="subscribe-form">
-                        <input type="email" name="subscribe-email" id="subscribe-email" style="width: 35%; border-radius: 20px; border-color: blue;" placeholder="ENTER EMAIL ID TO SUBSCRIBE US">
-                        <button id="subscribe-submit" class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; border-radius: 20px;"  ><a  style="color: white;  ">SUBSCRIBE US</a></button>
+				</div><div style="margin-top: 2%;">
+					<form id="subscribe-form" method="POST" action="#">
+                        <input type="email" name="subscribe-email" id="subscribe-email" style="width: 35%; border-radius: 20px; border-color: blue;" placeholder="ENTER EMAIL ID TO SUBSCRIBE">
+                        <a  id="subscribe-submit" class = "btn btn-default" style="float: left; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; border-radius: 20px; color: white;"  >SUBSCRIBE US</a>
                     </form></div>
 				<br>
-				<div class="row" style="max-width: 980px;text-align: left;margin-left: 7%;padding-top: 5%;">
+				<div class="row centr" style="max-width: 980px;text-align: left;margin-left: 7%;padding-top: 5%;">
 					<div class="col-md-1">
 						
 					</div>
@@ -1818,7 +1835,7 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 							
 					</div>
 					<div class="col-md-2">
-						<a href="blog.html" style="color: white;">Blogs</a>
+						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
 					
 				</div>
@@ -1833,17 +1850,54 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 <script type="text/javascript" src="code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 <script>
-	function blink(selector){
-$(selector).fadeOut('slow', function(){
-    $(this).fadeIn('slow', function(){
-        blink(this);
-    });
-});
-}
 
-blink('.blink');
 
-	$(document).ready(function(){
+
+
+	
+
+
+
+// 		var interval = 1000000;
+// var stopBlinking = false;
+
+// function blink(selector) {
+//     if(stopBlinking)
+//         return false;
+	
+//     $(selector).fadeOut(3000, function() {
+//         $(this).fadeIn(3000, function() {
+//             blink(this);
+//         });
+//     });
+// }
+
+// blink("#blink");
+
+// setInterval(function(){ 
+//     stopBlinking = !stopBlinking; 
+//     blink("#blink");
+// }, interval);
+
+
+
+
+	var count=1;
+	setInterval(function(){
+setTimeout(function(){ 
+	
+    var div = $("#blink1");  
+    $("#blink1").css('display','block');
+    div.animate({left: '200px'}, 5000);
+    div.animate({left: '-400px'}, 5000);
+
+   
+  }, 1000);
+},1000);
+
+</script> 
+<script>
+
 		$("#testimonial-slider").owlCarousel({
 			items:3,
 			itemsDesktop:[1000,3],
@@ -1864,7 +1918,10 @@ blink('.blink');
 			navigationText:["",""],
 			autoPlay:true
 		});
-	});
+
+
+
+
 </script>
 	</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -1875,20 +1932,103 @@ blink('.blink');
 		<script src="js/gamma.js"></script>
 		<script type="text/javascript">
 //            Rahul's code
-        $('#subscribe-submit').on("click", function(){
-            let email = $('#subscribe-email').val();
+
+
+function subscribeSubmit(){
+
+	  let email = $('#subscribe-email').val();
             $.ajax({
                 url : '../private/API/newsletter.php',
                 type: 'POST',
                 data: 'req=add&email='+email,
                 success: function(data){
+
                     if(JSON.parse(data)["status"]=='SUCCESS'){
-                    //    handlesuccess
+               $("#subscribe-submit").html("Subscribed");
+                    }else{
+                    	  $("#subscribe-submit").html("Subscribed");
+                    	
                     }
                 }
-            })
+            });
+
+}
+        $('#subscribe-submit').on("click", function(){
+
+        	console.log("hi");
+		subscribeSubmit();
+          
+        });
+
+
+
+
+
+
+function contactSubmit(){
+
+	  let name = $('#contact-name').val();
+	  let email = $('#contact-email').val();
+	  let subject = $('#contact-sub').val();
+	  let message = $('#contact-message').val();
+if(name!="" && email !="" && subject!="" && message !=""){
+	 $("#con_sub").html("Sent");
+	  $("#con_sub").css("background-color","#959595");
+            $.ajax({
+                url : '../private/API/contact.php',
+                type: 'POST',
+                data: 'req=addCon&email='+email+'&name='+name+'&subject='+subject+'&message='+message,
+                success: function(data){
+                	console.log("hi");
+              
+                }
+            });
+}
+}
+
+        $('#con_sub').on("click", function(){
+
+        	console.log("hi");
+		contactSubmit();
+          
         });
 			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			$(function() {
 
 				var GammaSettings = {
@@ -2015,7 +2155,7 @@ var Wtpsw = {"ajaxurl":"http:\/\/demo.wponlinesupport.com\/wp-admin\/admin-ajax.
 <script type='text/javascript' src='wp-content/plugins/app-mockups-carousel/assets/js/swiper.min5152.js?ver=1.0'></script>
 <script type='text/javascript' src='wp-content/plugins/stack-slider-3d-image-slider/assets/js/wp-sk-public4e44.js?ver=1.3'></script>
 <script type='text/javascript'>
-/* <![CDATA[ */
+
 </script>
 
 </body>

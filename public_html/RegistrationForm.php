@@ -290,6 +290,28 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 <!-- End Facebook Pixel Code -->
 	</head>
 	<body>
+	    <div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v3.3'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="128351647837657">
+</div>
 		<!-- Header Section Start -->
 		<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
 			<div class="container con">
@@ -308,7 +330,7 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right" >
-						
+						<li><a href="index.php">Home</a></li>
 						<li><a href="Aboutus.html">About Us</a></li>
 							<li class = "dropdown droli">
 							<a class="dropdown-toggle active1" data-toggle="dropdown" href="#">Conferences
@@ -323,19 +345,12 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 						</li>
 						
 					
-						<li class = "dropdown droli2">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Connet With Us
-								</a>
-							<ul class="dropdown-menu droliui2" style=" left:0; color: white; background-color: #0e3660;">
-								<li><a href="OnCampus.html" style="color: white;">On Campus</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Jointeam.html">Join Us</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Sponsorus.html">Sponsor Us</a></li>
-								
-							</ul>
-						</li>
 						
-						
-						<li><a href="blog.html">Blogs</a></li>
+						<li><a href="blog.php">Blogs</a></li>
+						<li><a href="OnCampus.html">On Campus</a></li>
+						<li><a href="Jointeam.html">Join Us</a></li>
+						<li><a href="Sponsorus.html">Sponsor Us</a></li>
+						<li><a href="blog.php">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
@@ -456,25 +471,25 @@ color: #15477A;">Already Registered ? Check your result.</h4>
   
 </div>	
 
-<div id = "imun-register-heading" style="height: 300px; padding-top: 0px;">
-	<div id="heading-background">
+<div id = "imun-register-heading" style="height: 100px; padding-top: 0px;">
+	<div id="heading-background" style="top: 350px;">
 		<h1 id="bg-text" class = "text-center" style="font-family: Khand;
 font-style: normal;
 font-weight: bold;
-font-size: 200px;
+font-size: 150px;
 line-height: normal;
 text-align: center;
 
 ">Register</h1>
 	</div>	
-	<h2 class = "text-center" id = "heading" style="padding-top: 4%;"><b style="font-family: Khand;
+	<h2 class = "text-center" id = "heading" style="padding-top: 3%;"><b style="font-family: Khand;
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
 line-height: normal;
 text-align: center;
 
-color: #15477A;">IMUN Egypt 2019 Registration Form</b></h2>
+color: #15477A;">IMUN China 2019 Registration Form</b></h2>
 	
 </div>
 	<?php
@@ -544,8 +559,8 @@ function generateRandomString($length = 10) {
 										<select id="location" name="location" type="text"
                                                                        placeholder="Enter your Preferred Conference Location"
                                                                        class="form-control required" >
-											<option>Egypt</option>
-											<option>Malaysia</option>
+											<option>China</option>
+											
 											
 
 										</select>
@@ -583,6 +598,13 @@ function generateRandomString($length = 10) {
 								
 										<label for="email" class="control-label">Email <span style = "color:indianred">*</span></label><br/>
 										<input type="text" name="email" class="form-control" id = "email" required>
+									</div>
+									<div class = "form-group" id="confirmEmail">
+										
+								
+										<label for="con-email" class="control-label">Confirm Email <span style = "color:indianred">*</span></label><br/>
+										<input type="text" name="con-email" class="form-control" id = "con-email" required>
+										 <small id='message'></small>
 									</div>
 									<div class = "form-group">
 										<label  for="email" class="control-label">Sex <span style = "color:indianred">*</span></label><br/>
@@ -754,6 +776,10 @@ function generateRandomString($length = 10) {
 										<label>Why do you think you must be choosen as a part of International MUN 2019? (in English)<span style = "color:indianred">*</span></label>
 										<textarea class = "form-control" name = "why_mun" id="why_mun" rows = "8" required></textarea>
 									</div>
+									   <div class = "form-group">
+										<label>Enter Promocode( If youu don't have, Leaave it empty)<span style = "color:indianred"   ></span></label>
+								<input type="text" name="promo" id="promo"  class="form-control" placeholder="Promocode">
+									</div>
 
 
 
@@ -864,7 +890,23 @@ function generateRandomString($length = 10) {
 
 </script>
 <script>
+
+
+	function sendMail(name,email){
+    $.ajax({
+			url : '../private/API/send_mail.php',
+			type: 'POST',
+			data: 'req=send&name='+name+'&email='+email,
+			success: function(data){
+			console.log(data);
+			}
+		})
+
+
+
+}
 		// Rahul's code
+	
 	function registerSubmit(){
 		// Please write validation rules here
 		let location = $('#location').val();
@@ -884,10 +926,11 @@ function generateRandomString($length = 10) {
 		let prev_experience = $('#previous_imun').val();
 		let referral_code = 'y';
 		let motivation_letter = $('#why_mun').val();
+		let promo = $('#promo').val();
 		$.ajax({
 			url : '../private/API/register.php',
 			type: 'POST',
-			data: 'req=create&location='+location+'&fullname='+fullname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter,
+			data: 'req=create&location='+location+'&fullname='+fullname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter+'&promo='+promo,
 			success: function(data){
 				if (JSON.parse(data)["status"] =="EXIST") {
 						$("#get_id").text('Error....Email Id Already Registered Try With Diffrent Email Id.');
@@ -895,88 +938,25 @@ function generateRandomString($length = 10) {
 					
 				}else if(JSON.parse(data)["status"] =="SUCCESS"){
 				$("#get_id").text(JSON.parse(data)["id"]);
+				console.log(fullname);
+				sendMail(fullname,email);
 			}
 			}
 		})
 	}
+
+
 	$('#register_submit').on("click", function(){
 	    console.log("hi");
 		registerSubmit();
+		
 
 	})
 	// Rahul's code ends
 
 	
 
-	function save(){
-		$("#form").validate({
-			rules:{
-				full_name: {
-					required:true
-				},
-				email:{
-					required:true,
-					email:true
-				},
-				date_of_birth: {
-					required:true
-				},
-				sex: {
-					required:true
-				},
-				nationality: {
-					required:true
-				},
-				country_of_residence: {
-					required:true
-				},
 
-				currently_enrolled_as: {
-					required:true
-				},
-				major_field_of_study: {
-					required:true
-				},
-				high_school_name: {
-					required:true
-				},
-
-				food_preference: {
-					required:true
-				},
-				size_shirt: {
-					required:true
-				},
-				about_mun: {
-					required:true
-				},
-				why_mun: {
-					required:true
-				},
-				previous_imun: {
-					required:true
-				},
-
-			},
-			submitHandler: function(form){
-				$.ajax({
-					url : 'DecHanoiApplicants.php',
-					type: 'POST',
-					data: $('#form').serialize(),
-					success: function(data)
-					{
-						location.href = "ThankYou.html"
-						//$("#form")[0].reset();
-
-					},
-					error: function (ts)
-					{
-						alert(ts.responseText);
-					}
-				});
-			}
-		});
-	}
 
 </script>
 <script>
@@ -998,13 +978,7 @@ function generateRandomString($length = 10) {
 
 
 <section style="margin-top: -50px;">
-	<div class="container">
-	<div class="hero-image" >
 
-
-
-</div>
-</div>
 </section>
 <section style=" margin-top: 30px;">
 	<div class="container">
@@ -1052,7 +1026,7 @@ color: #3C3C3C; padding: 5% 5% 5% 5%"> Note: Committee and Country preferences w
 							
 					</div>
 					<div class="col-md-2">
-						<a href="blog.html" style="color: white;">Blogs</a>
+						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
 					<br><br><br>
 				</div><div class="col-md-12 col-xs-7" style="">
@@ -1157,4 +1131,26 @@ color: #FFFFFF; padding: 4px;" class="col-md-10 col-xs-10" > Address<br>Sector 5
       gtag('event', 'conversion', {'send_to': 'AW-779655741/YdUeCKGqsJMBEL204vMC'});
     })
   })
+
+
+
+  $('#email, #con-email').on('keyup', function () {
+  if ($('#email').val() == $('#con-email').val()) {
+    $('#message').html('Matching').css('color', 'green');
+     $('#message').attr('class', 'help-block');
+   $('#message').attr('data-bv-for', 'con-email');
+   $('#message').attr('data-bv-result', 'VALID');
+   	$("#confirmEmail").removeClass("has-error");
+   		$("#confirmEmail").addClass("has-success");
+  } else {
+  		$("#confirmEmail").removeClass("has-success");
+  	$("#confirmEmail").addClass("has-error");
+
+     $('#message').attr('class', 'help-block');
+  
+   $('#message').attr('data-bv-for', 'con-email');
+   $('#message').attr('data-bv-result', 'INVALID');
+    $('#message').html('Email Not Matching').css('color', 'red');
+}
+});
 </script>

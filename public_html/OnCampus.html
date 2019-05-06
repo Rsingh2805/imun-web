@@ -98,8 +98,30 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 <!-- End Facebook Pixel Code -->
 	</head>
 	<body>
+	    <div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v3.3'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="128351647837657">
+</div>
 		<!-- Header Section Start -->
-	<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
+		<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
 			<div class="container con">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -116,7 +138,7 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right" >
-						
+							<li class=""><a href="index.php">Home</a></li>
 						<li><a href="Aboutus.html">About Us</a></li>
 							<li class = "dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Conferences
@@ -130,20 +152,13 @@ src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript
 							</ul>
 						</li>
 						
-						
-						<li class = "dropdown active1">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Connet With Us
-								</a>
-							<ul class="dropdown-menu active1 " style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
-								<li><a href="OnCampus.html" style="color: white;">On Campus</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Jointeam.html">Join Us</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "Sponsorus.html">Sponsor Us</a></li>
-								
-							</ul>
-						</li>
-						
-						
-						<li><a href="blog.html">Blogs</a></li>
+					
+					
+					
+						<li class="active1"><a href="OnCampus.html">On Campus</a></li>
+						<li><a href="Jointeam.html">Join Us</a></li>
+						<li><a href="Sponsorus.html">Sponsor Us</a></li>
+						<li><a href="blog.php">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
@@ -265,8 +280,9 @@ border-radius: 10px;}
 }.hero-text2 {
   text-align: center;
   position: absolute;
-  top: 70% !important;
+  top: 65% !important;
   left: 8%;
+  right: 8%;
  
   color: white;
 
@@ -346,14 +362,19 @@ text-shadow: 4px 4px black;" class="headd">Bring The International MUN To Your C
   <div class="hero-text3" style="background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%);
 box-shadow: 0px 4px 20px rgba(58, 58, 58, 0.2);
 border-radius: 20px; padding: 10px 10px 10px 10px">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8UncXtSWpJFPAbeurzFTMYQ904k5AOMoPi0YM9Z186ZG5eA/viewform"  style="color: white; height: 20px;">Apply now</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8UncXtSWpJFPAbeurzFTMYQ904k5AOMoPi0YM9Z186ZG5eA/viewform"  style="color: white; height: 20px;" id="app" >Apply now</a>
     
   </div>
+  <script type="text/javascript">
+  	$("#app").on(Click,function goto(){
+  		window.location("https://docs.google.com/forms/d/e/1FAIpQLSe8UncXtSWpJFPAbeurzFTMYQ904k5AOMoPi0YM9Z186ZG5eA/viewform");
+  	}
+  </script>
 
 </div>
 </div>
 </section>
-<div id = "imun-register-heading" style="height: 300px; position: absolute;left: 120px; top: 500px; right: 0px;
+<div id = "imun-register-heading" style="height: 300px; position: absolute;left: 120px; top: 700px; right: 0px;
 ">
 	<div id="heading-background" style="    z-index: 100;">
 		<h1 id="bg-text" class = "text-center headd" style="
@@ -614,7 +635,7 @@ color: #0E3660;">How are IMUN On-Campus Programs evaluated?</a>
 							
 					</div>
 					<div class="col-md-2">
-						<a href="blog.html" style="color: white;">Blogs</a>
+						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
 					<br><br><br>
 				</div><div class="col-md-12 col-xs-7" style="">
