@@ -103,4 +103,20 @@ $mail->AltBody = 'This is a plain-text message body';
     }else{
         return true;
     }
+}
+
+function sendNewsLetter($emails, $message, $subject, $file){
+    $mail = configure_PHPMailer();
+    foreach ($emails as $email){
+        $mail->addAddress($email);
     }
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+    $mail->addAttachment('uploads/'.$file, "IMUNNewsletter.pdf");
+    if(!$mail->send()){
+        file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);
+        return $mail->ErrorInfo;
+    }else{
+        return true;
+    }
+}

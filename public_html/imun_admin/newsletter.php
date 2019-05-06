@@ -156,13 +156,13 @@ tr.shown td.details-control {
                             <br>
                             <form>
                                 <label>Subject</label><br>
-                                <input type="text" name="subject"><br>
+                                <input type="text" name="subject" id="newsletter-subject"><br>
                                 <label>Attachment</label><br>
-                                <input type="file" name="" name="attach"><br>
+                                <input type="file" id="attach" name="attach"><br>
                                 <label>Message</label><br>
-                                <textarea rows="2" cols="16" name="message"  style="width: 50%;"></textarea><br>
+                                <textarea rows="2" cols="16" id="newsletter-message" name="message"  style="width: 50%;"></textarea><br>
 
-                                <input type="submit" name="submit" value="Send">
+                                <input type="button" name="submit" value="Send" id="newsletter-submit">
                             </form>
                         </div>
                         <div class="card-block">
@@ -212,113 +212,48 @@ tr.shown td.details-control {
   
   
      <script type="text/javascript">
+    $('#send').on("click", function(){
+        $('.mail').show();
+    });
+    $('#newsletter-submit').on("click", function(){
+        sendMails();
+    });
+     function sendMails(){
+         let file = $('#attach').prop('files')[0];
+         let data = new FormData();
+         data.append('file', file);
+         data.append('ids', JSON.stringify([2]));
+         data.append('subject', $('#newsletter-subject').val());
+         data.append('message', $('#newsletter-message').val());
+         data.append('req', 'forward');
+         $.ajax({
+             url: "./../../private/API/newsletter.php",
+             type: 'post',
+             processData: false,
+             contentType: false,
+             data: data,
+             success: function(htm){
+                 console.log(htm);
+             }
+         })
+     }
 
 
- $('#send').click(function(){
-            $('.mail').css('display','block');
-           
-
-        });
-        $('.egypt').click(function(){
-            $('#tab-malasia').removeClass('active');
-            $('#tab-egypt').addClass('active');
-            $('.egypt').addClass('active1');
-            $('.mal').removeClass('active1');
-
-        });
-              $('.mal').click(function(){
-            $('#tab-egypt').removeClass('active');
-            $('#tab-malasia').addClass('active');
-            $('.mal').addClass('active1');
-            $('.egypt').removeClass('active1');
-
-        });
 
     </script>
       <script type="text/javascript" src="js/custom.js"></script>
 
   <script type="text/javascript">
-    function format ( d ) {
-    // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-        
-        '<tr>'+
-            '<td>E-mail :</td>'+
-            '<td>'+d.email+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Gender :</td>'+
-            '<td>'+d.sex+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Date Of Birth :</td>'+
-            '<td>'+d.dob+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Country of Residence :</td>'+
-            '<td>'+d.residence_country+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Currently enrolled as :</td>'+
-            '<td>'+d.enrolled_as+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Major Field of Study :</td>'+
-            '<td>'+d.field_of_study+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>University/Senior High School Name :</td>'+
-            '<td>'+d.univ_name+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>How do you know about international MUN/IMUN? :</td>'+
-            '<td>'+d.known_from+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Previous MUN experience? :</td>'+
-            '<td>'+d.prev_experience+'</td>'+
-        '</tr>'+
-         '<tr>'+
-            '<td>Food Preference :</td>'+
-            '<td>'+d.food_preference+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Size of T-shirt :</td>'+
-            '<td>'+d.tshirt_size+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Why do you think you must be choosen as a part of International MUN 2019? (in English)  :</td>'+
-            '<td>'+d.motivation_letter+'</td>'+
-        '</tr>'+
-         '<tr>'+
-            '<td>Promocode  :</td>'+
-            '<td>'+d.promo+'</td>'+
-        '</tr>'
-
-    '</table>';
-}
-function pad(n, width, z) {
-    z = z || '0';
-    n = n + '';
-    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-}
-
-function get_id(el){
-    let registration_id = '';
-    registration_id += el['conference_location'].substr(0,3).toUpperCase();
-    registration_id += pad(el['id'], 6);
-    return registration_id;
-}
 
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/dashboard.php",
+            "url": "./../../private/API/newsletter.php",
             "dataSrc": function(json) {
                 console.log(json);
-                $.each(json, function(index, el){
-                    el["registration_id"] = get_id(el);
-                });
+                // $.each(json, function(index, el){
+                //     el["registration_id"] = get_id(el);
+                // });
                 return json;
             }
         },
@@ -334,35 +269,12 @@ function updateTable(){
 
                    
                 },},
-            { "data": "conference_location" },
+            { "data": "email" },
        
         ],
         "order": [[1, 'asc']]
     } );
 
-    // Add event listener for opening and closing details
-    $('#sample_2 tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = table.row( tr );
-
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( format(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    } );
-
-    $('#sample_2 tbody').on('click', '.accept-app', function () {
-        acceptTable($(this).attr('data-id'));
-    });
-    $('#sample_2 tbody').on('click', '.reject-app', function () {
-        rejectTable($(this).attr('data-id'));
-    });
 }
 
 function acceptTable(id){

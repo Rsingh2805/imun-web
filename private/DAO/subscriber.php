@@ -17,4 +17,15 @@ class Subscriber{
             echo $sql."<br>".$e->getMessage();
         }
     }
+
+    public static function getSubscribers($id=null){
+        $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT * FROM subscriber";
+        if ($id){
+            $sql .= " WHERE `id`=$id";
+        }
+        $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt;
+    }
 }
