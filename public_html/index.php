@@ -7,6 +7,14 @@ require_once('../private/DAO/database_api.php');
         $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       
 ?>
+<?php
+
+
+ 
+        $sql2 = "SELECT * FROM `news`";
+        $stmt2 = $conn->query($sql2)->fetchAll(PDO::FETCH_ASSOC);
+      
+?>
 <!DOCTYPE html>
 <html lang="en">
 	
@@ -1216,30 +1224,24 @@ color: #15477A; ">In The NEWS</span></h2>
             <div id="thumbnail-slider" style="background-color: unset; box-shadow: unset;">
                 <div class="inner">
                     <ul>
-                        <li>
+                      <?php foreach ($stmt2 as $value2) {
+                      ?>
+                   
                         <li style="min-height: 190px; min-width: 289px; text-align: left;">
-                            <a class="thumb" href="images/news.png"></a>
-                            <h6> Reflections: How MUN Has Changed Our Lives</h6><p>
-                            	Model UN is a fast-growing competitive activity for many students, but to a great deal of us, it means something more. Model UN has helped us grow into leaders, discover our futures, become confident in ourselves, and form lasting friendships with people from all over the world. This article was written by you, the Best Delegate community, and it shows stories about how MUN has made us the people.
+                            <a class="thumb" href="images/news/<?php echo $value2['image'];?>"></a>
+                               <a href="<?php echo $value2['url'];?>">
+                            <h6><?php echo $value2['subject'];?></h6> </a><p>
+                            	<?php echo $value2['content'];?>
                             </p>
 
                         </li>
+                   
+                        <?php 
+                    }
+                    ?>
 
-                    </li>
-                         <li style="min-height: 190px; min-width: 289px;">
-                            <a class="thumb" href="images/news.png"></a>
-                             <a class="thumb" href="images/news.png"></a>
-                            <h6> Reflections: How MUN Has Changed Our Lives</h6><p>
-                            	Model UN is a fast-growing competitive activity for many students, but to a great deal of us, it means something more. Model UN has helped us grow into leaders, discover our futures, become confident in ourselves, and form lasting friendships with people from all over the world. This article was written by you, the Best Delegate community, and it shows stories about how MUN has made us the people.
-                            </p>
-                        </li>
-                         <li style="min-height: 190px; min-width: 289px;">
-                            <a class="thumb" href="images/news.png"></a>
-                             <a class="thumb" href="images/news.png"></a>
-                            <h6> Reflections: How MUN Has Changed Our Lives</h6><p>
-                            	Model UN is a fast-growing competitive activity for many students, but to a great deal of us, it means something more. Model UN has helped us grow into leaders, discover our futures, become confident in ourselves, and form lasting friendships with people from all over the world. This article was written by you, the Best Delegate community, and it shows stories about how MUN has made us the people.
-                            </p>
-                        </li>
+                  
+                       
                        
                     </ul>
                 </div>

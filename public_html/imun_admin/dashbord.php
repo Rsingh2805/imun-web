@@ -149,6 +149,7 @@ tr.shown td.details-control {
                             
                                <button>Delete User</button>
                                 <button>Download Excel</button>
+                                 <button>Confirm Seat</button>
                               
                                  
                                        <button><a href="delegates.php" style="color: black;">Fixed Delegate Button</a></button>
