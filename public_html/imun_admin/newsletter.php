@@ -121,6 +121,7 @@ tr.shown td.details-control {
                                <a href="dashbord.php">  Dashboard </a>|
                              <a href="blogs.php">  Blogs</a> |
                               Newsletter |
+                               <a href="news.php">  News</a> |
                             </h4>
                         </div>
                     </div>
@@ -156,6 +157,8 @@ tr.shown td.details-control {
                             <form>
                                 <label>Subject</label><br>
                                 <input type="text" name="subject"><br>
+                                <label>Attachment</label><br>
+                                <input type="file" name="" name="attach"><br>
                                 <label>Message</label><br>
                                 <textarea rows="2" cols="16" name="message"  style="width: 50%;"></textarea><br>
 

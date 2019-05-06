@@ -346,11 +346,11 @@ window.fbAsyncInit = function() {
 						
 					
 						
-						<li><a href="blog.html">Blogs</a></li>
+						<li><a href="blog.php">Blogs</a></li>
 						<li><a href="OnCampus.html">On Campus</a></li>
 						<li><a href="Jointeam.html">Join Us</a></li>
 						<li><a href="Sponsorus.html">Sponsor Us</a></li>
-						<li><a href="blog.html">Blogs</a></li>
+						<li><a href="blog.php">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
@@ -471,18 +471,18 @@ color: #15477A;">Already Registered ? Check your result.</h4>
   
 </div>	
 
-<div id = "imun-register-heading" style="height: 300px; padding-top: 0px;">
-	<div id="heading-background">
+<div id = "imun-register-heading" style="height: 100px; padding-top: 0px;">
+	<div id="heading-background" style="top: 350px;">
 		<h1 id="bg-text" class = "text-center" style="font-family: Khand;
 font-style: normal;
 font-weight: bold;
-font-size: 200px;
+font-size: 150px;
 line-height: normal;
 text-align: center;
 
 ">Register</h1>
 	</div>	
-	<h2 class = "text-center" id = "heading" style="padding-top: 17%;"><b style="font-family: Khand;
+	<h2 class = "text-center" id = "heading" style="padding-top: 3%;"><b style="font-family: Khand;
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
@@ -598,6 +598,13 @@ function generateRandomString($length = 10) {
 								
 										<label for="email" class="control-label">Email <span style = "color:indianred">*</span></label><br/>
 										<input type="text" name="email" class="form-control" id = "email" required>
+									</div>
+									<div class = "form-group" id="confirmEmail">
+										
+								
+										<label for="con-email" class="control-label">Confirm Email <span style = "color:indianred">*</span></label><br/>
+										<input type="text" name="con-email" class="form-control" id = "con-email" required>
+										 <small id='message'></small>
 									</div>
 									<div class = "form-group">
 										<label  for="email" class="control-label">Sex <span style = "color:indianred">*</span></label><br/>
@@ -949,75 +956,7 @@ function generateRandomString($length = 10) {
 
 	
 
-	function save(){
-		$("#form").validate({
-			rules:{
-				full_name: {
-					required:true
-				},
-				email:{
-					required:true,
-					email:true
-				},
-				date_of_birth: {
-					required:true
-				},
-				sex: {
-					required:true
-				},
-				nationality: {
-					required:true
-				},
-				country_of_residence: {
-					required:true
-				},
 
-				currently_enrolled_as: {
-					required:true
-				},
-				major_field_of_study: {
-					required:true
-				},
-				high_school_name: {
-					required:true
-				},
-
-				food_preference: {
-					required:true
-				},
-				size_shirt: {
-					required:true
-				},
-				about_mun: {
-					required:true
-				},
-				why_mun: {
-					required:true
-				},
-				previous_imun: {
-					required:true
-				},
-
-			},
-			submitHandler: function(form){
-				$.ajax({
-					url : 'DecHanoiApplicants.php',
-					type: 'POST',
-					data: $('#form').serialize(),
-					success: function(data)
-					{
-						location.href = "ThankYou.html"
-						//$("#form")[0].reset();
-
-					},
-					error: function (ts)
-					{
-						alert(ts.responseText);
-					}
-				});
-			}
-		});
-	}
 
 </script>
 <script>
@@ -1087,7 +1026,7 @@ color: #3C3C3C; padding: 5% 5% 5% 5%"> Note: Committee and Country preferences w
 							
 					</div>
 					<div class="col-md-2">
-						<a href="blog.html" style="color: white;">Blogs</a>
+						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
 					<br><br><br>
 				</div><div class="col-md-12 col-xs-7" style="">
@@ -1192,4 +1131,26 @@ color: #FFFFFF; padding: 4px;" class="col-md-10 col-xs-10" > Address<br>Sector 5
       gtag('event', 'conversion', {'send_to': 'AW-779655741/YdUeCKGqsJMBEL204vMC'});
     })
   })
+
+
+
+  $('#email, #con-email').on('keyup', function () {
+  if ($('#email').val() == $('#con-email').val()) {
+    $('#message').html('Matching').css('color', 'green');
+     $('#message').attr('class', 'help-block');
+   $('#message').attr('data-bv-for', 'con-email');
+   $('#message').attr('data-bv-result', 'VALID');
+   	$("#confirmEmail").removeClass("has-error");
+   		$("#confirmEmail").addClass("has-success");
+  } else {
+  		$("#confirmEmail").removeClass("has-success");
+  	$("#confirmEmail").addClass("has-error");
+
+     $('#message').attr('class', 'help-block');
+  
+   $('#message').attr('data-bv-for', 'con-email');
+   $('#message').attr('data-bv-result', 'INVALID');
+    $('#message').html('Email Not Matching').css('color', 'red');
+}
+});
 </script>

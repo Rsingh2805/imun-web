@@ -1,3 +1,15 @@
+<?php
+
+require_once('../private/DAO/database_api.php');
+$id=$_GET['blog_id'];
+  $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT * FROM `blogs` where `id`=$id ";
+        $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+        
+      
+?>
 <!DOCTYPE html>
 <html lang="en">
 	
@@ -140,13 +152,13 @@ window.fbAsyncInit = function() {
 						<li><a href="OnCampus.html">On Campus</a></li>
 						<li><a href="Jointeam.html">Join Us</a></li>
 						<li><a href="Sponsorus.html">Sponsor Us</a></li>
-						<li class="active1"><a href="blog.html">Blogs</a></li>
+						<li class="active1"><a href="blog.php">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
 				</div>
 			</div>
-		</nav><title>Quality vs Quantity of delegates! What matters the most in a MUN?</title>
+		</nav><title><?php echo($stmt[0]['subject']); ?></title>
 <style>
 		.navbar{
 	overflow: unset !important;
@@ -297,7 +309,7 @@ color: #FFFFFF !important;
 		display: block;
 	}
 .hero-image {
-  background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0) 28.58%, #121E32 99.52%), url("images/blog.png");
+  background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0) 28.58%, #121E32 99.52%), url("images/blog/<?php echo($stmt[0]['image']); ?>");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -327,22 +339,21 @@ font-size: 24px;
 line-height: 38px;
 
 color: #121E32;
-">Quality vs Quantity of delegates!<br>
-What matters the most in a MUN?</div><div class="col-md-4" style="text-align: right;"><span style="font-family: Montserrat;
+"><?php echo($stmt[0]['subject']); ?></div><div class="col-md-4" style="text-align: right;"><span style="font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
 line-height: normal;
 text-align: right;
 
-color: #121E32;">Dec 12 2018<br><span style="font-family: Montserrat;
+color: #121E32;"><?php echo($stmt[0]['date']); ?><br><span style="font-family: Montserrat;
 font-style: italic;
 font-weight: 500;
 font-size: 18px;
 line-height: 29px;
 text-align: right;
 
-color: #FBB54D">Posted by Admin</span></div>
+color: #FBB54D">Posted by <?php echo($stmt[0]['posted_by']); ?></span></div>
 			</div>
 		
 			<div>
@@ -359,17 +370,17 @@ line-height: 20px;
 text-align: justify;
 
 color: #474747;">
-			MUN or Model United Nations is typically a platform where students role-play as delegates to the United Nations in a simulated environment, much similar to the UN committees. This activity takes place at MUN conferences, of which International Model United Nations (IMUN) is a brilliant example. Much like the idea behind conducting a MUN, IMUN intends to bring forth the leaders and diplomats lying dormant inside the students. Every year, thousands of students all over the world participate in various MUNs to display their mettle in negotiations and consensus-building.<br><br>
-
-In a largely globalized world that we live today, it becomes imperative that we build positive relations with people belonging to different cultures from a multitude of geographical backgrounds. This not only nurtures our knowledge but encourages harmony in a world which is otherwise, fraught with grave mishappenings. It is only through building productive and positive relationships with other countries can we successfully curb global issues of terrorism, climate change, and a multitude of global crimes taking place over the world. And, it is none but the youth of today who are the torch-bearers to a better world. IMUN prepares a spectacular platform for such youth to display their concerns and discuss and debate on issues so that they can take a substantial part in making the world a better place to live in.
-<br><br>
-How IMUN aims to assist the youth with this platform is by allowing them to interact with fellow youths from various parts of the world. This helps them build relationships with people from places where they would’ve never thought of otherwise. This is an amazing experience for the young minds to nurture growth and help them open up to newer, more interesting environments. As we know that IMUN is a simulated environment of the UN, it is only but natural that we make sure we have the best delegates on board. And, when we speak about quality, it will always win over quantity. If we look at any good International MUN conference, we will notice one thing which is common to all of them and that is, that there aren’t too many delegates in one conference. There are just enough from different parts of the world to conduct quality discussions and debates.
+			<?php echo($stmt[0]['content_1']); ?><br><br>
+			<?php echo($stmt[0]['content_2']); ?><br><br>
+			<?php echo($stmt[0]['content_3']); ?><br><br>
+			<?php echo($stmt[0]['content_4']); ?><br><br>
+			<?php echo($stmt[0]['content_5']); ?><br><br>
 </p>
 		</div>
 			<div class="col-md-2">
 		
 				
-				<a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/" target="_blank"> <img src="images/icon/facebook-logo.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.internationalmun.org/test_2/public_html/blog_page.html" target="_blank"> <img src="images/icon/facebook-logo.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
 					<a href="http://twitter.com/share?&amp;url=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/" target="_blank">	<img src="images/icon/twitter.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
 						
 							<a href="http://www.linkedin.com/shareArticle?url=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/" target="_blank">	<img src="images/icon/linkedin.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
@@ -408,7 +419,7 @@ How IMUN aims to assist the youth with this platform is by allowing them to inte
 							
 					</div>
 					<div class="col-md-2">
-						<a href="blog.html" style="color: white;">Blogs</a>
+						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
 					<br><br><br>
 				</div><div class="col-md-12 col-xs-7" style="">

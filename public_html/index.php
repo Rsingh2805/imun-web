@@ -731,7 +731,7 @@ window.fbAsyncInit = function() {
 						<li><a href="OnCampus.html">On Campus</a></li>
 						<li><a href="Jointeam.html">Join Us</a></li>
 						<li><a href="Sponsorus.html">Sponsor Us</a></li>
-						<li><a href="blog.html">Blogs</a></li>
+						<li><a href="blog.php">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
@@ -782,8 +782,8 @@ color: #FFFFFF;">Know More</a></button>
 						
 						<div class = "imun-social" style="float: left;">
 							<h6 style="float: left; color: white; margin-bottom: 0px;font-size: 14px;">Catch us at:</h6><br>
-								<a href = "https://www.facebook.com/internationalmun2018/" target = "_blank"><img src="images/f.png" height="30" width="30">
-									<a href = "https://www.instagram.com/international_mun/" target="_blank" ><img src="images/i.png" height="30" width="30"></a>
+								<a href = "https://www.facebook.com/internationalmun2018/" target = "_blank"><img src="images/f.png" height="28" width="28">
+									<a href = "https://www.instagram.com/international_mun/" target="_blank" ><img src="images/ii.png" height="30" width="30"></a>
 									</div>
 								
 							</div>
@@ -989,7 +989,7 @@ font-weight: 500;
 font-size: 12px;
 line-height: normal;
 text-align: center;
-color: #15477A;">Autralian Embassy, Bangkok and Vietnam</p>
+color: #15477A;">Australian Embassy, Bangkok and Vietnam</p>
 <section>
 	<div class="container ">
 		<h2 class = "text-left" id = "heading" style="text-align: left; margin-left: 12%;font-family: Khand !important;
@@ -1833,7 +1833,7 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 							
 					</div>
 					<div class="col-md-2">
-						<a href="blog.html" style="color: white;">Blogs</a>
+						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
 					
 				</div>

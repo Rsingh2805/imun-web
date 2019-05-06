@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	
+
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 		
@@ -30,6 +31,31 @@
 
   gtag('config', 'AW-779655741');
 </script>
+<style type="text/css">
+@font-face {
+  font-family: 'Khand';
+  font-style: normal;
+  font-weight: 700;
+  src: url('khand/khand-v7-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Khand Bold'), local('Khand-Bold'),
+       url('khand/khand-v7-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('khand/khand-v7-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('khand/khand-v7-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('khand/khand-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('khand/khand-v7-latin-700.svg#Khand') format('svg'); /* Legacy iOS */
+}@font-face {
+font-family: 'Helvetica 43 Light Extended';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica 43 Light Extended'), url('font/HelveticaNeue-LightExt.woff') format('woff');
+}
+
+	body, html {
+  height: 100% !important;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 		<!-- Global site tag (gtag.js) - Google Ads: 779655741 --> 
 		
 		 <script>
@@ -57,9 +83,113 @@ fbq('track', 'PageView');
  <img height="1" width="1" 
 src="https://www.facebook.com/tr?id=336654900172750&amp;ev=PageView&amp;noscript=1"/>
 </noscript>
+
+<style>
+@media (min-width: 1200px){
+.container {
+    width: 925px !important;
+}.con{
+	width: 1170px !important;
+}
+}
+
+.navbar ul li a{
+	font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: normal;
+
+
+}.but{
+	background: linear-gradient(244.71deg, #FFBB55 0%, #DC8F1A 100%);
+box-shadow: 0px 4px 20px rgba(58, 58, 58, 0.2);
+border-radius: 50px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: normal;
+text-align: center;
+min-width: 60%;
+text-align: center;
+color: #FFFFFF;
+min-height: 35px;
+margin-bottom: 50px;
+}.active1{
+font-family: Montserrat !important;
+font-style: normal !important;
+font-weight: 600 !important;
+font-size: 12px !important;
+line-height: normal !important;
+text-align: center !important;
+	border-bottom: 2px solid #fab449;
+color: #FFFFFF !important;
+}
+.navbar ul li a:hover{
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: normal;
+text-align: center;
+
+color: #FFFFFF !important;
+}
+.navbar{
+	overflow: unset !important;
+}
+	.manu{
+		font-family: Montserrat;
+}
+font-style: normal;
+font-weight: 500 !important;
+font-size: 12px;
+line-height: normal  !important;
+
+color: #BABABA  !important;
+
+	}
+	.manuu{
+		font-family: Montserrat;
+font-style: normal;
+font-weight: 500 !important;
+font-size: 12px;
+line-height: normal  !important;
+
+color: #BABABA  !important;
+
+	
+	}
+	.manu:hover{
+		font-family: Montserrat;
+font-style: normal;
+font-weight: 600 !important;
+font-size: 12px;
+line-height: normal !important;
+text-align: center;
+
+color: #FFFFFF !important;
+	}
+	.navbar ul li:hover{
+	border-bottom: 2px solid #fab449;
+	
+}
+.navbar-nav>li>.dropdown-menu>li>a {
+	color: white !important;
+	padding: 15px 15px 15px 20px;
+}
+.navbar-nav>li>.dropdown-menu>li>a:hover {
+	color: white !important ;
+	background-color: initial !important;
+	}
+
+
+</style>
 <!-- End Facebook Pixel Code -->
 	</head>
 	<body>
+	    
 	    <div id="fb-root"></div>
 <script>
 window.fbAsyncInit = function() {
@@ -83,7 +213,7 @@ window.fbAsyncInit = function() {
   page_id="128351647837657">
 </div>
 		<!-- Header Section Start -->
-	<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
+		<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
 			<div class="container con">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -102,7 +232,7 @@ window.fbAsyncInit = function() {
 					<ul class="nav navbar-nav navbar-right" >
 							<li class=""><a href="index.php">Home</a></li>
 						<li><a href="Aboutus.html">About Us</a></li>
-							<li class = "dropdown">
+							<li class = "dropdown active1">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Conferences
 								</a>
 							<ul class="dropdown-menu" style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
@@ -126,86 +256,37 @@ window.fbAsyncInit = function() {
 					</ul>
 				</div>
 			</div>
-		</nav><title>Terms and Conditions</title>
-	<style>
-		#imun-tandc-heading{
-			padding-top: 100px;
-		}
-		#imun-detailed-tandc .box{
-			box-shadow: 0 6px 16px 0 rgba(115,143,147,.4);
-			background: white;
-			padding:25px;
-		}
-		#imun-detailed-tandc h3{
-			font-weight: bolder;
-		}
-		#imun-detailed-tandc p{
-			font-size: 15px;
-			line-height: 24px;
-			text-align: justify;
-		}
-		#imun-detailed-tandc ul li{
-			line-height: 26px;
-			font-size: 15px;
-			text-align: justify;
+		</nav><title>IMUN Vietnam 2019</title>
+<section style="margin-bottom: 100px;">
+	<div class = "container" id = "row-content">
+			<div class = "row">
+				<div class = "col-md-3"></div>
+				<div class = "col-md-6">
+					<div class = "box">
+						<h2 class = "text-center"><b>IMUN 2019 Registration Payment</b>
+						</h2><hr>
+						<CENTER>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZJTNEA36GF6SU">
+<table>
+<tr><td><input type="hidden" name="on0" value="Name :">Name :</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+</table>
+<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+						
 
-		}
-	</style>
-	<body>
-		
-		<div id = "imun-tandc-heading">
-			<div id="heading-background">
-				<h1 id="bg-text" class = "text-center">T&C</h1>
-			</div>	
-			<h2 class = "text-center" id = "heading"><b>Terms and Conditions</b></h2>
-		</div>
-		<section id = "imun-detailed-tandc">
-			<div class = "container">
-				<div class = "box">
-					<div class = "row" id = "row-content">
-                       <ol>
-	<li><b>Registration Deadlines</b><br>
-		<ul>
-			<li>All registrations are accepted on a first come, first served basis. Once the maximum capacity is reached, the subsequent applicants will be placed in the waiting list.</li>
-		</ul>
-	</li>
-	<br>
-	<li>
-		<b>Cancellation Policy</b><br>
-		<ul>
-			<li>If the retreat or event is cancelled by the organizer, you will receive a full refund (100%)</li>
-			<li>If you cancel your participation in a retreat or event for any reason, you receive no refunds. We cannot however compensate you for airfare or travel costs incurred. In the unlikely event that the retreat or event is cancelled due to weather, natural disaster or political upheaval, we cannot guarantee a refund – it will be depending on receiving a refund from the venue / tour operator we work with. To cover these risks, we highly recommend you purchase travel insurance</li>
-		</ul>
-	</li><br>
-	<li><b>Visa</b><br>
-		<ul>
-			<li>IMUN 2019 will provide the necessary documents to support your visa application but is not responsible for your visa into Hanoi, Vietnam. All fees are non-refundable, and it is your responsibility to secure the necessary documents to enter Vietnam. IMUN will not issue refunds for delegates who are unable to secure a visa.</li>
-		</ul>
-	</li><br>
-	<li><b>Privacy and Intellectual Property</b><br>
-		<ul>
-			<li>IMUN reserves the right to utilize all the data submitted to IMUN and to collect data in the form of photographs or videos during the conference and social events without limitations.</li>
-			<li>All participants agree that no data, results, and materials from IMUN 2019 will be disseminated by means of publications, reports, conferences, or any other form without permission from IMUN of which these data, results, and materials are its exclusive property. </li>
-			<li>IMUN reserves the right to change these terms and conditions at any time without prior notice. If any changes are made, the revised terms and conditions shall be posted on the IMUN website immediately. Please check the latest information posted herein to inform yourself of any changes.</li>
-		</ul>
-	</li><br>
-	<li><b>Code of Conduct</b><br>
-		<ul>
-			<li>You hereby certify that all information submitted are truthful and accurate. Any falsification of any information submitted will terminate their participation in IMUN and future IMUN activities and may result in legal actions. </li>
-			<li>You certify that all materials produced for this conference will be original work. Plagiarism has zero tolerance at IMUN, and should the IMUN Secretariat discover instances of plagiarism, you will be disqualified from the conference without refund. </li>
-			<li>You are expected and obliged to obey the laws of Hanoi, Vietnam while participating in IMUN. You will be held liable for any damage or loss caused by you. Full payment for any such damage or loss must be paid prior to your departure. If you fail to make payment, you will be responsible for meeting any claims (including legal costs) subsequently made
-			against IMUN because of your actions together with all costs we incur in pursuing any claim against you. </li>
-			<li>You have full assumption of risk and acknowledge that IMUN, and its members, officers, elected representatives and employees, including the IMUN Student Secretariat team, do not assume any responsibility for the conduct and activities of the participant. </li>
-			<li>You agree to accept and abide by the Code of Conduct published in the Conference Handbook and decided by the IMUN Secretary-General. </li>
 
-		</ul>
-	</li>
-</ol>
+						</CENTER>
 					</div>
 				</div>
 			</div>
-			
-		</section>
+		</div>
+</section>
+
+
+
 	<section id = "imun-footer" style="background-color: #0E3660">
 			<div class = "container">
 				<div class="row">
@@ -277,7 +358,6 @@ color: #FFFFFF; padding: 4px;" class="col-md-10 col-xs-10" > Address<br>Sector 5
 				<h4 class="pull-right"></h4>
 			</div>
 		</section>
-		
 
 <script>
   window.addEventListener('load',function(){
@@ -290,21 +370,7 @@ color: #FFFFFF; padding: 4px;" class="col-md-10 col-xs-10" > Address<br>Sector 5
     })
   })
 </script>
-	<script>
-		$(function () {
-			$(document).scroll(function () {
-				var $nav = $(".navbar-fixed-top");
-				var $list = $(".navbar-right li a");
-				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-				$list.toggleClass('list-scroll', $(this).scrollTop()>$list.height());
-
-			});
-		});
-
-	</script>
-
-
-	</body>
+</body>
 
 
 </html>

@@ -1,3 +1,14 @@
+<?php
+
+require_once('../private/DAO/database_api.php');
+
+  $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT * FROM `blogs`";
+        $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+      
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	
@@ -158,7 +169,7 @@ window.fbAsyncInit = function() {
 						<li><a href="OnCampus.html">On Campus</a></li>
 						<li><a href="Jointeam.html">Join Us</a></li>
 						<li><a href="Sponsorus.html">Sponsor Us</a></li>
-						<li class="active1"><a href="blog.html">Blogs</a></li>
+						<li class="active1"><a href="blog.php">Blogs</a></li>
 						<li><a href="index.php#con">Contact Us</a></li>
 			
 					</ul>
@@ -362,11 +373,14 @@ color: #15477A;">Blogs</b></h2>
 </div>
 	
 <section style="padding-bottom: 10%;">
-	<div class="container">
+	<?php foreach ($stmt as $value) {
+		?>
+	
+	<div class="container" >
 <div class="row" style="background: #FFFFFF;
 box-shadow: 0px 0px 20px rgba(49, 49, 49, 0.1);
-border-radius: 10px;">
-			<div class="col-md-4 hero-image" style="  box-shadow:    inset   -55px 0px 29px -1px #121E32; background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0.45) 28.58%, #121e32de 99.52%), url('images/blog.png');">
+border-radius: 10px;max-height: 430px;">
+			<div class="col-md-4 hero-image" style="  box-shadow:    inset   -55px 0px 29px -1px #121E32; background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0.45) 28.58%, #121e32de 99.52%), url('images/blog/<?php echo($value['image']); ?>');max-height: 230px;">
 <div class="">				
  <div class="hero-text">
     <span style="font-family: Montserrat;
@@ -376,7 +390,7 @@ font-weight: bold;
 line-height: normal;
 text-align: center;
 
-color: #FFFFFF;">Quality vs Quantity of delegates! What matters the most in a MUN?</span>
+color: #FFFFFF;"><?php echo($value['subject']); ?></span>
     
   </div>
   <br>
@@ -389,7 +403,7 @@ font-size: 12px;
 line-height: 19px;
 text-align: justify;
 
-color: #E3E3E3;">Posted by Admin</h1>
+color: #E3E3E3;">Posted by <?php echo($value['posted_by']); ?></h1>
     
   </div>
 </div><div class="">
@@ -409,7 +423,7 @@ color: #FFFFFF;">share</h1><br><a href="https://www.facebook.com/sharer/sharer.p
 </div>
 
 			</div>
-			<div class="col-md-6" style="padding: 2% 2% 2% 2%; text-align: justify;">MUN or Model United Nations is typically a platform where students role-play as delegates to the United Nations in a simulated environment, much similar to the UN committees. This activity takes place at MUN conferences, of which International Model United Nations (IMUN) is a brilliant example. Much like the idea behind conducting a MUN, IMUN intends to bring forth the leaders and diplomats lying dormant inside the students. Every year, thousands of students all over the world participate in various MUNs to display their mettle in negotiations and consensus-building.....<a href="blog_page.html" style="color: black;background-color: #f9c579; border-radius: 20px;padding: 2px 2px 2px 2px;">Read More</a></div>
+			<div class="col-md-6" style="padding: 2% 2% 2% 2%; text-align: justify;"><p style="max-height: 200px;overflow: hidden;"><?php echo($value['content_1']); ?></p><a href="blog_page.php?blog_id=<?php echo $value['id']; ?>" style="color: black;background-color: #f9c579; border-radius: 20px;padding: 2px 2px 2px 2px;">Read More</a></div>
 			<div class="col-md-2">
 				<span style="position: absolute;top: 0px;font-family: Montserrat;
 font-style: normal;
@@ -418,10 +432,10 @@ font-size: 16px;
 line-height: normal;
 
 color: #FFFFFF; right: 0px; background: #121E32;
-border-radius: 0px 10px 0px 0px; padding: 7% 7% 7%  7%;">Dec <br> 12</span>
+border-radius: 0px 10px 0px 0px; padding: 7% 7% 7%  7%;"><?php echo $value['date']; ?></span>
 			</div>
-		</div><br><br>
-		<div class="row" style="background: #FFFFFF;
+		</div></div><br><br><?php } ?>
+		<!-- <div class="row" style="background: #FFFFFF;
 box-shadow: 0px 0px 20px rgba(49, 49, 49, 0.1);
 border-radius: 10px;">
 			<div class="col-md-4 hero-image" style="  box-shadow:    inset   -55px 0px 29px -1px #121E32;background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0.45) 28.58%, #121e32de 99.52%), url('images/blog/2.jpg');">
@@ -478,14 +492,14 @@ line-height: normal;
 
 color: #FFFFFF; right: 0px; background: #121E32;
 border-radius: 0px 10px 0px 0px; padding: 7% 7% 7%  7%;">Nov <br> 15</span>
-<!-- <span style="position: absolute;bottom:0px;font-family: Montserrat;
+<span style="position: absolute;bottom:0px;font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
 font-size: 16px;
 line-height: normal;
 
 color: #FFFFFF; right: 0px; background: #FBB54D;
-border-radius: 0px 0px 10px 0px; padding: 7% 7% 7%  7%;">READ <br> More</span> --></div>
+border-radius: 0px 0px 10px 0px; padding: 7% 7% 7%  7%;">READ <br> More</span></div>
 		</div><br><br>
 			<div class="row" style="background: #FFFFFF;
 box-shadow: 0px 0px 20px rgba(49, 49, 49, 0.1);
@@ -542,7 +556,7 @@ line-height: normal;
 
 color: #FFFFFF; right: 0px; background: #121E32;
 border-radius: 0px 10px 0px 0px; padding: 7% 7% 7%  7%;">Oct <br> 07</span></div>
-		</div>
+		</div> -->
 		
 	</div>
 </section>
@@ -572,7 +586,7 @@ border-radius: 0px 10px 0px 0px; padding: 7% 7% 7%  7%;">Oct <br> 07</span></div
 							
 					</div>
 					<div class="col-md-2">
-						<a href="blog.html" style="color: white;">Blogs</a>
+						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
 					<br><br><br>
 				</div><div class="col-md-12 col-xs-7" style="">

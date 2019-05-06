@@ -5,7 +5,6 @@ if (!isset($_SESSION['user'])){
 }
 ?>
 
-
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -121,9 +120,9 @@ tr.shown td.details-control {
                             <h4 class="m-t-5">
                                 <i class="fa fa-home"></i>
                               <a href="dashbord.php">  Dashboard </a>|
-                               Blogs |
+                               <a href="blogs.php">  Blogs</a> |
                                 <a href="newsletter.php"> Newsletter</a> |
-                                 <a href="news.php">  News</a> |
+                               News |
                             </h4>
                         </div>
                     </div>
@@ -142,13 +141,13 @@ tr.shown td.details-control {
                                         <div class="tab-pane active" id="tab-malasia">
                                            <div class="card m-t-35">
                         <div class="card-header bg-white">
-                            <i class="fa fa-table"> </i> Blogs
+                            <i class="fa fa-table"> </i> News
                         </div>
                         <div class="container">
                 
-                             <button id="add">Add New Blog</button>
+                             <button id="add">Add New News</button>
                             
-                               <button>Delete Blogs</button>
+                               <button>Delete News</button>
                               
                               
                                  
@@ -157,34 +156,16 @@ tr.shown td.details-control {
                          <div class="blog" style="display: none; margin-left: 5%;"><br>
                             <br>
                             <form>
-                                <div class="container"><div class="row">
-                                    <div class="col-md-4">
-                                         <label>Subject</label>
-                                <input type="text" name="subject">
-                                    </div>
-                                     <div class="col-md-4">
-                                         <label>Posted by</label>
-                                <input type="text" name="posted_by">
-                                    </div>
-                                     <div class="col-md-4">
-                                         <label>Date</label>
-                                <input type="text" name="date" placeholder="eg:- Dec 12 2018">
-                                    </div>
-                                     <div class="col-md-6">
-                                        <label>Upload Image</label>
-                                <input type="file" name="image">
-                                    </div>
-                                </div>
-                            
+                                <label>Subject</label><br>
+                                <input type="text" name="subject"><br><br>
+                                   <label>Image</label><br>
+                                <input type="file" name="image"><br><br>
+                                <label>Link</label><br>
+                                <input type="text" name="link"><br><br>
                                 <label>Content</label><br>
-                                <textarea rows="2" cols="16" name="content_1"  style="width: 50%;">Paragraph 1</textarea><br>
-                                 <textarea rows="2" cols="16" name="content_2"  style="width: 50%;">Paragraph 2</textarea><br>
-                                 <textarea rows="2" cols="16" name="content_3"  style="width: 50%;">Paragraph 3</textarea><br>
-                                 <textarea rows="2" cols="16" name="content_4"  style="width: 50%;">Paragraph 4</textarea><br>
-                                <textarea rows="2" cols="16" name="content_5"  style="width: 50%;">Paragraph 5</textarea><br>                                                                                                                                
+                                <textarea rows="2" cols="16" name="content"  style="width: 50%;"></textarea><br>
 
-                                <input type="submit" name="submit" value="Post">
-                                </div>
+                                <input type="submit" name="submit" value="Send">
                             </form>
                         </div>
                         <div class="card-block">
@@ -198,12 +179,11 @@ tr.shown td.details-control {
                                         <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important;">
                                             <thead>
                                                 <tr><th><input type="checkbox" name="" value=""> <br></th>
-                                                     <th>Image</th>        
                                                     <th>Subject</th>
-                                                    <th> Posted by</th>
-                                                    <th>Date</th>
-                                                                                            
-                                            <th>View</th>
+                                                    <th> Link</th>
+                                                    <th>Image</th>
+                                            <th>Content</th>                                                         
+                                           
                                           
                                                 </tr>
                                             </thead>
@@ -268,24 +248,56 @@ tr.shown td.details-control {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
-            '<td>Paragraph 1 :</td>'+
+            '<td>E-mail :</td>'+
             '<td>'+d.email+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>paragraph 2 :</td>'+
+            '<td>Gender :</td>'+
             '<td>'+d.sex+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>paragraph 3 :</td>'+
+            '<td>Date Of Birth :</td>'+
             '<td>'+d.dob+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>Paragraph 4 :</td>'+
+            '<td>Country of Residence :</td>'+
             '<td>'+d.residence_country+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>Paragraph 5 :</td>'+
+            '<td>Currently enrolled as :</td>'+
             '<td>'+d.enrolled_as+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Major Field of Study :</td>'+
+            '<td>'+d.field_of_study+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>University/Senior High School Name :</td>'+
+            '<td>'+d.univ_name+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>How do you know about international MUN/IMUN? :</td>'+
+            '<td>'+d.known_from+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Previous MUN experience? :</td>'+
+            '<td>'+d.prev_experience+'</td>'+
+        '</tr>'+
+         '<tr>'+
+            '<td>Food Preference :</td>'+
+            '<td>'+d.food_preference+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Size of T-shirt :</td>'+
+            '<td>'+d.tshirt_size+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Why do you think you must be choosen as a part of International MUN 2019? (in English)  :</td>'+
+            '<td>'+d.motivation_letter+'</td>'+
+        '</tr>'+
+         '<tr>'+
+            '<td>Promocode  :</td>'+
+            '<td>'+d.promo+'</td>'+
         '</tr>'
 
     '</table>';
@@ -330,7 +342,6 @@ function updateTable(){
             { "data": "conference_location" },
             { "data": "registration_id" },
             { "data": "full_name" },
-             { "data": "full_name" },
            
 
             {

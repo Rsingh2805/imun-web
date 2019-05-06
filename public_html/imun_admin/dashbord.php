@@ -122,6 +122,7 @@ tr.shown td.details-control {
                                 Dashboard |
                                 <a href="blogs.php" >Blogs</a> |
                                 <a href="newsletter.php"> Newsletter</a>|
+                                 <a href="news.php">  News</a> |
                             </h4>
                           
                         </div>
