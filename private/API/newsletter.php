@@ -25,8 +25,14 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             $ids = json_decode($_POST['ids']);
             $message = $_POST['message'];
             $subject = $_POST['subject'];
-            $filename = $_FILES['file']['name'];
-            move_uploaded_file($_FILES['file']['tmp_name'], dirname(__FILE__).'/../lib/mail/uploads/' . $_FILES['file']['name']);
+            if (isset($_FILES['file']['name'])) {
+                $filename = $_FILES['file']['name'];
+                 move_uploaded_file($_FILES['file']['tmp_name'], dirname(__FILE__).'/../lib/mail/uploads/' . $_FILES['file']['name']);
+            }else{
+                 $filename="";
+            }
+           
+           
             $emails = array();
             foreach ($ids as $id){
                 $email = Subscriber::getSubscribers($id)[0]['email'];

@@ -95,7 +95,6 @@ tr.shown td.details-control {
                                 <button type="button" class="btn btn-default no-bg Prince_btn" data-toggle="dropdown" aria-expanded="false">
                                     <img src="../images/logo.png" class="admin_img2 rounded-circle avatar-img" alt="avatar">
                                  <strong>   <a href="logout.php">Logout</a></strong>
-                                
                                 </button>
                               
                             </div>
@@ -175,7 +174,7 @@ tr.shown td.details-control {
                                         </div>
                                         <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important;">
                                             <thead>
-                                                <tr><th><input type="checkbox" name="" value=""> <br></th>
+                                                <tr><th><input type="checkbox" name="" value="" id="demo" > <br></th>
                                                     <th>Email  id</th>
                                                   
                                                 </tr>
@@ -212,17 +211,36 @@ tr.shown td.details-control {
   
   
      <script type="text/javascript">
+  
+
+
     $('#send').on("click", function(){
         $('.mail').show();
     });
-    $('#newsletter-submit').on("click", function(){
-        sendMails();
+    $(document).on("click",'#newsletter-submit', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please check atleast one email id');
+   breck();
+   }
+console.log(chkArray);
+
+        sendMails(chkArray);
     });
-     function sendMails(){
+     function sendMails(chkArray){
          let file = $('#attach').prop('files')[0];
          let data = new FormData();
          data.append('file', file);
-         data.append('ids', JSON.stringify([2]));
+         data.append('ids', JSON.stringify(chkArray));
          data.append('subject', $('#newsletter-subject').val());
          data.append('message', $('#newsletter-message').val());
          data.append('req', 'forward');
@@ -233,7 +251,7 @@ tr.shown td.details-control {
              contentType: false,
              data: data,
              success: function(htm){
-                 console.log(htm);
+                 console.log("htm");
              }
          })
      }
@@ -244,6 +262,43 @@ tr.shown td.details-control {
       <script type="text/javascript" src="js/custom.js"></script>
 
   <script type="text/javascript">
+checkedArray = [];    
+
+   
+// $(document).on('change',":checkbox", function(){
+
+//   if((this).checked){
+//     checkedArray.push(this.id);
+//   }
+//   else{
+//     checkedArray.splice(checkedArray.indexOf(this.id), 1);
+//   }
+//   console.log(checkedArray);
+  
+  
+// });
+
+
+
+
+
+
+ $("#demo").on("change", function () {
+  
+
+$('input:checkbox').not(this).prop('checked', this.checked);
+
+    });
+   
+    
+
+
+
+
+
+
+
+
 
 function updateTable(){
     var table = $('#sample_2').DataTable( {
@@ -254,6 +309,7 @@ function updateTable(){
                 // $.each(json, function(index, el){
                 //     el["registration_id"] = get_id(el);
                 // });
+              
                 return json;
             }
         },
@@ -265,7 +321,7 @@ function updateTable(){
                 "render": function (data, type, row) {
 
                 
-                        return '<input type="checkbox" name="" value="">';
+                        return '<input type="checkbox" id="'+row.id+'" />';
 
                    
                 },},
@@ -297,8 +353,9 @@ function rejectTable(id){
 
 $(document).ready(function() {
 
-    updateTable()
-} );
+    updateTable();
+ 
+});
 
 </script>
 
