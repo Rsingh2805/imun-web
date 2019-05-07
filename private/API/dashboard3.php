@@ -15,7 +15,7 @@ if (!isset($_SESSION['user'])){
     echo json_encode($result);
 }else{
     if ($_SERVER['REQUEST_METHOD']=='GET'){
-        $application = Application::getApplications_pending();
+        $application = Application::getApplications_rejected();
         echo json_encode($application);
     }
 }

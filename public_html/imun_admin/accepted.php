@@ -141,18 +141,18 @@ tr.shown td.details-control {
 
                                         <div class="tab-pane active" id="tab-malasia">
                                            <div class="card m-t-35">
-                  <div class="card-header bg-white">
+                             <div class="card-header bg-white">
                             <button style="border-radius: 20px; background-color: #ffff6b;"><a href="dashbord.php" style="color: black;">PENDING</a></button>
                             <button style="border-radius: 20px; background-color: #82e582;"><a href="accepted.php" style="color: black;">ACCEPTED</a></button>
                             <button style="border-radius: 20px; background-color: #ff7d7d;"><a href="rejected.php" style="color: black;">REJECTED</a></button>
                             <button style="border-radius: 20px; background-color: #8b8bff;"><a href="delegates.php" style="color: black;">Fixed Delegate</a></button>
                         </div><div class="container">
                 
-                          
-                          
-                           <button id="delete_user">Delete User</button>
-                                <button id="download_excel">Download Excel</button>
-                              
+                             <button  id="pending-submit" >Payment Pending Mail</button>
+                            
+                               <button>Delete User</button>
+                                <button>Download Excel</button>
+                                 <button>Confirm Seat</button>
                               
                                  
                                        
@@ -174,7 +174,7 @@ tr.shown td.details-control {
                                                                                                                        
                                             <th >Status</th>
                                             <th>View</th>
-                                          
+                                             <th >Control</th>
                                                 </tr>
                                             </thead>
                                           
@@ -312,7 +312,7 @@ function get_id(el){
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/dashboard4.php",
+            "url": "./../../private/API/dashboard2.php",
             "dataSrc": function(json) {
                 console.log(json);
                 $.each(json, function(index, el){
@@ -347,7 +347,21 @@ function updateTable(){
                 "orderable":      false,
                 "data":           "",
                 "defaultContent": ''
-            }
+            },
+            {"data":"",
+
+                "orderable":false,
+                "render": function (data, type, row) {
+
+                    if ( row.status === 'PENDING') {
+                        return '<button data-id="'+row.id+'" class="accept-app">Accept</button><button class="reject-app" data-id="'+row.id+'">Reject</button>';}
+
+                    else {
+
+                        return '<button disabled>Accept</button><button disabled>Reject</button>';
+
+                    }
+                },}
         ],
         "order": [[1, 'asc']]
     } );
@@ -399,7 +413,6 @@ $(document).ready(function() {
 
     updateTable()
 } );
-
 
 
 
@@ -458,13 +471,69 @@ console.log(chkArray);
  
        
     });
+
+
+
+
+    $(document).on("click",'#payment_pending_mail', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please select atleat one application');
+   breck();
+   }else{
+    if (confirm('Are you sure you want to send payment pending mail to this applications ?')) {
+//call payment pending fuction here
+} else {
+    // Do nothing!
+}
+   }
+console.log(chkArray);
+
+       
+    });
+
+
+
+        $(document).on("click",'#confirm', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please select atleat one application');
+   breck();
+   }else{
+    if (confirm('Are you sure you want to confirm this applications ?')) {
+//call confirm fuction here
+} else {
+    // Do nothing!
+}
+   }
+console.log(chkArray);
+
+       
+    });
      $("#demo").on("change", function () {
   
 
 $('input:checkbox').not(this).prop('checked', this.checked);
 
     });
-   
 
 </script>
 

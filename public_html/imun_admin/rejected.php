@@ -141,15 +141,13 @@ tr.shown td.details-control {
 
                                         <div class="tab-pane active" id="tab-malasia">
                                            <div class="card m-t-35">
-                  <div class="card-header bg-white">
+                        <div class="card-header bg-white">
                             <button style="border-radius: 20px; background-color: #ffff6b;"><a href="dashbord.php" style="color: black;">PENDING</a></button>
                             <button style="border-radius: 20px; background-color: #82e582;"><a href="accepted.php" style="color: black;">ACCEPTED</a></button>
                             <button style="border-radius: 20px; background-color: #ff7d7d;"><a href="rejected.php" style="color: black;">REJECTED</a></button>
                             <button style="border-radius: 20px; background-color: #8b8bff;"><a href="delegates.php" style="color: black;">Fixed Delegate</a></button>
                         </div><div class="container">
                 
-                          
-                          
                            <button id="delete_user">Delete User</button>
                                 <button id="download_excel">Download Excel</button>
                               
@@ -174,7 +172,7 @@ tr.shown td.details-control {
                                                                                                                        
                                             <th >Status</th>
                                             <th>View</th>
-                                          
+                                           
                                                 </tr>
                                             </thead>
                                           
@@ -312,11 +310,11 @@ function get_id(el){
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/dashboard4.php",
+            "url": "./../../private/API/dashboard3.php",
             "dataSrc": function(json) {
                 console.log(json);
                 $.each(json, function(index, el){
-                  
+                
                     el["registration_id"] = get_id(el);
                      
                 });
@@ -404,7 +402,7 @@ $(document).ready(function() {
 
 
 
-
+   
     $(document).on("click",'#delete_user', function(){
 var chkArray = Array();
 
@@ -421,7 +419,7 @@ $('.card-block input:checked').each( function()
    breck();
    }else{
     if (confirm('Are you sure you want to delete this applications ?')) {
-//call delete fuction here
+//call delete fuction here 
 } else {
     // Do nothing!
 }
@@ -455,7 +453,7 @@ $('.card-block input:checked').each( function()
 }
    }
 console.log(chkArray);
- 
+
        
     });
      $("#demo").on("change", function () {
