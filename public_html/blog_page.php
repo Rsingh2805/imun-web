@@ -1,13 +1,22 @@
 <?php
+ header('Content-Type: text/html; charset=utf-8');
 
-require_once('../private/DAO/database_api.php');
 $id=$_GET['blog_id'];
+require_once('../private/DAO/database_api.php');
+
   $db = new DBConn();
         $conn = $db->connection();
         $sql = "SELECT * FROM `blogs` where `id`=$id ";
+        $sql1="SET CHARACTER SET 'utf8'";
+        $sql2="SET SESSION collation_connection ='utf8_unicode_ci'";
+        $stmt = $conn->query($sql1);
+        $stmt = $conn->query($sql2);
         $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
-        
+  
+      
+
+  
       
 ?>
 <!DOCTYPE html>
@@ -17,6 +26,7 @@ $id=$_GET['blog_id'];
 <head>
 		
 		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name = "application-name" content="International Model United Nations">
 		<meta name="description" content="International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.">
