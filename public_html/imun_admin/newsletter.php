@@ -231,14 +231,11 @@ $('.card-block input:checked').each( function()
  if (chkArray.length==0) {
    alert('please check atleast one email id');
    breck();
-   }else{
-     if (confirm('Are you sure you want to Send Newsletter ?')) {
-  sendMails(chkArray);
-} else {
-    // Do nothing!
-
-   }}
+   
+  
+}
 console.log(chkArray);
+sendMails(chkArray);
 
       
     });
