@@ -434,7 +434,7 @@ color: #15477A;">Already Registered ? Check your result.</h4>
 									
 										
 									</div>
-									  <button onclick="checkStatus()" id="check-status" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1" style="background-color: white; color:black; border-radius: 20px; font-size: 14px; float: right;">Check</button>
+									  <button onclick="checkStatus()" id="check-status" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1" style="background-color: white; color:black; border-radius: 20px; font-size: 14px; float: right;z-index: 1029; position: relative;">Check</button>
 										</form>
 
 		</div>
