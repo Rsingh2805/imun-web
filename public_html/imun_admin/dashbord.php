@@ -81,8 +81,7 @@ tr.shown td.details-control {
                         <h4 class="text-white">
                             <img src="../images/logo.png" class="admin_img" alt="logo"  style="height: unset !important;">
                             IMUN ADMIN</h4>
-                    </a>
-                    
+                    </a> 
 
                     <!-- Toggle Button -->
                 
@@ -127,7 +126,8 @@ tr.shown td.details-control {
                           
                         </div>
                     </div>
-                </header>
+                </header><h2 class="text-black" style="margin-top: 20px; text-align: center;">Pending Candidates</h2>
+                    
                  <div id="page-content" style="padding-bottom: 10%;">
                 <div class="container">
                    <br><br>

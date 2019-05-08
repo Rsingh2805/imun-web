@@ -127,7 +127,7 @@ tr.shown td.details-control {
                           
                         </div>
                     </div>
-                </header>
+                </header><h2 class="text-black" style="margin-top: 20px; text-align: center;">Fixed Delegates</h2>
                  <div id="page-content" style="padding-bottom: 10%;">
                 <div class="container">
                    <br><br>

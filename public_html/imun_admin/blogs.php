@@ -148,7 +148,7 @@ tr.shown td.details-control {
                 
                              <button id="add">Add New Blog</button>
                             
-                               <button>Delete Blogs</button>
+                               <button id="delete_blogs">Delete Blogs</button>
                               
                               
                                  
@@ -159,7 +159,7 @@ tr.shown td.details-control {
                             <form>
                                 <div class="container"><div class="row">
                                     <div class="col-md-4">
-                                         <label>Subject</label>
+                                         <label>Title</label>
                                 <input type="text" name="subject">
                                     </div>
                                      <div class="col-md-4">
@@ -269,23 +269,23 @@ tr.shown td.details-control {
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
             '<td>Paragraph 1 :</td>'+
-            '<td>'+d.email+'</td>'+
+            '<td>'+d.content_1+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>paragraph 2 :</td>'+
-            '<td>'+d.sex+'</td>'+
+            '<td>'+d.content_2+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>paragraph 3 :</td>'+
-            '<td>'+d.dob+'</td>'+
+            '<td>'+d.content_3+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>Paragraph 4 :</td>'+
-            '<td>'+d.residence_country+'</td>'+
+            '<td>'+d.content_4+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>Paragraph 5 :</td>'+
-            '<td>'+d.enrolled_as+'</td>'+
+            '<td>'+d.content_5+'</td>'+
         '</tr>'
 
     '</table>';
@@ -327,10 +327,10 @@ function updateTable(){
 
                    
                 },},
-            { "data": "conference_location" },
-            { "data": "registration_id" },
-            { "data": "full_name" },
-             { "data": "full_name" },
+            { "data": "image" },
+            { "data": "subject" },
+            { "data": "posted_by" },
+             { "data": "date" },
            
 
             {
@@ -392,6 +392,39 @@ $(document).ready(function() {
     updateTable()
 } );
 
+
+
+   $(document).on("click",'#delete_blogs', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please select atleat one blog');
+   breck();
+   }else{
+    if (confirm('Are you sure you want to delere this blogs ?')) {
+//call delete fuction here
+} else {
+    // Do nothing!
+}
+   }
+console.log(chkArray);
+
+       
+    });
+     $("#demo").on("change", function () {
+  
+
+$('input:checkbox').not(this).prop('checked', this.checked);
+
+    });
 </script>
 
    
