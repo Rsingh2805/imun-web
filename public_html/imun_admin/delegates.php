@@ -422,6 +422,12 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to delete this applications ?')) {
 //call delete fuction here
+        $.post("./../../private/API/register.php", {
+            "req": "delete",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            console.log(data);
+        })
 } else {
     // Do nothing!
 }

@@ -73,24 +73,28 @@ function applicationAcceptedMail($email, $fullname, $nationality){
     }else{
         return true;
     }
-//    $mail = configure_PHPMailer();
-//    $mail->addAddress($email, $first);
-//    $mail->Subject = 'Accepted for IMUN -2019';
-//    $mail->msgHTML(nl2br("Dear $first $last, \n Thank you for registering with IMUN 2019. Your application has been accepted.\nRegards, \n IMUN 2019 team")); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
-//    $mail->AltBody = 'HTML messaging not supported';
-//    $mail->addStringAttachment(getLOAPdf($first.' '.$last, $nationality), 'my-doc.pdf');
-//// $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
-//    if(!$mail->send()){
-//        return false;
-//    }else{
-//        return true;
-//    }
+}
+
+function paymentPendingMail($email, $fullname){
+    $mail = configure_PHPMailer();
+    $mail->addAddress($email, $fullname);
+    $mail->Subject = 'International Model United Nations 2019 ';
+
+//    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
+    $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/pending.html'));
+    $message = $mail->msgHTML($html, dirname(__FILE__));
+    // $message = $mail->msgHTML('<img src="/register/reg-unnamed.jpg">', dirname(__FILE__));
+    if(!$mail->send()){
+        return false;
+    }else{
+        return true;
+    }
 }
 
 function sendContact($email,$fullname,$message,$subject){
        $mail = configure_PHPMailer();
    $mail->addAddress('team@internationalmun.org', 'Contact Form');
- //Set the subject line 
+ //Set the subject line
  $mail->Subject = "IMUN CONTACT FORM";
   //Read an HTML message body from an external file, convert referenced images to embedded,
  //convert HTML into a basic plain-text alternative body

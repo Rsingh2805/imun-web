@@ -101,7 +101,28 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             $data = array(
                 "status" => "SUCCESS"
             );
-            applicationAcceptedMail($app[0]["email"], $app[0]["first_name"], $app[0]["last_name"], $app[0]["nationality"]);
+            applicationAcceptedMail($app[0]["email"], $app[0]["full_name"], $app[0]["nationality"]);
+            echo json_encode($data);
+            break;
+        case "payment-reminder":
+            $ids = json_decode($_POST["id"]);
+            $data = array(
+                "status" => "SUCCESS"
+            );
+            foreach ($ids as $id){
+                $app = Application::getApplications($id);
+                paymentPendingMail($app[0]["email"], $app[0]["full_name"]);
+            }
+            echo json_encode($data);
+            break;
+        case "confirm":
+            $ids = json_decode($_POST["id"]);
+            $data = array(
+                "status" => "SUCCESS"
+            );
+            foreach ($ids as $id){
+                $app = Application::confirmApplication($id);
+            }
             echo json_encode($data);
             break;
         case "status":
@@ -110,6 +131,16 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
 
             $app = Application::getStatus($id, $dob);
             echo json_encode($app);
+            break;
+        case "delete":
+            $id = json_decode($_POST['id']);
+            $data = Application::deleteApplications($id);
+            if ($data===true){
+                $data = array("status" => "SUCCESS");
+            }else{
+                $data = array("status" => "ERROR");
+            }
+            echo json_encode($data);
             break;
         default:
             break;

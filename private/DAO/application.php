@@ -2,6 +2,16 @@
 
 require_once(dirname(__FILE__).'/database_api.php');
 class Application{
+    public static function getApplications($id=null){
+        $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT * FROM application";
+        if ($id){
+            $sql .= " WHERE `id`=$id ";
+        }
+        $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt;
+    }
     public static function getApplications_pending($id=null){
         $db = new DBConn();
         $conn = $db->connection();
@@ -114,11 +124,44 @@ class Application{
 
     }
 
+    public static function confirmApplication($id){
+        $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "UPDATE `application` SET `payment`='PAID' WHERE `id`='$id'";
+        $stmt = $conn->prepare($sql);
+        try {
+            $stmt->execute();
+            if ($stmt->rowCount()==1){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(PDOException $e){
+            return $e->getMessage();
+        }
+
+    }
+
     public static function getStatus($id, $dob){
         $db = new DBConn();
         $conn = $db->connection();
         $sql = "SELECT status FROM `application` WHERE `id`='$id' AND `dob`='$dob'";
         $stmt = $conn->query($sql)->fetch(PDO::FETCH_ASSOC);
         return $stmt;
+    }
+
+    public static function deleteApplications($ids){
+        $db = new DBConn();
+        $conn = $db->connection();
+
+        try {
+            foreach ($ids as $id){
+                $sql = "DELETE FROM `application` WHERE `id`='$id'";
+                $conn->exec($sql);
+            }
+            return true;
+        }catch(PDOException $e){
+            return $e->getMessage();
+        }
     }
 }

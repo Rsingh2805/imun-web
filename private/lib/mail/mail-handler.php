@@ -12,3 +12,6 @@
         print_r($command);
         exec($command);
     }
+    function paymentPendingMail($email, $fullname){
+        exec("php exec-payment-pending.php ".escapeshellarg($email)." ".escapeshellarg($fullname)." > /dev/null &");
+    }
