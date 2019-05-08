@@ -19,7 +19,10 @@ class DBConn{
             return self::$conn;
         }
         try{
-            $opts = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_EMULATE_PREPARES => false);
+            $opts = array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_EMULATE_PREPARES => false,
+                PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
             self::$conn = new PDO("mysql:host=".CONFIG['db']['host'].";dbname=".CONFIG['db']['database'], CONFIG['db']['username'], CONFIG['db']['password'], $opts);
             return self::$conn;
         }catch (PDOException $e){

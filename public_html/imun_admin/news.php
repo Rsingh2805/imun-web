@@ -248,56 +248,8 @@ tr.shown td.details-control {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
-            '<td>E-mail :</td>'+
-            '<td>'+d.email+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Gender :</td>'+
-            '<td>'+d.sex+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Date Of Birth :</td>'+
-            '<td>'+d.dob+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Country of Residence :</td>'+
-            '<td>'+d.residence_country+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Currently enrolled as :</td>'+
-            '<td>'+d.enrolled_as+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Major Field of Study :</td>'+
-            '<td>'+d.field_of_study+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>University/Senior High School Name :</td>'+
-            '<td>'+d.univ_name+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>How do you know about international MUN/IMUN? :</td>'+
-            '<td>'+d.known_from+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Previous MUN experience? :</td>'+
-            '<td>'+d.prev_experience+'</td>'+
-        '</tr>'+
-         '<tr>'+
-            '<td>Food Preference :</td>'+
-            '<td>'+d.food_preference+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Size of T-shirt :</td>'+
-            '<td>'+d.tshirt_size+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Why do you think you must be choosen as a part of International MUN 2019? (in English)  :</td>'+
-            '<td>'+d.motivation_letter+'</td>'+
-        '</tr>'+
-         '<tr>'+
-            '<td>Promocode  :</td>'+
-            '<td>'+d.promo+'</td>'+
+            '<td>Content:</td>'+
+            '<td>'+d.content+'</td>'+
         '</tr>'
 
     '</table>';
@@ -318,12 +270,9 @@ function get_id(el){
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/dashboard.php",
+            "url": "./../../private/API/news.php",
             "dataSrc": function(json) {
                 console.log(json);
-                $.each(json, function(index, el){
-                    el["registration_id"] = get_id(el);
-                });
                 return json;
             }
         },
@@ -339,9 +288,9 @@ function updateTable(){
 
                    
                 },},
-            { "data": "conference_location" },
-            { "data": "registration_id" },
-            { "data": "full_name" },
+            { "data": "subject" },
+            { "data": "url" },
+            { "data": "image" },
            
 
             {

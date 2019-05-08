@@ -241,8 +241,6 @@ tr.shown td.details-control {
      <script type="text/javascript">
          $('#add').click(function(){
             $('.blog').css('display','block');
-           
-
         });
 
         $('.egypt').click(function(){
@@ -269,49 +267,34 @@ tr.shown td.details-control {
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
             '<td>Paragraph 1 :</td>'+
-            '<td>'+d.email+'</td>'+
+            '<td>'+d.content_1+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>paragraph 2 :</td>'+
-            '<td>'+d.sex+'</td>'+
+            '<td>'+d.content_2+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>paragraph 3 :</td>'+
-            '<td>'+d.dob+'</td>'+
+            '<td>'+d.content_3+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>Paragraph 4 :</td>'+
-            '<td>'+d.residence_country+'</td>'+
+            '<td>'+d.content_4+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>Paragraph 5 :</td>'+
-            '<td>'+d.enrolled_as+'</td>'+
+            '<td>'+d.content_5+'</td>'+
         '</tr>'
 
     '</table>';
 }
-function pad(n, width, z) {
-    z = z || '0';
-    n = n + '';
-    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-}
 
-function get_id(el){
-    let registration_id = '';
-    registration_id += el['conference_location'].substr(0,3).toUpperCase();
-    registration_id += pad(el['id'], 6);
-    return registration_id;
-}
 
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/dashboard.php",
+            "url": "./../../private/API/blogs.php",
             "dataSrc": function(json) {
-                console.log(json);
-                $.each(json, function(index, el){
-                    el["registration_id"] = get_id(el);
-                });
                 return json;
             }
         },
@@ -327,10 +310,10 @@ function updateTable(){
 
                    
                 },},
-            { "data": "conference_location" },
-            { "data": "registration_id" },
-            { "data": "full_name" },
-             { "data": "full_name" },
+            { "data": "image" },
+            { "data": "subject" },
+            { "data": "posted_by" },
+             { "data": "date" },
            
 
             {
@@ -361,32 +344,7 @@ function updateTable(){
         }
     } );
 
-    $('#sample_2 tbody').on('click', '.accept-app', function () {
-        acceptTable($(this).attr('data-id'));
-    });
-    $('#sample_2 tbody').on('click', '.reject-app', function () {
-        rejectTable($(this).attr('data-id'));
-    });
 }
-
-function acceptTable(id){
-    $.post("./../../private/API/register.php", {
-        "req": "accept",
-        "id": id
-    }, function(data, status){
-        console.log(data);
-    })
-}
-
-function rejectTable(id){
-    $.post("./../../private/API/register.php", {
-        "req": "reject",
-        "id": id
-    }, function(data, status){
-        console.log(data);
-    })
-}
-
 $(document).ready(function() {
 
     updateTable()
