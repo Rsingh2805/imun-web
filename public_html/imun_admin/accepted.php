@@ -148,11 +148,11 @@ tr.shown td.details-control {
                             <button style="border-radius: 20px; background-color: #8b8bff;"><a href="delegates.php" style="color: black;">Fixed Delegate</a></button>
                         </div><div class="container">
                 
-                             <button  id="pending-submit" >Payment Pending Mail</button>
+                             <button  id="payment_pending_mail" >Payment Pending Mail</button>
                             
-                               <button>Delete User</button>
-                                <button>Download Excel</button>
-                                 <button>Confirm Seat</button>
+                               <button id="delete_user">Delete User</button>
+                                <button id="download_excel">Download Excel</button>
+                                 <button id="confirm_seat">Confirm Seat</button>
                               
                                  
                                        
@@ -431,10 +431,14 @@ $('.card-block input:checked').each( function()
 });
  if (chkArray.length==0) {
    alert('please select atleat one application');
-   breck();
    }else{
     if (confirm('Are you sure you want to delete this applications ?')) {
-//call delete fuction here
+        $.post("./../../private/API/register.php", {
+            "req": "delete",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            console.log(data);
+        })
 } else {
     // Do nothing!
 }
@@ -463,6 +467,15 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to print this applications ?')) {
 //call excel fuction here
+        $.post("./../../private/API/register.php", {
+            "req": "print",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            data = JSON.parse(data)
+            if (data['status']=="SUCCESS"){
+                window.location = "DownloadExcel.php";
+            }
+        })
 } else {
     // Do nothing!
 }
@@ -492,6 +505,12 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to send payment pending mail to this applications ?')) {
 //call payment pending fuction here
+        $.post("./../../private/API/register.php", {
+            "req": "payment-reminder",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            console.log(data);
+        })
 } else {
     // Do nothing!
 }
@@ -503,7 +522,7 @@ console.log(chkArray);
 
 
 
-        $(document).on("click",'#confirm', function(){
+        $(document).on("click",'#confirm_seat', function(){
 var chkArray = Array();
 
 $('.card-block input:checked').each( function()
@@ -516,10 +535,15 @@ $('.card-block input:checked').each( function()
 });
  if (chkArray.length==0) {
    alert('please select atleat one application');
-   breck();
    }else{
     if (confirm('Are you sure you want to confirm this applications ?')) {
 //call confirm fuction here
+        $.post("./../../private/API/register.php", {
+            "req": "confirm",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            console.log(data);
+        })
 } else {
     // Do nothing!
 }

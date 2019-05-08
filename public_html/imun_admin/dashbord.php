@@ -431,10 +431,14 @@ $('.card-block input:checked').each( function()
 });
  if (chkArray.length==0) {
    alert('please select atleat one application');
-   breck();
    }else{
     if (confirm('Are you sure you want to delete this applications ?')) {
-  //call delete fuction here 
+        $.post("./../../private/API/register.php", {
+            "req": "delete",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            console.log(data);
+        })
 } else {
     // Do nothing!
 }
@@ -463,6 +467,16 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to print this applications ?')) {
 //call excel fuction here
+        $.post("./../../private/API/register.php", {
+            "req": "print",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            data = JSON.parse(data)
+            if (data['status']=="SUCCESS"){
+                window.location = "DownloadExcel.php";
+            }
+        })
+
 } else {
     // Do nothing!
 }
@@ -477,7 +491,7 @@ console.log(chkArray);
 $('input:checkbox').not(this).prop('checked', this.checked);
 
     });
-   
+
 
 </script>
 
