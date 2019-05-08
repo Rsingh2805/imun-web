@@ -1,9 +1,14 @@
 <?php
+ header('Content-Type: text/html; charset=utf-8');
 
 require_once('../private/DAO/database_api.php');
   $db = new DBConn();
         $conn = $db->connection();
         $sql = "SELECT * FROM application ORDER BY id DESC LIMIT 3 ";
+         $sql1="SET CHARACTER SET 'utf8'";
+        $sql2="SET SESSION collation_connection ='utf8_unicode_ci'";
+        $stmt = $conn->query($sql1);
+        $stmt = $conn->query($sql2);
         $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       
 ?>

@@ -148,7 +148,7 @@ tr.shown td.details-control {
                 
                              <button id="add">Add New Blog</button>
                             
-                               <button>Delete Blogs</button>
+                               <button id="delete_blogs">Delete Blogs</button>
                               
                               
                                  
@@ -159,7 +159,7 @@ tr.shown td.details-control {
                             <form>
                                 <div class="container"><div class="row">
                                     <div class="col-md-4">
-                                         <label>Subject</label>
+                                         <label>Title</label>
                                 <input type="text" name="subject">
                                     </div>
                                      <div class="col-md-4">
@@ -350,6 +350,39 @@ $(document).ready(function() {
     updateTable()
 } );
 
+
+
+   $(document).on("click",'#delete_blogs', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please select atleat one blog');
+   breck();
+   }else{
+    if (confirm('Are you sure you want to delere this blogs ?')) {
+//call delete fuction here
+} else {
+    // Do nothing!
+}
+   }
+console.log(chkArray);
+
+       
+    });
+     $("#demo").on("change", function () {
+  
+
+$('input:checkbox').not(this).prop('checked', this.checked);
+
+    });
 </script>
 
    

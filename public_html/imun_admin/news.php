@@ -147,7 +147,7 @@ tr.shown td.details-control {
                 
                              <button id="add">Add New News</button>
                             
-                               <button>Delete News</button>
+                               <button id="delete_news">Delete News</button>
                               
                               
                                  
@@ -156,13 +156,13 @@ tr.shown td.details-control {
                          <div class="blog" style="display: none; margin-left: 5%;"><br>
                             <br>
                             <form>
-                                <label>Subject</label><br>
-                                <input type="text" name="subject"><br><br>
-                                   <label>Image</label><br>
+                                <label>Title*</label><br>
+                                <input type="text" name="subject" style="width: 50%;"><br><br>
+                                   <label>Image*</label><br>
                                 <input type="file" name="image"><br><br>
-                                <label>Link</label><br>
-                                <input type="text" name="link"><br><br>
-                                <label>Content</label><br>
+                                <label>News Link*</label><br>
+                                <input type="text" name="link" style="width: 50%;"><br><br>
+                                <label>Content*(First 3-5 Lines of news)</label><br>
                                 <textarea rows="2" cols="16" name="content"  style="width: 50%;"></textarea><br>
 
                                 <input type="submit" name="submit" value="Send">
@@ -178,7 +178,7 @@ tr.shown td.details-control {
                                         </div>
                                         <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important;">
                                             <thead>
-                                                <tr><th><input type="checkbox" name="" value=""> <br></th>
+                                                <tr><th><input type="checkbox" name="" value="" id="demo"> <br></th>
                                                     <th>Subject</th>
                                                     <th> Link</th>
                                                     <th>Image</th>
@@ -351,6 +351,40 @@ $(document).ready(function() {
 
     updateTable()
 } );
+
+
+
+   $(document).on("click",'#delete_news', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please select atleat one News');
+   breck();
+   }else{
+    if (confirm('Are you sure you want to delete this news ?')) {
+//call delete fuction here
+} else {
+    // Do nothing!
+}
+   }
+console.log(chkArray);
+
+       
+    });
+     $("#demo").on("change", function () {
+  
+
+$('input:checkbox').not(this).prop('checked', this.checked);
+
+    });
 
 </script>
 

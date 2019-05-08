@@ -2,12 +2,42 @@
 
 require_once(dirname(__FILE__).'/database_api.php');
 class Application{
-    public static function getApplications($id=null){
+    public static function getApplications_pending($id=null){
         $db = new DBConn();
         $conn = $db->connection();
-        $sql = "SELECT * FROM application";
+        $sql = "SELECT * FROM application WHERE `status`='PENDING'";
         if ($id){
-            $sql .= " WHERE `id`=$id";
+            $sql .= " WHERE `id`=$id ";
+        }
+        $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt;
+    }
+    public static function getApplications_accepted($id=null){
+        $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT * FROM application WHERE `status`='ACCEPTED' AND `payment`='PENDING'";
+        if ($id){
+            $sql .= " WHERE `id`=$id ";
+        }
+        $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt;
+    }
+    public static function getApplications_rejected($id=null){
+        $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT * FROM application WHERE `status`='REJECTED'";
+        if ($id){
+            $sql .= " WHERE `id`=$id ";
+        }
+        $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt;
+    }
+    public static function getApplications_fixed_delegates($id=null){
+        $db = new DBConn();
+        $conn = $db->connection();
+        $sql = "SELECT * FROM application WHERE `status`='ACCEPTED' AND `payment`='PAID'";
+        if ($id){
+            $sql .= " WHERE `id`=$id ";
         }
         $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         return $stmt;

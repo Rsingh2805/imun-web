@@ -122,11 +122,12 @@ tr.shown td.details-control {
                                 Dashboard |
                                 <a href="blogs.php" >Blogs</a> |
                                 <a href="newsletter.php"> Newsletter</a>|
+                                 <a href="news.php">  News</a> |
                             </h4>
                           
                         </div>
                     </div>
-                </header>
+                </header><h2 class="text-black" style="margin-top: 20px; text-align: center;">Fixed Delegates</h2>
                  <div id="page-content" style="padding-bottom: 10%;">
                 <div class="container">
                    <br><br>
@@ -140,14 +141,21 @@ tr.shown td.details-control {
 
                                         <div class="tab-pane active" id="tab-malasia">
                                            <div class="card m-t-35">
-                        <div class="card-header bg-white">
-                            <i class="fa fa-table"> </i> Fixed Delegates
+                  <div class="card-header bg-white">
+                            <button style="border-radius: 20px; background-color: #ffff6b;"><a href="dashbord.php" style="color: black;">PENDING</a></button>
+                            <button style="border-radius: 20px; background-color: #82e582;"><a href="accepted.php" style="color: black;">ACCEPTED</a></button>
+                            <button style="border-radius: 20px; background-color: #ff7d7d;"><a href="rejected.php" style="color: black;">REJECTED</a></button>
+                            <button style="border-radius: 20px; background-color: #8b8bff;"><a href="delegates.php" style="color: black;">Fixed Delegate</a></button>
                         </div><div class="container">
                 
-                                <button>Download Excel</button>
+                          
+                          
+                           <button id="delete_user">Delete User</button>
+                                <button id="download_excel">Download Excel</button>
+                              
                               
                                  
-                                       <button><a href="dashbord.php" style="color: black;">Registrated Candidates</a></button>
+                                       
                         </div>
                         <div class="card-block">
                             
@@ -159,14 +167,14 @@ tr.shown td.details-control {
                                         </div>
                                         <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important; ">
                                             <thead>
-                                                <tr><th><input type="checkbox" name="" value=""> <br></th>
+                                                <tr><th><input type="checkbox" name="" value="" id="demo"> <br></th>
                                                     <th>Con. Location</th>
                                                     <th> Registration Id</th>
                                                     <th>Full Name</th>
-                                                                                                                             <th>Why IMUN?</th>
-                                           
+                                                                                                                       
+                                            <th >Status</th>
                                             <th>View</th>
-                                            
+                                          
                                                 </tr>
                                             </thead>
                                           
@@ -224,6 +232,10 @@ tr.shown td.details-control {
     function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+     '<tr>'+
+            '<td>Why IMUN?:</td>'+
+            '<td>'+d.motivation_letter+'</td>'+
+        '</tr>'+
             '<tr>'+
             '<td>Registration Date and Time:</td>'+
             '<td>'+d.submission_time+'</td>'+
@@ -300,11 +312,13 @@ function get_id(el){
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/dashboard.php",
+            "url": "./../../private/API/dashboard4.php",
             "dataSrc": function(json) {
                 console.log(json);
                 $.each(json, function(index, el){
+                  
                     el["registration_id"] = get_id(el);
+                     
                 });
                 return json;
             }
@@ -317,7 +331,7 @@ function updateTable(){
                 "render": function (data, type, row) {
 
                 
-                        return '<input type="checkbox" name="" value="">';
+                        return '<input type="checkbox" name="" value=""  id="'+row.id+'" >';
 
                    
                 },},
@@ -325,16 +339,15 @@ function updateTable(){
             { "data": "registration_id" },
             { "data": "full_name" },
            
-            { "data": "motivation_letter" },
-           
+          
+            { "data": "status" },
 
             {
                 "className":      'details-control',
                 "orderable":      false,
                 "data":           "",
                 "defaultContent": ''
-            },
-        
+            }
         ],
         "order": [[1, 'asc']]
     } );
@@ -386,6 +399,72 @@ $(document).ready(function() {
 
     updateTable()
 } );
+
+
+
+
+
+
+    $(document).on("click",'#delete_user', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please select atleat one application');
+   breck();
+   }else{
+    if (confirm('Are you sure you want to delete this applications ?')) {
+//call delete fuction here
+} else {
+    // Do nothing!
+}
+   }
+console.log(chkArray);
+
+       
+    });
+
+
+
+        $(document).on("click",'#download_excel', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please select atleat one application');
+   breck();
+   }else{
+    if (confirm('Are you sure you want to print this applications ?')) {
+//call excel fuction here
+} else {
+    // Do nothing!
+}
+   }
+console.log(chkArray);
+ 
+       
+    });
+     $("#demo").on("change", function () {
+  
+
+$('input:checkbox').not(this).prop('checked', this.checked);
+
+    });
+   
 
 </script>
 
