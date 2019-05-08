@@ -151,7 +151,7 @@ tr.shown td.details-control {
                              <button  id="payment_pending_mail" >Payment Pending Mail</button>
                             
                                <button id="delete_user">Delete User</button>
-                                <button>Download Excel</button>
+                                <button id="download_excel">Download Excel</button>
                                  <button id="confirm_seat">Confirm Seat</button>
                               
                                  
@@ -467,6 +467,15 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to print this applications ?')) {
 //call excel fuction here
+        $.post("./../../private/API/register.php", {
+            "req": "print",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            data = JSON.parse(data)
+            if (data['status']=="SUCCESS"){
+                window.location = "DownloadExcel.php";
+            }
+        })
 } else {
     // Do nothing!
 }

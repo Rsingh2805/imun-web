@@ -1,4 +1,5 @@
 <?php
+session_start();
 ini_set("display_errors", "1");
 error_reporting(E_ALL);
 ini_set("log_errors", 1);
@@ -140,6 +141,19 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             }else{
                 $data = array("status" => "ERROR");
             }
+            echo json_encode($data);
+            break;
+        case "print":
+            $ids = json_decode($_POST['id']);
+            $data = array();
+            foreach ($ids as $id){
+                $temp = Application::getApplications($id)[0];
+                array_push($data, $temp);
+            }
+            $_SESSION['print'] = $data;
+            $data = array(
+                "status" => "SUCCESS"
+            );
             echo json_encode($data);
             break;
         default:
