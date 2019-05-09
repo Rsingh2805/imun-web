@@ -312,7 +312,7 @@ function get_id(el){
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../API/dashboard4.php",
+            "url": "./../private/API/dashboard4.php",
             "dataSrc": function(json) {
                 console.log(json);
                 $.each(json, function(index, el){
