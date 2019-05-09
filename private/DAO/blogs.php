@@ -28,4 +28,17 @@ class Blog{
         $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         return $stmt;
     }
+
+    public static function deleteBlog($id)
+    {
+        $db = new DBConn();
+        $conn = $db->connection();
+        try {
+            $sql = "DELETE FROM `blogs` WHERE `id`='$id'";
+            $conn->exec($sql);
+            return true;
+        }catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 }

@@ -145,7 +145,7 @@ tr.shown td.details-control {
                 
                              <button id="send">Send Mail</button>
                             
-                               <button>Unsubscribe</button>
+                               <button id="unsubscribe-button">Unsubscribe</button>
                                 <button>Download Excel</button>
                               
                                  
@@ -241,6 +241,37 @@ $('.card-block input:checked').each( function()
 console.log(chkArray);
 
       
+    });
+
+    $(document).on("click",'#unsubscribe-button', function(){
+        var chkArray = Array();
+
+        $('.card-block input:checked').each( function()
+        {
+            chkArray.push(this.id);
+            if (chkArray[0]=='demo') {
+                chkArray.shift();
+            }
+
+        });
+        if (chkArray.length==0) {
+            alert('please check atleast one email id');
+            breck();
+        }else{
+            if (confirm('Are you sure you want to unsubscribe this user?')) {
+                $.post("./../../private/API/newsletter.php", {
+                    "req": "unsubscribe",
+                    "id": JSON.stringify(chkArray)
+                }, function(data, status){
+                    console.log(data);
+                })
+            } else {
+                // Do nothing!
+
+            }}
+        console.log(chkArray);
+
+
     });
      function sendMails(chkArray){
          let file = $('#attach').prop('files')[0];

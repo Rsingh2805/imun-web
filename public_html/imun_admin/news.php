@@ -284,7 +284,7 @@ function updateTable(){
                 "render": function (data, type, row) {
 
                 
-                        return '<input type="checkbox" name="" value="">';
+                        return '<input type="checkbox" name="" value="" id="'+row.id+'">';
 
                    
                 },},
@@ -371,6 +371,12 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to delete this news ?')) {
 //call delete fuction here
+        $.post("./../../private/API/news.php", {
+            "req": "delete",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            console.log(data);
+        })
 } else {
     // Do nothing!
 }

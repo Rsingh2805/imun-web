@@ -197,7 +197,7 @@ tr.shown td.details-control {
                                         </div>
                                         <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important;">
                                             <thead>
-                                                <tr><th><input type="checkbox" name="" value=""> <br></th>
+                                                <tr><th><input type="checkbox" name="" value="" id="demo"> <br></th>
                                                      <th>Image</th>        
                                                     <th>Subject</th>
                                                     <th> Posted by</th>
@@ -306,9 +306,9 @@ function updateTable(){
                 "render": function (data, type, row) {
 
                 
-                        return '<input type="checkbox" name="" value="">';
+                        return '<input type="checkbox" name="" value="" id="'+row.id+'">';
 
-                   
+
                 },},
             { "data": "image" },
             { "data": "subject" },
@@ -368,7 +368,12 @@ $('.card-block input:checked').each( function()
    breck();
    }else{
     if (confirm('Are you sure you want to delere this blogs ?')) {
-//call delete fuction here
+        $.post("./../../private/API/blogs.php", {
+            "req": "delete",
+            "id": JSON.stringify(chkArray)
+        }, function(data, status){
+            console.log(data);
+        })
 } else {
     // Do nothing!
 }

@@ -12,6 +12,18 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     echo json_encode($blogs);
 }else if($_SERVER['REQUEST_METHOD']=='POST'){
     switch ($_POST["req"]){
+        case "delete":
+            $ids = json_decode($_POST['id']);
+            foreach ($ids as $id){
+                $data = Blog::deleteBlog($id);
+            }
+            if ($data===true){
+                $data = array("status" => "SUCCESS");
+            }else{
+                $data = array("status" => "ERROR");
+            }
+            echo json_encode($data);
+            break;
         default:
             $data = array(
                 "status" => "INV"

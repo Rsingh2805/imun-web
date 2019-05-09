@@ -42,6 +42,18 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             sendNewsLetter(json_encode($emails), $filename, $message, $subject);
 
             break;
+        case "unsubscribe":
+            $ids = json_decode($_POST['id']);
+            foreach ($ids as $id){
+                $data = Subscriber::unsubscribe($id);
+            }
+            if ($data===true){
+                $data = array("status" => "SUCCESS");
+            }else{
+                $data = array("status" => "ERROR");
+            }
+            echo json_encode($data);
+            break;
         default:
             break;
     }

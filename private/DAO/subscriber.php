@@ -28,4 +28,16 @@ class Subscriber{
         $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         return $stmt;
     }
+
+    public static function unsubscribe($id){
+        $db = new DBConn();
+        $conn = $db->connection();
+        try {
+            $sql = "DELETE FROM `subscriber` WHERE `id`='$id'";
+            $conn->exec($sql);
+            return true;
+        }catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 }

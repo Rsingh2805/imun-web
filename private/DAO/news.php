@@ -28,4 +28,16 @@ class News{
         $stmt = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         return $stmt;
     }
+
+    public static function deleteNews($id){
+        $db = new DBConn();
+        $conn = $db->connection();
+        try {
+            $sql = "DELETE FROM `news` WHERE `id`='$id'";
+            $conn->exec($sql);
+            return true;
+        }catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 }
