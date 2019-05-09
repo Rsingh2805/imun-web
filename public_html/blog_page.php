@@ -2,7 +2,7 @@
  header('Content-Type: text/html; charset=utf-8');
 
 $id=$_GET['blog_id'];
-require_once('../private/DAO/database_api.php');
+require_once('private/DAO/database_api.php');
 
   $db = new DBConn();
         $conn = $db->connection();

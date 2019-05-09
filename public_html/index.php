@@ -1,7 +1,7 @@
 <?php
  header('Content-Type: text/html; charset=utf-8');
 
-require_once('../private/DAO/database_api.php');
+require_once('private/DAO/database_api.php');
   $db = new DBConn();
         $conn = $db->connection();
         $sql = "SELECT * FROM application ORDER BY id DESC LIMIT 3 ";
@@ -1972,7 +1972,7 @@ function subscribeSubmit(){
 
 	  let email = $('#subscribe-email').val();
             $.ajax({
-                url : '../private/API/newsletter.php',
+                url : 'private/API/newsletter.php',
                 type: 'POST',
                 data: 'req=add&email='+email,
                 success: function(data){
@@ -2009,7 +2009,7 @@ if(name!="" && email !="" && subject!="" && message !=""){
 	 $("#con_sub").html("Sent");
 	  $("#con_sub").css("background-color","#959595");
             $.ajax({
-                url : '../private/API/contact.php',
+                url : 'private/API/contact.php',
                 type: 'POST',
                 data: 'req=addCon&email='+email+'&name='+name+'&subject='+subject+'&message='+message,
                 success: function(data){

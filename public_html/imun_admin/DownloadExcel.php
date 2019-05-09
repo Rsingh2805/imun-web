@@ -1,6 +1,5 @@
 <?php
 session_start();
-include_once "../DAO/application.php";
 
 function getExcel($data){
     $output = '';

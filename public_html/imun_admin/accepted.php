@@ -312,7 +312,7 @@ function get_id(el){
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/dashboard2.php",
+            "url": "./../private/API/dashboard2.php",
             "dataSrc": function(json) {
                 console.log(json);
                 $.each(json, function(index, el){
@@ -392,7 +392,7 @@ function updateTable(){
 }
 
 function acceptTable(id){
-    $.post("./../../private/API/register.php", {
+    $.post("./../private/API/register.php", {
         "req": "accept",
         "id": id
     }, function(data, status){
@@ -401,7 +401,7 @@ function acceptTable(id){
 }
 
 function rejectTable(id){
-    $.post("./../../private/API/register.php", {
+    $.post("./../private/API/register.php", {
         "req": "reject",
         "id": id
     }, function(data, status){
@@ -433,7 +433,7 @@ $('.card-block input:checked').each( function()
    alert('please select atleat one application');
    }else{
     if (confirm('Are you sure you want to delete this applications ?')) {
-        $.post("./../../private/API/register.php", {
+        $.post("./../private/API/register.php", {
             "req": "delete",
             "id": JSON.stringify(chkArray)
         }, function(data, status){
@@ -467,7 +467,7 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to print this applications ?')) {
 //call excel fuction here
-        $.post("./../../private/API/register.php", {
+        $.post("./../private/API/register.php", {
             "req": "print",
             "id": JSON.stringify(chkArray)
         }, function(data, status){
@@ -505,7 +505,7 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to send payment pending mail to this applications ?')) {
 //call payment pending fuction here
-        $.post("./../../private/API/register.php", {
+        $.post("./../private/API/register.php", {
             "req": "payment-reminder",
             "id": JSON.stringify(chkArray)
         }, function(data, status){
@@ -538,7 +538,7 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to confirm this applications ?')) {
 //call confirm fuction here
-        $.post("./../../private/API/register.php", {
+        $.post("./../private/API/register.php", {
             "req": "confirm",
             "id": JSON.stringify(chkArray)
         }, function(data, status){

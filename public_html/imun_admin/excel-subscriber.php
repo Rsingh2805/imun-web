@@ -1,7 +1,5 @@
 <?php
 session_start();
-include_once "../DAO/application.php";
-
 function getExcel($data){
     $output = '';
     if(count($data)>0){
@@ -24,7 +22,7 @@ function getExcel($data){
 
         header("Content-type: application/octet-stream");
 
-        header("Content-Disposition: attachment; filename=IMUN_subscribers.xls");
+        header("Content-Disposition: attachment; filename=IMUN-subsc.xls");
 //header("Content-Disposition: attachment; filename=IMUN_Applicants.csv");
 
 

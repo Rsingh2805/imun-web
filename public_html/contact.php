@@ -3,8 +3,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once dirname(__FILE__).'/../private/config.php';
-require_once dirname(__FILE__).'/../vendor/autoload.php';
+require_once dirname(__FILE__) . '/private/config.php';
+require_once dirname(__FILE__).'/vendor/autoload.php';
 
 
 

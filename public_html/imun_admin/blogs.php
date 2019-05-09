@@ -293,7 +293,7 @@ tr.shown td.details-control {
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/blogs.php",
+            "url": "./../private/API/blogs.php",
             "dataSrc": function(json) {
                 return json;
             }
@@ -368,7 +368,7 @@ $('.card-block input:checked').each( function()
    breck();
    }else{
     if (confirm('Are you sure you want to delere this blogs ?')) {
-        $.post("./../../private/API/blogs.php", {
+        $.post("./../private/API/blogs.php", {
             "req": "delete",
             "id": JSON.stringify(chkArray)
         }, function(data, status){
@@ -411,7 +411,7 @@ $('input:checkbox').not(this).prop('checked', this.checked);
          data.append("para5", para5);
          data.append("req", "create");
          $.ajax({
-             url: "./../../private/API/blogs.php",
+             url: "./../private/API/blogs.php",
              type: 'post',
              processData: false,
              contentType: false,

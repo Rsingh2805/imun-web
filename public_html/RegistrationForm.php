@@ -859,7 +859,7 @@ function generateRandomString($length = 10) {
         registration_id = parseInt(registration_id.substr(3, registration_id.length));
         console.log(registration_id);
         console.log(dob);
-        $.post("./../private/API/register.php", {
+        $.post("private/API/register.php", {
             "req": "status",
             "id": registration_id,
             "dob": dob
@@ -894,7 +894,7 @@ function generateRandomString($length = 10) {
 
 	function sendMail(name,email){
     $.ajax({
-			url : '../private/API/send_mail.php',
+			url : 'private/API/send_mail.php',
 			type: 'POST',
 			data: 'req=send&name='+name+'&email='+email,
 			success: function(data){
@@ -928,7 +928,7 @@ function generateRandomString($length = 10) {
 		let motivation_letter = $('#why_mun').val();
 		let promo = $('#promo').val();
 		$.ajax({
-			url : '../private/API/register.php',
+			url : 'private/API/register.php',
 			type: 'POST',
 			data: 'req=create&location='+location+'&fullname='+fullname+'&sex='+sex+'&dob='+dob+'&email='+email+'&nationality='+nationality+'&residence='+residence+'&enrolled_as='+enrolled_as+'&field_of_study='+field_of_study+'&univ_name='+univ_name+'&food_preference='+food_preference+'&tshirt_size='+tshirt_size+'&funded_by='+funded_by+'&known_from='+known_from+'&prev_experience='+prev_experience+'&referral_code='+referral_code+'&motivation_letter='+motivation_letter+'&promo='+promo,
 			success: function(data){

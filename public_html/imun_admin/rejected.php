@@ -310,7 +310,7 @@ function get_id(el){
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/dashboard3.php",
+            "url": "./../private/API/dashboard3.php",
             "dataSrc": function(json) {
                 console.log(json);
                 $.each(json, function(index, el){
@@ -376,7 +376,7 @@ function updateTable(){
 }
 
 function acceptTable(id){
-    $.post("./../../private/API/register.php", {
+    $.post("./../private/API/register.php", {
         "req": "accept",
         "id": id
     }, function(data, status){
@@ -385,7 +385,7 @@ function acceptTable(id){
 }
 
 function rejectTable(id){
-    $.post("./../../private/API/register.php", {
+    $.post("./../private/API/register.php", {
         "req": "reject",
         "id": id
     }, function(data, status){
@@ -420,7 +420,7 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to delete this applications ?')) {
 //call delete fuction here
-        $.post("./../../private/API/register.php", {
+        $.post("./../private/API/register.php", {
             "req": "delete",
             "id": JSON.stringify(chkArray)
         }, function(data, status){
@@ -453,7 +453,7 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to print this applications ?')) {
 //call excel fuction here
-        $.post("./../../private/API/register.php", {
+        $.post("./../private/API/register.php", {
             "req": "print",
             "id": JSON.stringify(chkArray)
         }, function(data, status){

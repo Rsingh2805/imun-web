@@ -1,6 +1,6 @@
 <?php
 
-require_once('../private/DAO/database_api.php');
+require_once('private/DAO/database_api.php');
   $db = new DBConn();
         $conn = $db->connection();
         $sql = "SELECT * FROM application ORDER BY id DESC LIMIT 1 ";

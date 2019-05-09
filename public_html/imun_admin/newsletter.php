@@ -256,7 +256,7 @@ sendMails(chkArray);
             breck();
         }else{
             if (confirm('Are you sure you want to unsubscribe this user?')) {
-                $.post("./../../private/API/newsletter.php", {
+                $.post("./../private/API/newsletter.php", {
                     "req": "unsubscribe",
                     "id": JSON.stringify(chkArray)
                 }, function(data, status){
@@ -286,7 +286,7 @@ sendMails(chkArray);
             alert('please check atleast one email id');
         }else{
             if (confirm('Are you sure you want to print these users?')) {
-                $.post("./../../private/API/newsletter.php", {
+                $.post("./../private/API/newsletter.php", {
                     "req": "print",
                     "id": JSON.stringify(chkArray)
                 }, function(data, status){
@@ -310,7 +310,7 @@ sendMails(chkArray);
          data.append('message', $('#newsletter-message').val());
          data.append('req', 'forward');
          $.ajax({
-             url: "./../../private/API/newsletter.php",
+             url: "./../private/API/newsletter.php",
              type: 'post',
              processData: false,
              contentType: false,
@@ -368,7 +368,7 @@ $('input:checkbox').not(this).prop('checked', this.checked);
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/newsletter.php",
+            "url": "./../private/API/newsletter.php",
             "dataSrc": function(json) {
                 console.log(json);
                 // $.each(json, function(index, el){
@@ -399,7 +399,7 @@ function updateTable(){
 }
 
 function acceptTable(id){
-    $.post("./../../private/API/register.php", {
+    $.post("./../private/API/register.php", {
         "req": "accept",
         "id": id
     }, function(data, status){
@@ -408,7 +408,7 @@ function acceptTable(id){
 }
 
 function rejectTable(id){
-    $.post("./../../private/API/register.php", {
+    $.post("./../private/API/register.php", {
         "req": "reject",
         "id": id
     }, function(data, status){

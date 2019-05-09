@@ -270,7 +270,7 @@ function get_id(el){
 function updateTable(){
     var table = $('#sample_2').DataTable( {
         "ajax": {
-            "url": "./../../private/API/news.php",
+            "url": "./../private/API/news.php",
             "dataSrc": function(json) {
                 console.log(json);
                 return json;
@@ -330,7 +330,7 @@ function updateTable(){
 }
 
 function acceptTable(id){
-    $.post("./../../private/API/register.php", {
+    $.post("./../private/API/register.php", {
         "req": "accept",
         "id": id
     }, function(data, status){
@@ -339,7 +339,7 @@ function acceptTable(id){
 }
 
 function rejectTable(id){
-    $.post("./../../private/API/register.php", {
+    $.post("./../private/API/register.php", {
         "req": "reject",
         "id": id
     }, function(data, status){
@@ -371,7 +371,7 @@ $('.card-block input:checked').each( function()
    }else{
     if (confirm('Are you sure you want to delete this news ?')) {
 //call delete fuction here
-        $.post("./../../private/API/news.php", {
+        $.post("./../private/API/news.php", {
             "req": "delete",
             "id": JSON.stringify(chkArray)
         }, function(data, status){
@@ -400,7 +400,7 @@ $('input:checkbox').not(this).prop('checked', this.checked);
          data.append("content", $("#news-content").val());
          data.append("req", "create");
          $.ajax({
-             url: "./../../private/API/news.php",
+             url: "./../private/API/news.php",
              type: 'post',
              processData: false,
              contentType: false,
