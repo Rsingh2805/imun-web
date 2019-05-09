@@ -6,7 +6,7 @@ define('CONFIG', array(
         "db" => array(
             "database" => "imun",
             "username" => "root",
-            "password" => "000000",
+            "password" => "",
             "host" => "localhost"
         ),
         "urls" => array(
