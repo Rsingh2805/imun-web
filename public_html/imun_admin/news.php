@@ -157,15 +157,15 @@ tr.shown td.details-control {
                             <br>
                             <form>
                                 <label>Title*</label><br>
-                                <input type="text" name="subject" style="width: 50%;"><br><br>
+                                <input type="text" name="subject" id="news-title" style="width: 50%;"><br><br>
                                    <label>Image*</label><br>
-                                <input type="file" name="image"><br><br>
+                                <input type="file" name="image" id="news-image"><br><br>
                                 <label>News Link*</label><br>
-                                <input type="text" name="link" style="width: 50%;"><br><br>
+                                <input type="text" name="link" id="news-link" style="width: 50%;"><br><br>
                                 <label>Content*(First 3-5 Lines of news)</label><br>
-                                <textarea rows="2" cols="16" name="content"  style="width: 50%;"></textarea><br>
+                                <textarea id="news-content" rows="2" cols="16" name="content"  style="width: 50%;"></textarea><br>
 
-                                <input type="submit" name="submit" value="Send">
+                                <input type="button" name="submit" value="Send" id="news-submit">
                             </form>
                         </div>
                         <div class="card-block">
@@ -391,6 +391,29 @@ console.log(chkArray);
 $('input:checkbox').not(this).prop('checked', this.checked);
 
     });
+     function newsSubmit(){
+         let file = $('#news-image').prop("files")[0];
+         let data = new FormData();
+         data.append("file", file);
+         data.append("title", $('#news-title').val());
+         data.append("link", $("#news-link").val());
+         data.append("content", $("#news-content").val());
+         data.append("req", "create");
+         $.ajax({
+             url: "./../../private/API/news.php",
+             type: 'post',
+             processData: false,
+             contentType: false,
+             data: data,
+             success: function(htm){
+                 console.log("htm");
+             }
+         })
+     }
+
+     $(document).on("click", "#news-submit", function(){
+         newsSubmit();
+     })
 
 </script>
 

@@ -12,6 +12,23 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     echo json_encode($blogs);
 }else if($_SERVER['REQUEST_METHOD']=='POST'){
     switch ($_POST["req"]){
+        case "create":
+            $data = array();
+            if (isset($_FILES['file']['name'])){
+                $filename = $_FILES['file']['name'];
+                move_uploaded_file($_FILES['file']['tmp_name'], dirname(__FILE__).'/../../public_html/images/news/' . $_FILES['file']['name']);
+                $data['error'] = $_FILES['file']['error'];
+            }else{
+                $filename="";
+            }
+            $stmt = News::createNews($filename, $_POST['title'], $_POST['link'], $_POST['content']);
+            if($stmt){
+                $data["status"] = "SUCCESS";
+            }else{
+                $data["status"] = "ERROR";
+            }
+            echo json_encode($data);
+            break;
         case "delete":
             $ids = json_decode($_POST['id']);
             foreach ($ids as $id){

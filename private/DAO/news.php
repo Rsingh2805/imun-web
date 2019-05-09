@@ -3,18 +3,23 @@
 require_once(dirname(__FILE__).'/database_api.php');
 
 class News{
-    public static function createSubscriber($email){
+    public static function createNews($filename, $title, $link, $content){
         $db = new DBConn();
         $conn = $db->connection();
 
-        $sql = "INSERT INTO `subscriber` (`email`) VALUES (:email);";
+        $sql = "INSERT INTO `news` (`image`, `subject`, `content`, `url`) VALUES (:image, :subject, :content, :url);";
         try {
             $stmt = $conn->prepare($sql);
             $stmt->execute(array(
-                ':email' => $email
+                ':image' => $filename,
+                ':subject' => $title,
+                ':content' => $content,
+                ':url' => $link
             ));
+            return true;
         }catch (PDOException $e){
             echo $sql."<br>".$e->getMessage();
+            return false;
         }
     }
 

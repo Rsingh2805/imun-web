@@ -146,7 +146,7 @@ tr.shown td.details-control {
                              <button id="send">Send Mail</button>
                             
                                <button id="unsubscribe-button">Unsubscribe</button>
-                                <button>Download Excel</button>
+                                <button id="print-subscribers">Download Excel</button>
                               
                                  
                                       
@@ -261,6 +261,37 @@ sendMails(chkArray);
                     "id": JSON.stringify(chkArray)
                 }, function(data, status){
                     console.log(data);
+                })
+            } else {
+                // Do nothing!
+
+            }}
+        console.log(chkArray);
+
+
+    });
+
+    $(document).on("click",'#print-subscribers', function(){
+        var chkArray = Array();
+
+        $('.card-block input:checked').each( function()
+        {
+            chkArray.push(this.id);
+            if (chkArray[0]=='demo') {
+                chkArray.shift();
+            }
+
+        });
+        if (chkArray.length==0) {
+            alert('please check atleast one email id');
+        }else{
+            if (confirm('Are you sure you want to print these users?')) {
+                $.post("./../../private/API/newsletter.php", {
+                    "req": "print",
+                    "id": JSON.stringify(chkArray)
+                }, function(data, status){
+                    console.log(data);
+                    window.location = "excel-subscriber.php";
                 })
             } else {
                 // Do nothing!

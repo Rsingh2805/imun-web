@@ -160,30 +160,30 @@ tr.shown td.details-control {
                                 <div class="container"><div class="row">
                                     <div class="col-md-4">
                                          <label>Title</label>
-                                <input type="text" name="subject">
+                                <input type="text" name="subject" id="blog-title">
                                     </div>
                                      <div class="col-md-4">
                                          <label>Posted by</label>
-                                <input type="text" name="posted_by">
+                                <input type="text" name="posted_by" id="blog-author">
                                     </div>
                                      <div class="col-md-4">
                                          <label>Date</label>
-                                <input type="text" name="date" placeholder="eg:- Dec 12 2018">
+                                <input type="text" name="date" placeholder="eg:- Dec 12 2018" id="blog-date">
                                     </div>
                                      <div class="col-md-6">
                                         <label>Upload Image</label>
-                                <input type="file" name="image">
+                                <input type="file" name="image" id="blog-image">
                                     </div>
                                 </div>
                             
                                 <label>Content</label><br>
-                                <textarea rows="2" cols="16" name="content_1"  style="width: 50%;">Paragraph 1</textarea><br>
-                                 <textarea rows="2" cols="16" name="content_2"  style="width: 50%;">Paragraph 2</textarea><br>
-                                 <textarea rows="2" cols="16" name="content_3"  style="width: 50%;">Paragraph 3</textarea><br>
-                                 <textarea rows="2" cols="16" name="content_4"  style="width: 50%;">Paragraph 4</textarea><br>
-                                <textarea rows="2" cols="16" name="content_5"  style="width: 50%;">Paragraph 5</textarea><br>                                                                                                                                
+                                <textarea rows="2" cols="16" id="blog-para-1" name="content_1"  style="width: 50%;">Paragraph 1</textarea><br>
+                                 <textarea rows="2" cols="16" id="blog-para-2" name="content_2"  style="width: 50%;">Paragraph 2</textarea><br>
+                                 <textarea rows="2" cols="16" id="blog-para-3" name="content_3"  style="width: 50%;">Paragraph 3</textarea><br>
+                                 <textarea rows="2" cols="16" id="blog-para-4" name="content_4"  style="width: 50%;">Paragraph 4</textarea><br>
+                                <textarea rows="2" cols="16" id="blog-para-5" name="content_5"  style="width: 50%;">Paragraph 5</textarea><br>
 
-                                <input type="submit" name="submit" value="Post">
+                                <input type="button" name="submit" value="Post" id="blog-submit">
                                 </div>
                             </form>
                         </div>
@@ -388,6 +388,43 @@ console.log(chkArray);
 $('input:checkbox').not(this).prop('checked', this.checked);
 
     });
+
+     function addBlog(){
+         let file=$("#blog-image").prop('files')[0];
+         let title=$('#blog-title').val();
+         let author = $('#blog-author').val();
+         let date = $('#blog-date').val();
+         let para1 = $("#blog-para-1").val();
+         let para2 = $("#blog-para-2").val();
+         let para3 = $("#blog-para-3").val();
+         let para4 = $("#blog-para-4").val();
+         let para5 = $("#blog-para-5").val();
+         let data = new FormData();
+         data.append("file", file);
+         data.append("title",title);
+         data.append("author", author);
+         data.append("date", date);
+         data.append("para1", para1);
+         data.append("para2", para2);
+         data.append("para3", para3);
+         data.append("para4", para4);
+         data.append("para5", para5);
+         data.append("req", "create");
+         $.ajax({
+             url: "./../../private/API/blogs.php",
+             type: 'post',
+             processData: false,
+             contentType: false,
+             data: data,
+             success: function(htm){
+                 console.log("htm");
+             }
+         })
+     }
+
+     $(document).on("click", "#blog-submit", function(){
+         addBlog();
+     })
 </script>
 
    
