@@ -732,7 +732,8 @@ window.fbAsyncInit = function() {
 							<ul class="dropdown-menu" style="margin-top: 5px; left:0; color: white; background-color: #0e3660;">
 								<li><a href="IMUN_2018.html" style="color: white;">IMUN Thailand 2018</a></li><hr style="margin: 0px 10px 0px 10px">
 								<li><a href = "imun_vietnam.html"> IMUN Vietnam 2019</a></li><hr style="margin: 0px 10px 0px 10px">
-								<li><a href = "IMUN_2019.html">IMUN Egypt 2019 </a></li>
+								<li><a href = "IMUN_2019.html">IMUN Egypt 2019 </a></li><hr style="margin: 0px 10px 0px 10px"><li><a href = "imun_china.html">IMUN China 2019 </a></li>
+								
 								
 								
 							</ul>
@@ -916,7 +917,7 @@ font-weight: bold;
 line-height: normal;
 text-align: center;
 
-color: #FFFFFF;">IMUN Egypt 2019</h2></a>
+color: #FFFFFF;">IMUN Egypt 2019</h2>
     
   </div>
 
@@ -930,7 +931,7 @@ color: #FFFFFF;;
 
 color: #FFFFFF; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; padding: 13px 13px 13px 13px; border-radius: 20px; ">Know More</h1>
     
-  </div></a>
+  </a></div>
  		</div>					
 						</div>
 											
@@ -957,10 +958,38 @@ color: #FFFFFF;;
 
 color: #FFFFFF; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; padding: 13px 13px 13px 13px; border-radius: 20px; ">Know More</h1>
     
-  </div></a>
+  </a></div>
  		</div>	
  
+ 		</div>
+
+ 			<div class="swiper-slide">							
+								<div class="hero-image" style=" background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0) 28.58%, #121E32 99.52%), url('images/slider/1 (4).png');">
+  <div class="hero-text" style="top: 60% !important;">
+ <h2 style="font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+
+line-height: normal;
+text-align: center;
+
+color: #FFFFFF;">IMUN China 2019</h2>
+    
+  </div>
+
+   <div class="hero-text3">   <a href="imun_china.html"> 
+    <h1 style="font-family: HelveticaNeue;
+font-size: 16px;
+line-height: normal;
+text-align: center;
+
+color: #FFFFFF;;
+
+color: #FFFFFF; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit; padding: 13px 13px 13px 13px; border-radius: 20px; ">Know More</h1>
+    
+  </a></div>
  		</div>					
+						</div>					
 						</div>
 											
 						
