@@ -397,6 +397,7 @@ function acceptTable(id){
         "id": id
     }, function(data, status){
         console.log(data);
+        location.reload();
     })
 }
 
@@ -406,6 +407,7 @@ function rejectTable(id){
         "id": id
     }, function(data, status){
         console.log(data);
+        location.reload();
     })
 }
 
@@ -438,6 +440,7 @@ $('.card-block input:checked').each( function()
             "id": JSON.stringify(chkArray)
         }, function(data, status){
             console.log(data);
+            location.reload();
         })
 } else {
     // Do nothing!

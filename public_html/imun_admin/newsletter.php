@@ -261,6 +261,7 @@ sendMails(chkArray);
                     "id": JSON.stringify(chkArray)
                 }, function(data, status){
                     console.log(data);
+                    location.reload();
                 })
             } else {
                 // Do nothing!
@@ -317,6 +318,7 @@ sendMails(chkArray);
              data: data,
              success: function(htm){
                  console.log("htm");
+                 location.reload();
              }
          })
      }
@@ -404,6 +406,7 @@ function acceptTable(id){
         "id": id
     }, function(data, status){
         console.log(data);
+        location.reload();
     })
 }
 
@@ -413,6 +416,7 @@ function rejectTable(id){
         "id": id
     }, function(data, status){
         console.log(data);
+        location.reload();
     })
 }
 

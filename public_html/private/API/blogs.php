@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             $data = array();
             if (isset($_FILES['file']['name'])){
                 $filename = $_FILES['file']['name'];
-                move_uploaded_file($_FILES['file']['tmp_name'], dirname(__FILE__).'/../../public_html/images/blog/' . $_FILES['file']['name']);
+                move_uploaded_file($_FILES['file']['tmp_name'], dirname(__FILE__).'/../../images/blog/' . $_FILES['file']['name']);
                 $data['error'] = $_FILES['file']['error'];
             }else{
                 $filename="";
