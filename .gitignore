@@ -1,6 +1,6 @@
-private/config.php
+public_html/private/config.php
 public_html1/
 /bower_components
 /node_modules
 .idea
-private/lib/mail/uploads/
+public_html/private/lib/mail/uploads/
