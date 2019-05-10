@@ -33,7 +33,7 @@ $(document).ready(function() {
 function login(){
     let username = $('#username').val();
     let password = $('#password').val();
-    $.post("./../../private/API/login.php", {
+    $.post("./../private/API/login.php", {
         "username": username,
         "password": password
     }, function(data, status){

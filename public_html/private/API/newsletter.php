@@ -41,7 +41,8 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
 
             }
             sendNewsLetter(json_encode($emails), $filename, $message, $subject);
-
+            $data = array("status" => "SUCCESS");
+            echo json_encode($data);
             break;
         case "unsubscribe":
             $ids = json_decode($_POST['id']);

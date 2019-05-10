@@ -9,9 +9,11 @@
     }
     function sendNewsletter($emails, $file, $message, $subject){
         $command = "php exec-newsletter.php ".escapeshellarg($emails)." ".escapeshellarg($message)." ".escapeshellarg($subject)." ".escapeshellarg($file)." > /dev/null &";
-        print_r($command);
         exec($command);
     }
     function paymentPendingMail($email, $fullname){
         exec("php exec-payment-pending.php ".escapeshellarg($email)." ".escapeshellarg($fullname)." > /dev/null &");
+    }
+    function applicationRejectedMail($email, $fullname){
+        exec("php exec-rejection.php ".escapeshellarg($email)." ".escapeshellarg($fullname)." > /dev/null &");
     }

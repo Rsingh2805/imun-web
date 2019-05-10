@@ -939,7 +939,6 @@ function generateRandomString($length = 10) {
 				}else if(JSON.parse(data)["status"] =="SUCCESS"){
 				$("#get_id").text(JSON.parse(data)["id"]);
 				console.log(fullname);
-				sendMail(fullname,email);
 			}
 			}
 		})

@@ -13,12 +13,28 @@ require_once dirname(__FILE__) . '/../../../vendor/autoload.php';
 
 require dirname(__FILE__) . '/../pdf/pdf.php';
 
+function output_log($text){
+    if(!isset($logger)){
+        $logger = fopen(dirname(__FILE__).'/mail.log', "a+");
+    }
+    fwrite($logger, $text);
+}
+
+function end_log(){
+    if(isset($logger)){
+        fclose($logger);
+        unset($logger);
+    }
+    unset($logger);
+}
+
 function configure_PHPMailer(){
+    fopen(dirname(__FILE__).'/mail.log', "w");
     $mail = new PHPMailer;
-   $mail->isSMTP();
+    $mail->isSMTP();
     $mail->SMTPDebug = CONFIG['smtp']['debug']; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
     $mail->Debugoutput = function($str, $level){
-        file_put_contents(dirname(__FILE__).'/email-error.log', $str);
+        output_log($str);
     };
     $mail->Host = CONFIG['smtp']['host']; // use $mail->Host = gethostbyname('smtp.gmail.com'); // if your network does not support SMTP over IPv6
     $mail->Port = CONFIG['smtp']['port']; // TLS only
@@ -47,8 +63,8 @@ function registeredSuccessfullyMail($email, $fullname){
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
     $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/mail.html'));
     $message = $mail->msgHTML($html, dirname(__FILE__));
-    $mail->addAttachment(dirname(__FILE__).'/../../../public_html/IMUN_Egypt_2019.pdf');
-    $mail->addAttachment(dirname(__FILE__).'/../../../public_html/viet.pdf');
+    $mail->addAttachment(dirname(__FILE__).'/../../../IMUN_Egypt_2019.pdf');
+    $mail->addAttachment(dirname(__FILE__).'/../../../viet.pdf');
     $mail->AltBody = 'This is a plain-text message body';
     if(!$mail->send()){
         file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);
@@ -59,6 +75,7 @@ function registeredSuccessfullyMail($email, $fullname){
 }
 
 function applicationAcceptedMail($email, $fullname, $nationality){
+    output_log("Application accepted was called");
     $mail = configure_PHPMailer();
     $mail->addAddress($email, $fullname);
     $mail->Subject = 'International Model United Nations 2019 ';
@@ -68,6 +85,25 @@ function applicationAcceptedMail($email, $fullname, $nationality){
     $message = $mail->msgHTML($html, dirname(__FILE__));
     // $message = $mail->msgHTML('<img src="/register/reg-unnamed.jpg">', dirname(__FILE__));
     $mail->addStringAttachment(getLOAPdf($fullname, $nationality), 'loa.pdf');
+    if(!$mail->send()){
+        output_log($mail->ErrorInfo);
+        end_log();
+        return false;
+    }else{
+        output_log("Mail sent successfully");
+        end_log();
+        return true;
+    }
+}
+
+function applicationRejectedMail($email, $fullname){
+    $mail = configure_PHPMailer();
+    $mail->addAddress($email, $fullname);
+    $mail->Subject = 'International Model United Nations 2019 ';
+
+//    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
+    $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/rejection.html'));
+    $message = $mail->msgHTML($html, dirname(__FILE__));
     if(!$mail->send()){
         return false;
     }else{
@@ -114,8 +150,10 @@ function sendNewsLetter($emails, $message, $subject, $file){
     foreach ($emails as $email){
         $mail->addAddress($email);
     }
-    $mail->Subject = $subject;
-    $mail->Body = $message;
+    $mail->Subject = "IMUN Newsletter";
+    $html = str_replace("NEWSLETTERSUBJECT",$subject, file_get_contents(dirname(__FILE__).'/newsletter.html'));
+    $html = str_replace("NEWSLETTERMESSAGE", $message, $html);
+    $message = $mail->msgHTML($html, dirname(__FILE__));
     $mail->addAttachment('uploads/'.$file, "IMUNNewsletter.pdf");
     if(!$mail->send()){
         file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);

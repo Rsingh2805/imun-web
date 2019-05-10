@@ -60,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
                 "status" => "SUCCESS",
                 "id" => strtoupper(substr($stmt["conference_location"], 0, 3)).str_pad(strval($stmt['id']), 6, '0', STR_PAD_LEFT)
             );
+            registeredSuccessfullyMail($email, $fullname);
        
          
             echo json_encode($data);
@@ -85,9 +86,11 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
             $id = $_POST["id"];
             $result = Application::rejectApplication($id);
             if($result==true){
+                $app = Application::getApplications($id);
                 $data = array(
                     "status" => "SUCCESS"
                 );
+                $mail = applicationRejectedMail($app[0]["email"], $app[0]["full_name"]);
             }else{
                 $data = array(
                     "status" => "ERROR",
