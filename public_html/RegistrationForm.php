@@ -459,7 +459,7 @@ color: #15477A;">Already Registered ? Check your result.</h4>
         </div>
         <div class="modal-body">
 
-          <p>Status of Your Application: <span id="status-result">Please Enter Correct Id or Date of birth</span></p>
+          <p>Status of Your Application: <span id="status-result"><span style="color:red;">Please enter correct Registration ID or date of birth</span></span></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -555,7 +555,7 @@ function generateRandomString($length = 10) {
                                                         <div class="tab-pane" id="tab1">
                                                            
                                                             <div class="form-group">
-                                                                <label for="location" class="control-label">For Which Conference You want to apply <span style = "color:indianred">*</span></label><br/>
+                                                                <label for="location" class="control-label">For which conference you want to apply <span style = "color:indianred">*</span></label><br/>
 										<select id="location" name="location" type="text"
                                                                        placeholder="Enter your Preferred Conference Location"
                                                                        class="form-control required" >
@@ -773,11 +773,12 @@ function generateRandomString($length = 10) {
                                                           <div class="tab-pane" id="tab6">
                                                         
                                                            <div class = "form-group">
-										<label>Why do you think you must be choosen as a part of International MUN 2019? (in English)<span style = "color:indianred">*</span></label>
+										<label>Motivation Letter : Why should you be selected to attend International MUN conference ? (in English only)*<span style = "color:indianred">*</span></label>
 										<textarea class = "form-control" name = "why_mun" id="why_mun" rows = "8" required></textarea>
 									</div>
 									   <div class = "form-group">
-										<label>Enter Promocode( If youu don't have, Leaave it empty)<span style = "color:indianred"   ></span></label>
+										<label>
+Enter Promo code(If any)<span style = "color:indianred"   ></span></label>
 								<input type="text" name="promo" id="promo"  class="form-control" placeholder="Promocode">
 									</div>
 
@@ -787,10 +788,10 @@ function generateRandomString($length = 10) {
                                                             <div class="form-group">
                                                                 <span>Terms and Conditions *</span>
                                                                 <br>
-                                                                <label class="custom-control custom-checkbox wizard_label_block">
+                                                                <label class="custom-control">
                                                                     <input type="checkbox" id="acceptTerms"
                                                                            name="acceptTerms"
-                                                                           class="custom-control-input">
+                                                                           class="custom-control-input" checked style="width: 10%;">
                                                                     <span class="custom-control-indicator"></span>
                                                                     <span class="custom-control-description custom_control_description_color">I agree with the Terms and Conditions.</span>
                                                                 </label>
@@ -825,16 +826,16 @@ function generateRandomString($length = 10) {
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <button type="button" class="close"
-                                                                        data-dismiss="modal">&times;</button>
+                                                                        data-dismiss="modal" onClick="document.location.reload(true)">&times;</button>
                                                               
                                                             </div>
                                                             <div class="modal-body">
-                                                                 <p>Wait for 5 Sec To update Your Registration Id </p>
-                                                                <p>Your Registration Id :- <span id="get_id"></span></p><p>(Save your Id it will help to check your result)</p>
+                                                                 <p>Wait for 5 sec to update your registration ID </p>
+                                                                <p>Your Registration ID :- <span id="get_id"></span></p><p>( Please save your ID, to check your application's result )</p>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default"
-                                                                        data-dismiss="modal">
+                                                                        data-dismiss="modal" onClick="document.location.reload(true)">
                                                                     OK
                                                                 </button>
                                                             </div>
@@ -852,6 +853,7 @@ function generateRandomString($length = 10) {
                 </div>
 </section>
 <script>
+
     function checkStatus(){
         let registration_id = $('#registration_id').val();
         let dob = $('#date_of_birth2').val();
@@ -1005,7 +1007,7 @@ color: #3C3C3C; padding: 5% 5% 5% 5%"> Note: Committee and Country preferences w
 		<section id = "imun-footer" style="background-color: #0E3660">
 			<div class = "container">
 				<div class="row">
-				<div class="col-md-12 col-xs-4" style="max-width: 980px;text-align: left;margin-left: 7%;">
+				<div class="col-md-12 col-xs-4" style="max-width: 980px;text-align: left;margin-left: 2%;">
 					
 			<div class="col-md-2">
 						<a href="Aboutus.html" style="color: white;">About Us</a>
@@ -1027,6 +1029,10 @@ color: #3C3C3C; padding: 5% 5% 5% 5%"> Note: Committee and Country preferences w
 					<div class="col-md-2">
 						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
+					<div class="col-md-2">
+						<a href="terms-and-conditions.html" style="color: white;">Terms & Conditions</a>
+					</div>
+
 					<br><br><br>
 				</div><div class="col-md-12 col-xs-7" style="">
 					<div class="col-md-1">
@@ -1067,9 +1073,14 @@ color: #FFFFFF; padding: 4px;" class="col-md-10 col-xs-10" > Address<br>Sector 5
 				
 
 				</div>
-			</div>
+			</div><div class="imun-social" style="text-align: center; padding-top: 5%;">
+				
+								
+									<a href="https://www.facebook.com/internationalmun2018/" target="_blank"><img src="images/f.png" style="max-width: 18px ; max-height: 18px;"></a>     <a href="https://www.instagram.com/international_mun/" target="_blank"><img src="images/ii.png" style="margin-left: 2px; max-height: 22px; max-width:  20px;padding-top: 2px;"></a>
+									<a href="https://www.linkedin.com/company/international-mun/" target="_blank"><img src="images/icon/linkedin.png" style="max-width: 18px ; max-height: 16px;margin-left: 2px;"></a>     <a href="https://twitter.com/imun_18" target="_blank"><img src="images/icon/twitter.png" style="margin-left: 2px; max-height: 18px; max-width:  18px;"></a>
+									</div>
 			
-				<h4 style="text-align: center;  padding-top: 5%;">Copyright © 2018-2019, International Model United Nations </h4>
+				<h4 style="text-align: center;  padding-top: 5%; color: white;">Copyright © 2018-2019, International Model United Nations </h4>
 				<h4 class="pull-right"></h4>
 			</div>
 		</section>

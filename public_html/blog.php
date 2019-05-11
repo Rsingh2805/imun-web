@@ -570,7 +570,7 @@ border-radius: 0px 10px 0px 0px; padding: 7% 7% 7%  7%;">Oct <br> 07</span></div
 	<section id = "imun-footer" style="background-color: #0E3660">
 			<div class = "container">
 				<div class="row">
-				<div class="col-md-12 col-xs-4" style="max-width: 980px;text-align: left;margin-left: 7%;">
+				<div class="col-md-12 col-xs-4" style="max-width: 980px;text-align: left;margin-left: 2%;">
 					
 			<div class="col-md-2">
 						<a href="Aboutus.html" style="color: white;">About Us</a>
@@ -592,12 +592,16 @@ border-radius: 0px 10px 0px 0px; padding: 7% 7% 7%  7%;">Oct <br> 07</span></div
 					<div class="col-md-2">
 						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
+					<div class="col-md-2">
+						<a href="terms-and-conditions.html" style="color: white;">Terms & Conditions</a>
+					</div>
+
 					<br><br><br>
 				</div><div class="col-md-12 col-xs-7" style="">
 					<div class="col-md-1">
 						
 					</div>
-					<div class="col-md-3"><div class="row" style="margin: unset;">
+					<div class="col-md-3"><div class="row">
 						<div class="col-md-4 col-xs-2" style="padding: unset;"><img src="images/icon/2 (3).png" style="max-height: 26px; max-width: 26px; float: right;" ></div><a href="tel:(+91) 999 741 5973"><div style="font-family: Roboto;
 font-style: normal;
 font-weight: 300;
@@ -607,7 +611,7 @@ line-height: normal;
 color: #FFFFFF; padding: 4px;" class="col-md-8" > Phone<br>(+91) 999 741 5973 </div></a>
 </div>
 					</div>	<div class="col-md-4">
-						<div class="row" style="margin: unset;">
+						<div class="row">
 						<div class="col-md-4 col-xs-2" style="padding: unset;"><img src="images/icon/2 (1).png" style="max-height: 26px; max-width: 26px; float: right;" ></div><a href="mailto:info@internationalmun.org"><div style="font-family: Roboto;
 font-style: normal;
 font-weight: 300;
@@ -618,7 +622,7 @@ color: #FFFFFF; padding: 4px;" class="col-md-8 col-xs-10" > Email<br>info@intern
 </div>
 					</div>
 					<div class="col-md-4">
-						<div class="row" style="margin: unset;">
+						<div class="row">
 						<div class="col-md-2 col-xs-2" style="padding: unset;"><img src="images/icon/2 (2).png" style="max-height: 26px; max-width: 26px; float: right;" ></div><div style="font-family: Roboto;
 font-style: normal;
 font-weight: 300;
@@ -632,13 +636,17 @@ color: #FFFFFF; padding: 4px;" class="col-md-10 col-xs-10" > Address<br>Sector 5
 				
 
 				</div>
-			</div>
+			</div><div class="imun-social" style="text-align: center; padding-top: 5%;">
+				
+								
+									<a href="https://www.facebook.com/internationalmun2018/" target="_blank"><img src="images/f.png" style="max-width: 18px ; max-height: 18px;"></a>     <a href="https://www.instagram.com/international_mun/" target="_blank"><img src="images/ii.png" style="margin-left: 2px; max-height: 22px; max-width:  20px;padding-top: 2px;"></a>
+									<a href="https://www.linkedin.com/company/international-mun/" target="_blank"><img src="images/icon/linkedin.png" style="max-width: 18px ; max-height: 16px;margin-left: 2px;"></a>     <a href="https://twitter.com/imun_18" target="_blank"><img src="images/icon/twitter.png" style="margin-left: 2px; max-height: 18px; max-width:  18px;"></a>
+									</div>
 			
-				<h4 style="text-align: center;  padding-top: 5%;">Copyright © 2018-2019, International Model United Nations </h4>
+				<h4 style="text-align: center;  padding-top: 5%; color: white;">Copyright © 2018-2019, International Model United Nations </h4>
 				<h4 class="pull-right"></h4>
 			</div>
 		</section>
-
 		
 
 <script>
