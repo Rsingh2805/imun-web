@@ -1872,6 +1872,9 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 					<div class="col-md-2">
 						<a href="blog.php" style="color: white;">Blogs</a>
 					</div>
+					<div class="col-md-2">
+						<a href="terms-and-conditions.html" style="color: white;">Terms & Conditions</a>
+					</div>
 					
 				</div>
 			
