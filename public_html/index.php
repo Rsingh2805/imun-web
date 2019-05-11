@@ -41,7 +41,7 @@ require_once('private/DAO/database_api.php');
 }
 	</style>	
 		<meta charset="utf-8">
-		<meta property="og:image" content="images/logo.png">
+		<meta property="og:image" content="images/banner.jpg">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name = "application-name" content="International Model United Nations">
 		<meta name="description" content="International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.">
@@ -1834,7 +1834,8 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 						<div class="imun-social" style="float: left;">
 							Catch us<br>
 								
-									<a href="https://www.facebook.com/internationalmun2018/" target="_blank"><img src="images/ff.png" style="max-width: 18px ; max-height: 18px;"></a>     <a href="https://www.instagram.com/international_mun/" target="_blank"><img src="images/ii.png" style="margin-left: 2px; max-height: 18px; max-width:  18px;"></a>
+									<a href="https://www.facebook.com/internationalmun2018/" target="_blank"><img src="images/f.png" style="max-width: 18px ; max-height: 18px;"></a>     <a href="https://www.instagram.com/international_mun/" target="_blank"><img src="images/ii.png" style="margin-left: 2px; max-height: 18px; max-width:  18px;"></a>
+									<a href="https://www.linkedin.com/company/international-mun/" target="_blank"><img src="images/icon/linkedin.png" style="max-width: 18px ; max-height: 16px;"></a>     <a href="https://twitter.com/imun_18" target="_blank"><img src="images/icon/twitter.png" style="margin-left: 2px; max-height: 18px; max-width:  18px;"></a>
 									</div>
 					</div>
 					<div class="col-md-2">
@@ -1971,7 +1972,9 @@ setTimeout(function(){
 function subscribeSubmit(){
 
 	  let email = $('#subscribe-email').val();
-            $.ajax({
+	 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+  {
+    $.ajax({
                 url : 'private/API/newsletter.php',
                 type: 'POST',
                 data: 'req=add&email='+email,
@@ -1985,6 +1988,9 @@ function subscribeSubmit(){
                     }
                 }
             });
+  }else{
+           alert("Please enter valid email Id");
+        }
 
 }
         $('#subscribe-submit').on("click", function(){
