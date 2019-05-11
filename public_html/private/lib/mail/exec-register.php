@@ -2,4 +2,4 @@
 
 require_once dirname(__FILE__) . '/mail.php';
 
-registeredSuccessfullyMail($argv[1], $argv[2]);
+registeredSuccessfullyMail($argv[1], $argv[2], $argv[3]);
