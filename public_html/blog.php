@@ -148,7 +148,7 @@ window.fbAsyncInit = function() {
 					<a class="navbar-brand logo" href="index.php">
 						<span><img src = "images/logo.png" alt = "imun-logo" class = "imun_logo"></span>
 					
-						<p style="font-size: 15px !important">International <small><br>Model United Nations</small></p>				
+						<p style="font-size: 15px !important;margin-left:62px !important;">International <small><br>Model United Nations</small></p>				
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
@@ -417,7 +417,7 @@ font-size: 14px;
 line-height: 19px;
 text-align: justify;
 
-color: #FFFFFF;">share</h1><br><a href="https://www.facebook.com/sharer/sharer.php?u=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/  " target="_blank"><img src="images/icon/facebook-logo.png" style="max-height: 18px; max-width: 18px;"></a><a href="http://twitter.com/share?&amp;url=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/"  target="_blank">
+color: #FFFFFF;">share</h1><br><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.internationalmun.org/blog_page.php?blog_id=<?php  echo($value['id']);  ?>  " target="_blank"><img src="images/icon/facebook-logo.png" style="max-height: 18px; max-width: 18px;"></a><a href="http://twitter.com/share?&amp;url=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/"  target="_blank">
 <img src="images/icon/twitter.png" style="max-height: 18px; max-width: 18px;"></a>
 
 <a href="http://www.linkedin.com/shareArticle?url=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/" target="_blank" >

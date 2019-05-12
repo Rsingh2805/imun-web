@@ -545,7 +545,7 @@ color: #FFFFFF !important;
   text-align: center !important;
   position: absolute !important;
   top: 55% !important;
-  left: 50% !important;
+  left: 47% !important;
   transform: translate(-50%, -50%) !important;
   color: white !important;
   padding-bottom: 5% !important;
@@ -719,7 +719,7 @@ window.fbAsyncInit = function() {
 					<a class="navbar-brand logo" href="index.php">
 						<span><img src = "images/logo.png" alt = "imun-logo" class = "imun_logo"></span>
 					
-						<p style="font-size: 15px !important">International <small><br>Model United Nations</small></p>				
+						<p style="font-size: 15px !important;margin-left:62px !important;">International <small><br>Model United Nations</small></p>				
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
@@ -830,7 +830,7 @@ line-height: normal;
        url('khand/khand-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('khand/khand-v7-latin-700.svg#Khand') format('svg'); /* Legacy iOS */
 
-color: #15477A;"> <span style = "color:rgb(21,71,122); ">Conference</span></h2>
+color: #15477A;"> <span style = "color:rgb(21,71,122); ">Conferences</span></h2>
 		
 
 		</div>
@@ -936,7 +936,7 @@ color: #FFFFFF; background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%)
 						</div>
 											
 						<div class="swiper-slide">							
-							<div class="hero-image" style=" background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0) 28.58%, #121E32 99.52%), url('images/slider/1 (1).png');">
+							<div class="hero-image" style=" background-image: linear-gradient(180.15deg, rgba(18, 30, 50, 0) 28.58%, #121E32 99.52%), url('images/new_1 (4).jpg');">
   <div class="hero-text" style="top: 60% !important;">
    <h2 style="font-family: Montserrat;
 font-style: normal;

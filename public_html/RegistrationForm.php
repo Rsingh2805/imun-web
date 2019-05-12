@@ -325,7 +325,7 @@ window.fbAsyncInit = function() {
 					<a class="navbar-brand logo" href="index.php">
 						<span><img src = "images/logo.png" alt = "imun-logo" class = "imun_logo"></span>
 					
-						<p style="font-size: 15px !important">International <small><br>Model United Nations</small></p>				
+						<p style="font-size: 15px !important;margin-left:62px !important;">International <small><br>Model United Nations</small></p>				
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
@@ -990,7 +990,8 @@ font-size: 14px;
 line-height: 20px;
 text-align: center;
 
-color: #3C3C3C; padding: 5% 5% 5% 5%"> Note: Committee and Country preferences will be asked after your acceptance in IMUN 2019 If you don't receive an email from IMUN Team within 72 hours,<a href="mailto:egypt@internationalmun.org"><span style="color: #DC8F1A;"> Please message us at egypt@internationalmun.org </span></a></p>
+color: #3C3C3C; padding: 5% 5% 5% 5%"> Note:Committee and Country preferences will be asked after your acceptance in IMUN 2019. If you don't receive an email from IMUN Team within 72 hours, 
+Please message us at<a href="mailto:team@internationalmun.org"><span style="color: #DC8F1A;"> team@internationalmun.org </span></a></p>
 </div>
 </section>
 

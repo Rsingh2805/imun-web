@@ -29,6 +29,7 @@ require_once('private/DAO/database_api.php');
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name = "application-name" content="International Model United Nations">
+				<meta property="og:image" content="https://www.internationalmun.org/images/blog/<?php echo($stmt[0]['id']); ?>">
 		<meta name="description" content="International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.">
 
 		<link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -390,10 +391,10 @@ color: #474747;">
 			<div class="col-md-2">
 		
 				
-				<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.internationalmun.org/test_2/public_html/blog_page.html" target="_blank"> <img src="images/icon/facebook-logo.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
-					<a href="http://twitter.com/share?&amp;url=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/" target="_blank">	<img src="images/icon/twitter.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.internationalmun.org/blog_page.php?blog_id=<?php  echo($stmt[0]['id']);  ?> " target="_blank"> <img src="images/icon/facebook-logo.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
+					<a href="http://twitter.com/share?&amp;url=https://www.internationalmun.org/blog_page.php?blog_id=<?php  echo($stmt[0]['id']);  ?>" target="_blank">	<img src="images/icon/twitter.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
 						
-							<a href="http://www.linkedin.com/shareArticle?url=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/" target="_blank">	<img src="images/icon/linkedin.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
+							<a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.internationalmun.org/blog_page.php?blog_id=<?php  echo($stmt[0]['id']);  ?>&title<?php  echo($stmt[0]['subject']);  ?>" target="_blank">	<img src="images/icon/linkedin.png" style="max-width: 30px; max-height: 30px;"></a><br><br>
 								
 			</div>
 	</div>

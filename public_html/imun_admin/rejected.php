@@ -166,11 +166,11 @@ tr.shown td.details-control {
                                         <table class="table table-striped table-bordered table-hover display" id="sample_2" style="width: 100% !important; ">
                                             <thead>
                                                 <tr><th><input type="checkbox" name="" value="" id="demo"> <br></th>
-                                                    <th>Con. Location</th>
-                                                    <th> Registration Id</th>
+                                                    <th>Location</th>
+                                                    <th> Registration Date</th>
                                                     <th>Full Name</th>
                                                                                                                        
-                                            <th >Status</th>
+                                            <th >Why IMUN?</th>
                                             <th>View</th>
                                            
                                                 </tr>
@@ -231,8 +231,8 @@ tr.shown td.details-control {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
      '<tr>'+
-            '<td>Why IMUN?:</td>'+
-            '<td>'+d.motivation_letter+'</td>'+
+            '<td>Registration ID:</td>'+
+            '<td>'+d.registration_id+'</td>'+
         '</tr>'+
             '<tr>'+
             '<td>Registration Date and Time:</td>'+
@@ -334,11 +334,11 @@ function updateTable(){
                    
                 },},
             { "data": "conference_location" },
-            { "data": "registration_id" },
+            { "data": "submission_time" },
             { "data": "full_name" },
            
           
-            { "data": "status" },
+            { "data": "motivation_letter" },
 
             {
                 "className":      'details-control',
