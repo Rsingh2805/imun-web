@@ -128,7 +128,7 @@ function paymentPendingMail($email, $fullname){
 }
 
 function sendContact($email,$fullname,$message,$subject){
-       $mail = configure_PHPMailer();
+       $mail = configure_PHPMailer(); 
    $mail->addAddress('team@internationalmun.org', 'Contact Form');
  //Set the subject line
  $mail->Subject = "IMUN CONTACT FORM";

@@ -41,7 +41,7 @@ require_once('private/DAO/database_api.php');
 }
 	</style>	
 		<meta charset="utf-8">
-		<meta property="og:image" content="images/banner.jpg">
+		<meta property="og:image" content="https://www.internationalmun.org/images/banner.jpg">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name = "application-name" content="International Model United Nations">
 		<meta name="description" content="International Model United Nations (IMUN) brings youth together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.">
@@ -1832,7 +1832,7 @@ text-align: justify;
 
 color: #FFFFFF;">International Model United Nations (IMUN) brings students together from around the world to learn and share ideas from a diverse set of experiences and backgrounds where the Executive board, International Press and International Delegates consolidate to learn about diplomacy, international relations, and the United Nations.</p>
 						<div class="imun-social" style="float: left;">
-							Catch us<br>
+							Catch us at<br>
 								
 									<a href="https://www.facebook.com/internationalmun2018/" target="_blank"><img src="images/f.png" style="max-width: 18px ; max-height: 18px;"></a>     <a href="https://www.instagram.com/international_mun/" target="_blank"><img src="images/ii.png" style="margin-left: 2px; max-height: 18px; max-width:  18px;"></a>
 									<a href="https://www.linkedin.com/company/international-mun/" target="_blank"><img src="images/icon/linkedin.png" style="max-width: 18px ; max-height: 16px;"></a>     <a href="https://twitter.com/imun_18" target="_blank"><img src="images/icon/twitter.png" style="margin-left: 2px; max-height: 18px; max-width:  18px;"></a>
