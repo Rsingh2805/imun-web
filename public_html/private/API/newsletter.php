@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
            
             $emails = array();
             foreach ($ids as $id){
-                $email = Subscriber::getSubscribers($id)[0]['email'];
+                $email = Subscriber::getSubscribers($id)[0];
                 array_push($emails, $email);
 
             }

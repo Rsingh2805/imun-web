@@ -55,13 +55,14 @@ function configure_PHPMailer(){
     return $mail;
 }
 
-function registeredSuccessfullyMail($email, $fullname){
+function registeredSuccessfullyMail($email, $fullname, $registration_id){
     $mail = configure_PHPMailer();
     $mail->addAddress($email, $fullname);
     $mail->Subject = "International Model United Nations";
 
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
     $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/mail.html'));
+    $html = str_replace("CONSTANTVAR2",$registration_id, $html);
     $message = $mail->msgHTML($html, dirname(__FILE__));
     $mail->addAttachment(dirname(__FILE__).'/../../../IMUN_Egypt_2019.pdf');
     $mail->addAttachment(dirname(__FILE__).'/../../../viet.pdf');
