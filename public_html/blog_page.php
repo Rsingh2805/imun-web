@@ -24,7 +24,14 @@ require_once('private/DAO/database_api.php');
 	
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-		
+		<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="Admin">
+<meta name="twitter:title" content="<?php echo($stmt[0]['subject']); ?>">
+<meta name="twitter:description" content="<?php echo($stmt[0]['content_1']); ?>">
+<meta name="twitter:creator" content="IMUN">
+<meta name="twitter:image" content="https://www.internationalmun.org/images/blog/<?php echo($stmt[0]['id']); ?>">
+<meta name="twitter:domain" content="internationalmun.org">
+
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">

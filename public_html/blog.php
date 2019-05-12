@@ -411,7 +411,7 @@ color: #E3E3E3;">Posted by <?php echo($value['posted_by']); ?></h1>
     
   </div>
 </div><div class="">
-  <div class="hero-text3">
+  <!--<div class="hero-text3">
     <h1 style="font-family: Helvetica;
 font-size: 14px;
 line-height: 19px;
@@ -423,7 +423,7 @@ color: #FFFFFF;">share</h1><br><a href="https://www.facebook.com/sharer/sharer.p
 <a href="http://www.linkedin.com/shareArticle?url=http://blog.internationalmun.org/quality-vs-quantity-of-delegates-what-matters-the-most-in-a-mun/" target="_blank" >
 <img src="images/icon/linkedin.png" style="max-height: 18px; max-width: 18px;"></a>
 
-  </div>
+  </div>-->
 </div>
 
 			</div>
