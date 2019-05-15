@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
         $sql = "SELECT * FROM `application` WHERE `email`='$email' ";
          $stmt = $conn->query($sql)->fetch(PDO::FETCH_ASSOC);
        
-        if ($stmt != null) {
+        if ($stmt != null && $stmt["status"]!='REJECTED') {
            $data =  array(
                "status" => "EXIST",
                "id" => strtoupper(substr($stmt["conference_location"], 0, 3)).str_pad(strval($stmt['id']), 6, '0', STR_PAD_LEFT)
