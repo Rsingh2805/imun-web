@@ -239,7 +239,7 @@ $('.card-block input:checked').each( function()
   
 });
  if (chkArray.length==0) {
-   alert('please check atleast one email id');
+   alert('please check atleast one application');
    breck();
    
   
