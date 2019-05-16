@@ -256,7 +256,7 @@ window.fbAsyncInit = function() {
 					</ul>
 				</div>
 			</div>
-		</nav><title>IMUN Vietnam 2019</title>
+		</nav><title>IMUN Payment</title>
 <section style="margin-bottom: 100px;">
 	<div class = "container" id = "row-content">
 			<div class = "row">
@@ -296,19 +296,19 @@ window.fbAsyncInit = function() {
 
 <tr>
 <td>
-<p style="font-family: Times; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; text-align: justify;">	If you don't have a PayPal Account, you can pay through your Debit / Credit Card also.</p>
+<p style="font-family: Times; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; text-align: justify;">	If you don't have a PayPal Account, you can pay through your Debit / Credit Card also.</p>
 
 </td>
 </tr>
 <tr>
 <td>
-<p style="font-family: Times; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; text-align: justify;">If PayPal is not available in your country, Please pay through Direct Bank Transfer and share the payment receipt with us at info@internationalmun.org</p>
+<p style="font-family: Times; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; text-align: justify;">If PayPal is not available in your country, Please pay through Direct Bank Transfer and share the payment receipt with us at info@internationalmun.org</p>
 
 </td>
 </tr>
 <tr>
 <td style="padding-top: 2%;">
-<p style="font-family: Times; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; text-align: justify;"><b>Bank Details:</b><br>
+<p style="font-family: Times; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; text-align: justify;"><b>Bank Details:</b><br>
 
 Account's Name : International Model United Nations <br>
 Account Number: 272 6002 1000 61434<br>
@@ -321,7 +321,7 @@ Bank Address: D Block Market, Sector 27, Noida, Uttar Pradesh, India 201301</p>
 
 <tr>
 <td style="padding-top: 2%;">
-<p style="font-family: Times; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; text-align: justify;"><b>Please Note:</b><br>
+<p style="font-family: Times; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; text-align: justify;"><b>Please Note:</b><br>
 Indian participants need to pay 18% GST.</p>
 
 </td>
