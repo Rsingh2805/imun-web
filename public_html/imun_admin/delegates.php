@@ -186,6 +186,7 @@ tr.shown td.details-control {
                                                                                                                        
                                             <th >Why IMUN?</th>
                                             <th>View</th>
+                                               <th style="display: none;">email</th>
                                           
                                                 </tr>
                                             </thead>
@@ -385,7 +386,17 @@ function updateTable(){
                 "orderable":      false,
                 "data":           "",
                 "defaultContent": ''
-            }
+            },
+                  { "data":"",
+
+                "orderable":false,
+                "render": function (data, type, row) {
+
+           
+                        return '<label style="display:none;width:0%;height:0%;" data-id="'+row.email+'" class="accept-app">'+row.email+'</label>';
+
+                
+                }, }
         ],
         "order": [[1, 'asc']]
     } );
