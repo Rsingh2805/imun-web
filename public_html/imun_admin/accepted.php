@@ -152,7 +152,7 @@ tr.shown td.details-control {
                             
                                <button id="delete_user">Delete User</button>
                                 <button id="download_excel">Download Excel</button>
-                                 <button id="confirm_seat">Confirm Seat</button>
+                                <!--  <button id="confirm_seat">Confirm Seat</button> -->
                                    <button id="send">Send Mail</button>
                               
                                  
@@ -394,8 +394,8 @@ function updateTable(){
                 "orderable":false,
                 "render": function (data, type, row) {
 
-                    if ( row.status === 'PENDING') {
-                        return '<button data-id="'+row.id+'" class="accept-app">Accept</button><button class="reject-app" data-id="'+row.id+'">Reject</button>';}
+                    if ( row.status === 'ACCEPTED') {
+                        return '<button data-id="'+row.id+'" class="accept-app">Confirm Seat</button>';}
 
                     else {
 
