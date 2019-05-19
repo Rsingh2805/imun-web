@@ -696,16 +696,51 @@ window.fbAsyncInit = function() {
 			<?php if (isset($stmt[0])) {
 						
 					 ?>
-
-		<div style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px;  width: 25%; text-align: center;display: none;" class=" navbar-fixed-bottom" id="blink1"><b><?php echo $stmt[0]['full_name']; ?>  From  <?php echo $stmt[0]['nationality']; ?><br>  just Registered on IMUN</b></div>
-			<div style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px;  width: 25%; text-align: center;display: none;" class=" navbar-fixed-bottom" id="blink2"><b><?php echo $stmt[1]['full_name']; ?>  From  <?php echo $stmt[1]['nationality']; ?><br>  just Registered on IMUN</b></div>
-				<div style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px;  width: 25%; text-align: center;display: none;" class=" navbar-fixed-bottom" id="blink3"><b><?php echo $stmt[2]['full_name']; ?>  From  <?php echo $stmt[2]['nationality']; ?><br>  just Registered on IMUN</b></div>
+<div id="blink" class=" navbar-fixed-bottom" style=" background: linear-gradient(252.81deg, #FFD18C 0%, #DC8F1A 100%); border: inherit;color: unset; padding: 13px 13px 13px 13px; border-radius: 20px;  width: 25%; text-align: center;">
+		<div style="display: block;"  id="blink1"><b><?php echo $stmt[0]['full_name']; ?>  from  <?php echo $stmt[0]['nationality']; ?><br>  just registered at IMUN</b></div>
+		<?php if (isset($stmt[1])) {
+						
+					 ?>
+			<div style=" display: none;" id="blink2"><b><?php echo $stmt[1]['full_name']; ?>  from  <?php echo $stmt[1]['nationality']; ?><br>  just registered at IMUN</b></div>
+		<?php }else{
+			?>
+			<div style=" display: none;" id="blink2"><b><?php echo $stmt[0]['full_name']; ?>  from  <?php echo $stmt[0]['nationality']; ?><br>  just registered at IMUN</b></div>
+		<?php }
+		?>
+		<?php if (isset($stmt[2])) {
+						
+					 ?>
+				<div style=" display: none;"  id="blink3"><b><?php echo $stmt[2]['full_name']; ?>  from  <?php echo $stmt[2]['nationality']; ?><br>  just registered at IMUN</b></div>
+			<?php }else{
+				?>
+				<div style=" display: none;"  id="blink3"><b><?php echo $stmt[0]['full_name']; ?>  from  <?php echo $stmt[0]['nationality']; ?><br>  just registered at IMUN</b></div>
+			<?php } ?>
+</div>
 
 
 					<?php
 				}
 
 					?>
+
+					<script type="text/javascript">
+						var blii=1;
+
+						window.setInterval(function(){
+							blii++;
+							$("#blink1").css("display","none");
+								$("#blink2").css("display","none");
+									$("#blink3").css("display","none");
+									if (blii==4) {
+										blii=1;
+									}
+									$("#blink"+blii).css("display","block");
+									
+
+
+
+}, 10000);
+					</script>
 		<!-- Header Section Start -->
 		<nav class="navbar navbar-default main-navigation imun-navigation navbar-fixed-top" role="navigation" style="background-color: #121E32; border: 0px solid #ffffff00; box-shadow: 0 0 0 0 ; height: 70px;">
 			<div class="container con">
@@ -1849,9 +1884,7 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
                     </form></div>
 				<br>
 				<div class="row centr" style="max-width: 980px;text-align: left;margin-left: 7%;padding-top: 5%;">
-					<div class="col-md-1">
-						
-					</div>
+				
 					<div class="col-md-2">
 						<a href="Aboutus.html" style="color: white;">About Us</a>
 					</div>
@@ -1924,8 +1957,8 @@ color: #FFFFFF;">International Model United Nations (IMUN) brings students toget
 	setInterval(function(){
 setTimeout(function(){ 
 	
-    var div = $("#blink1");  
-    $("#blink1").css('display','block');
+    var div = $("#blink");  
+    $("#blink").css('display','block');
     div.animate({left: '200px'}, 5000);
     div.animate({left: '-400px'}, 5000);
 
@@ -2006,10 +2039,8 @@ function subscribeSubmit(){
 
 
 
-
-
 function contactSubmit(){
-
+if ($("#con_sub").html()=="Sent") {}else{
 	  let name = $('#contact-name').val();
 	  let email = $('#contact-email').val();
 	  let subject = $('#contact-sub').val();
@@ -2023,9 +2054,11 @@ if(name!="" && email !="" && subject!="" && message !=""){
                 data: 'req=addCon&email='+email+'&name='+name+'&subject='+subject+'&message='+message,
                 success: function(data){
                 	console.log("hi");
+                	alert("Thank you for your message. We will write back soon.");
               
                 }
             });
+}
 }
 }
 

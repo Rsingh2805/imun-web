@@ -597,13 +597,13 @@ function generateRandomString($length = 10) {
 										
 								
 										<label for="email" class="control-label">Email <span style = "color:indianred">*</span></label><br/>
-										<input type="text" name="email" class="form-control" id = "email" required>
+										<input type="text" name="email" class="form-control" id = "email" oncopy="return false" required>
 									</div>
 									<div class = "form-group" id="confirmEmail">
 										
 								
 										<label for="con-email" class="control-label">Confirm Email <span style = "color:indianred">*</span></label><br/>
-										<input type="text" name="con-email" class="form-control" id = "con-email" required>
+										<input type="text" name="con-email" class="form-control" id = "con-email" onpaste="return false"  required>
 										 <small id='message'></small>
 									</div>
 									<div class = "form-group">
@@ -1096,6 +1096,9 @@ color: #FFFFFF; padding: 4px;" class="col-md-10 col-xs-10" > Address<br>Sector 5
 <!--Page level scripts-->
 <script type="text/javascript" src="js/pages/wizard.js"></script>		
 <script type="text/javascript">
+
+
+
 		$("#next0").click(function(){
   $(".tab1").addClass("active");
   $(".tab0").removeClass("active");

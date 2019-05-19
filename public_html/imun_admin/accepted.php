@@ -153,9 +153,23 @@ tr.shown td.details-control {
                                <button id="delete_user">Delete User</button>
                                 <button id="download_excel">Download Excel</button>
                                  <button id="confirm_seat">Confirm Seat</button>
+                                   <button id="send">Send Mail</button>
                               
                                  
                                        
+                        </div>
+                                                <div class="mail" style="display: none; margin-left: 5%;"><br>
+                            <br>
+                            <form>
+                                <label>Subject*</label><br>
+                                <input type="text" name="subject" id="newsletter-subject" style="width: 50%;"><br><br>
+                                <label>Attachment(PDF only)</label><br>
+                                <input type="file" id="attach" name="attach"><br><br>
+                                <label>Message*</label><br>
+                                <textarea rows="2" cols="16" id="newsletter-message" name="message"  style="width: 50%;"></textarea><br>
+
+                                <input type="button" name="submit" value="Send" id="newsletter-submit">
+                            </form>
                         </div>
                         <div class="card-block">
                             
@@ -175,6 +189,7 @@ tr.shown td.details-control {
                                             <th >Why IMUN?</th>
                                             <th>View</th>
                                              <th >Control</th>
+                                             <th style="display: none;">email</th>
                                                 </tr>
                                             </thead>
                                           
@@ -209,6 +224,32 @@ tr.shown td.details-control {
   
   
      <script type="text/javascript">
+
+            $('#send').on("click", function(){
+        $('.mail').show();
+    });
+    $(document).on("click",'#newsletter-submit', function(){
+var chkArray = Array();
+
+$('.card-block input:checked').each( function()
+{
+   chkArray.push(this.id);
+   if (chkArray[0]=='demo') {
+    chkArray.shift();
+   }
+  
+});
+ if (chkArray.length==0) {
+   alert('please check atleast one application');
+   breck();
+   
+  
+}else{
+console.log(chkArray);
+sendMails(chkArray);
+
+   }   
+    });
 
         $('.egypt').click(function(){
             $('#tab-malasia').removeClass('active');
@@ -361,7 +402,17 @@ function updateTable(){
                         return '<button disabled>Accept</button><button disabled>Reject</button>';
 
                     }
-                },}
+                },},
+                  { "data":"",
+
+                "orderable":false,
+                "render": function (data, type, row) {
+
+           
+                        return '<label style="display:none;width:0%;height:0%;" data-id="'+row.email+'" class="accept-app">'+row.email+'</label>';
+
+                
+                }, }
         ],
         "order": [[1, 'asc']]
     } );

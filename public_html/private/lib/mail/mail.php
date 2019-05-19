@@ -31,7 +31,7 @@ function end_log(){
 function configure_PHPMailer(){
     fopen(dirname(__FILE__).'/mail.log', "w");
     $mail = new PHPMailer;
-    $mail->isSMTP();
+    // $mail->isSMTP();
     $mail->SMTPDebug = CONFIG['smtp']['debug']; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
     $mail->Debugoutput = function($str, $level){
         output_log($str);
@@ -58,15 +58,14 @@ function configure_PHPMailer(){
 function registeredSuccessfullyMail($email, $fullname, $registration_id){
     $mail = configure_PHPMailer();
     $mail->addAddress($email, $fullname);
-    $mail->Subject = "International Model United Nations";
+    $mail->Subject = "Thank you for Registration!";
 
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
     $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/mail.html'));
     $html = str_replace("CONSTANTVAR2",$registration_id, $html);
     $message = $mail->msgHTML($html, dirname(__FILE__));
-    $mail->addAttachment(dirname(__FILE__).'/../../../IMUN_Egypt_2019.pdf');
-    $mail->addAttachment(dirname(__FILE__).'/../../../viet.pdf');
-    $mail->AltBody = 'This is a plain-text message body';
+
+    $mail->AltBody = '';
     if(!$mail->send()){
         file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);
         return $mail->ErrorInfo;
@@ -79,13 +78,14 @@ function applicationAcceptedMail($email, $fullname, $nationality){
     output_log("Application accepted was called");
     $mail = configure_PHPMailer();
     $mail->addAddress($email, $fullname);
-    $mail->Subject = 'International Model United Nations 2019 ';
+    $mail->Subject = ' (IMPORTANT) IMUN Application Decision ';
 
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
     $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/acceptance.html'));
     $message = $mail->msgHTML($html, dirname(__FILE__));
     // $message = $mail->msgHTML('<img src="/register/reg-unnamed.jpg">', dirname(__FILE__));
     $mail->addStringAttachment(getLOAPdf($fullname, $nationality), 'loa.pdf');
+        $mail->addAttachment(dirname(__FILE__).'/../../../imun_china.pdf');
     if(!$mail->send()){
         output_log($mail->ErrorInfo);
         end_log();
@@ -100,7 +100,7 @@ function applicationAcceptedMail($email, $fullname, $nationality){
 function applicationRejectedMail($email, $fullname){
     $mail = configure_PHPMailer();
     $mail->addAddress($email, $fullname);
-    $mail->Subject = 'International Model United Nations 2019 ';
+    $mail->Subject = ' (IMPORTANT) IMUN Application Announcement ';
 
 //    $mail->msgHTML($html); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
     $html = str_replace("CONSTANTVAR1",$fullname, file_get_contents(dirname(__FILE__).'/rejection.html'));
@@ -129,7 +129,7 @@ function paymentPendingMail($email, $fullname){
 }
 
 function sendContact($email,$fullname,$message,$subject){
-       $mail = configure_PHPMailer(); 
+       $mail = configure_PHPMailer();
    $mail->addAddress('team@internationalmun.org', 'Contact Form');
  //Set the subject line
  $mail->Subject = "IMUN CONTACT FORM";
