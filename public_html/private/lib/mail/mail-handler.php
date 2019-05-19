@@ -17,3 +17,7 @@
     function applicationRejectedMail($email, $fullname){
         exec("php exec-rejection.php ".escapeshellarg($email)." ".escapeshellarg($fullname)." > /dev/null &");
     }
+    function sendDelegateLetter($emails, $file, $message, $subject){
+        $command = "php exec-delegate.php ".escapeshellarg($emails)." ".escapeshellarg($message)." ".escapeshellarg($subject)." ".escapeshellarg($file)." > /dev/null &";
+        exec($command);
+    }

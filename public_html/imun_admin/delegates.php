@@ -160,13 +160,13 @@ tr.shown td.details-control {
                             <br>
                             <form>
                                 <label>Subject*</label><br>
-                                <input type="text" name="subject" id="newsletter-subject" style="width: 50%;"><br><br>
+                                <input type="text" name="subject" id="delegate-subject" style="width: 50%;"><br><br>
                                 <label>Attachment(PDF only)</label><br>
                                 <input type="file" id="attach" name="attach"><br><br>
                                 <label>Message*</label><br>
-                                <textarea rows="2" cols="16" id="newsletter-message" name="message"  style="width: 50%;"></textarea><br>
+                                <textarea rows="2" cols="16" id="delegate-message" name="message"  style="width: 50%;"></textarea><br>
 
-                                <input type="button" name="submit" value="Send" id="newsletter-submit">
+                                <input type="button" name="submit" value="Send" id="delegate-submit">
                             </form>
                         </div>
                         <div class="card-block">
@@ -226,7 +226,7 @@ tr.shown td.details-control {
             $('#send').on("click", function(){
         $('.mail').show();
     });
-    $(document).on("click",'#newsletter-submit', function(){
+    $(document).on("click",'#delegate-submit', function(){
 var chkArray = Array();
 
 $('.card-block input:checked').each( function()
@@ -248,6 +248,27 @@ sendMails(chkArray);
 
       
     });
+
+    function sendMails(chkArray){
+        let file = $('#attach').prop('files')[0];
+        let data = new FormData();
+        data.append('file', file);
+        data.append('ids', JSON.stringify(chkArray));
+        data.append('subject', $('#delegate-subject').val());
+        data.append('message', $('#delegate-message').val());
+        data.append('req', 'send-mail');
+        $.ajax({
+            url: "./../private/API/dashboard4.php",
+            type: 'post',
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function(htm){
+                console.log("htm");
+                location.reload();
+            }
+        })
+    }
 
         $('.egypt').click(function(){
             $('#tab-malasia').removeClass('active');

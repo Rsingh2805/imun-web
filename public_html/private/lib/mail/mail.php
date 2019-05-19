@@ -31,7 +31,7 @@ function end_log(){
 function configure_PHPMailer(){
     fopen(dirname(__FILE__).'/mail.log', "w");
     $mail = new PHPMailer;
-    // $mail->isSMTP();
+     $mail->isSMTP();
     $mail->SMTPDebug = CONFIG['smtp']['debug']; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
     $mail->Debugoutput = function($str, $level){
         output_log($str);
@@ -156,6 +156,28 @@ function sendNewsLetter($emails, $message, $subject, $file){
     $html = str_replace("NEWSLETTERMESSAGE", $message, $html);
     $message = $mail->msgHTML($html, dirname(__FILE__));
     $mail->addAttachment('uploads/'.$file, "IMUNNewsletter.pdf");
+    if(!$mail->send()){
+        file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);
+        return $mail->ErrorInfo;
+    }else{
+        return true;
+    }
+}
+
+function sendDelegateLetter($emails, $message, $subject, $file){
+    $mail = configure_PHPMailer();
+    foreach ($emails as $email){
+        $mail->addAddress($email);
+    }
+    output_log("Mail is " + json_encode($emails));
+    output_log("Message is "+$message);
+    output_log("Subject is "+$subject);
+    output_log("File is "+$file);
+    $mail->Subject = "IMUN Newsletter";
+    $html = str_replace("NEWSLETTERSUBJECT",$subject, file_get_contents(dirname(__FILE__).'/delegates_mail.html'));
+    $html = str_replace("NEWSLETTERMESSAGE", $message, $html);
+    $mail->msgHTML($html, dirname(__FILE__));
+    $mail->addAttachment('uploads/'.$file, "attachment.pdf");
     if(!$mail->send()){
         file_put_contents(dirname(__FILE__).'/email-error.log', "Failed\n".$mail->ErrorInfo);
         return $mail->ErrorInfo;
